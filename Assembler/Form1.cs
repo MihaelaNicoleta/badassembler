@@ -56,30 +56,6 @@ namespace Assembler
           
         }
 
-        private void parseAssemblyCode() {
-            //pt directive cu punct
-            // String pattern = @"\.[a-zA-z]+)";
-
-            String pattern = @"([a-zA-z]+\s)";
-            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-
-            foreach (var line in assemblyCodeLines) {
-                if (line.Contains(".DATA") == false && line.Contains(".CODE") == false && line.Contains("END") == false) {               
-                    this.asmCode.Text += "\n" + line;
-                    Match m = regex.Match(line);
-                    if (m.Success)
-                    {
-                        Group g = m.Groups[1];
-                        this.asmCode.Text += "\n" + g;
-                    }
-                    else {
-                        //TO DO: not correct code, try again
-                        //check if comment
-                    }
-                }
-            }
-        }
-
         private void createBinaryInstructionsCodes(String fileName) {
             String instructionsLine;
             StreamReader sr = new StreamReader(fileName);
@@ -119,6 +95,36 @@ namespace Assembler
 
             sr.Close();
         }
+
+
+
+        private void parseAssemblyCode()
+        {
+            //pt directive cu punct
+            // String pattern = @"\.[a-zA-z]+)";
+
+            String pattern = @"([a-zA-z]+\s)";
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+            foreach (var line in assemblyCodeLines)
+            {
+                if (line.Contains(".DATA") == false && line.Contains(".CODE") == false && line.Contains("END") == false)
+                {
+                    this.asmCode.Text += "\n" + line;
+                    Match m = regex.Match(line);
+                    if (m.Success)
+                    {
+                        Group g = m.Groups[1];
+                        this.asmCode.Text += "\n" + g;
+                    }
+                    else {
+                        //TO DO: not correct code, try again
+                        //check if comment
+                    }
+                }
+            }
+        }
+
 
 
     }
