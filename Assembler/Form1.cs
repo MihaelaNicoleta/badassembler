@@ -14,6 +14,11 @@ namespace Assembler
 {
     public partial class mainForm : Form
     {
+        //given files
+        String assemblyCodeFile = "input.asm";
+        String instructionsFile = "instructiuniinbinar.csv";
+        String registersAndAddressingModesFile = "registri_moduriAdresare.csv";
+
         //given code
         List<String> assemblyCodeLines = new List<String>();
 
@@ -32,11 +37,19 @@ namespace Assembler
         Dictionary<string, string> B3 = new Dictionary<string, string>();
         Dictionary<string, string> B4 = new Dictionary<string, string>();
 
+        //the number of registers and addressing modes
+        int numberOfRegisters = 16;
+        int numberOfAddressingModes = 4;
+
+        //dictionaries for registers and addressing modes
+        Dictionary<string, string> registers = new Dictionary<string, string>();
+        Dictionary<string, string> addressingModes = new Dictionary<string, string>();
+
+
         public mainForm()
         {
             InitializeComponent();
-            //showAsmCode("input.asm");
-            createBinaryInstructionsCodes("instructiuniinbinar.csv");
+            getDefaultInstructionsRegistersAddressingModes();
             //parseAssemblyCode();
 
         }
@@ -56,6 +69,7 @@ namespace Assembler
           
         }
 
+        //read and parse instructions file
         private void createBinaryInstructionsCodes(String fileName) {
             String instructionsLine;
             StreamReader sr = new StreamReader(fileName);
@@ -96,6 +110,40 @@ namespace Assembler
             sr.Close();
         }
 
+        //read and parse registers/addressing modes file
+        private void createBinaryRegistersAndAddressingModesCodes(String fileName)
+        {
+            String line;
+            StreamReader sr = new StreamReader(fileName);
+
+            int ct = 0;
+            while ((line = sr.ReadLine()) != null)
+            {
+
+                string[] values = line.Split(';');
+
+                if (ct < numberOfRegisters)
+                {
+                    registers.Add(values[0], values[1]);
+                    ct++;
+                }
+                else
+                {                  
+                    addressingModes.Add(values[0], values[1]);
+                    ct++;
+                }
+                    
+            }
+
+            sr.Close();
+        }
+
+        private void getDefaultInstructionsRegistersAddressingModes()
+        {
+            showAsmCode(assemblyCodeFile);
+            createBinaryInstructionsCodes(instructionsFile);
+            createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile);
+        }
 
 
         private void parseAssemblyCode()
