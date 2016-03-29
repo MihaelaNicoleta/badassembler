@@ -113,6 +113,65 @@ namespace Assembler
             sr.Close();
         }
 
+        public void writeBinaryFile(String fileName, Dictionary<Instruction, string> instructions)
+        {
+            //write to a test file
+            StreamWriter streamWriter = new StreamWriter("output.txt");
+           
+            //createa .bin file
+            FileStream fileStream = new FileStream(fileName, FileMode.Create);
+            BinaryWriter binaryWriter = new BinaryWriter(fileStream);
 
+            //fisIesire.WriteLine(codif);
+            //bw.Write(Convert.ToInt16(codif, 2));
+
+            if (instructions != null)
+            {
+                foreach (KeyValuePair<Instruction, String> instruction in instructions)
+                {
+                    //write instructions
+                    streamWriter.WriteLine(instruction.Key.ToString());
+                    binaryWriter.Write(Convert.ToInt16(instruction.Key.ToString(), 2));
+
+                    //write offsets for B1
+                    if (instruction.Value == "B1")
+                    {
+                        B1Instruction B1instr = (B1Instruction) instruction.Key;
+                        if(B1instr.offsetS != null)
+                        {
+                            streamWriter.WriteLine(B1instr.offsetS);
+                            binaryWriter.Write(Convert.ToInt16(B1instr.offsetS, 2));
+                        }
+
+                        if (B1instr.offsetD != null)
+                        {
+                            streamWriter.WriteLine(B1instr.offsetD);
+                            binaryWriter.Write(Convert.ToInt16(B1instr.offsetD, 2));
+                        }
+                    }
+
+                    //write offsets for B2
+                    if (instruction.Value == "B2")
+                    {
+                        B2Instruction B2instr = (B2Instruction)instruction.Key;
+
+                        if (B2instr.offsetD != null)
+                        {
+                            streamWriter.WriteLine(B2instr.offsetD);
+                            binaryWriter.Write(Convert.ToInt16(B2instr.offsetD, 2));
+                        }
+                    }
+                }
+            }
+
+            fileStream.Flush();
+            fileStream.Close();
+
+            streamWriter.Flush();
+            streamWriter.Close();
+
+            binaryWriter.Close();
+
+        }
     }
 }

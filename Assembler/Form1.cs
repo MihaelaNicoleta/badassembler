@@ -16,9 +16,10 @@ namespace Assembler
     public partial class mainForm : Form
     {
         //given files
-        String assemblyCodeFile = "input.asm";
-        String instructionsFile = "instructiuniinbinar.csv";
-        String registersAndAddressingModesFile = "registri_moduriAdresare.csv";
+        String assemblyCodeFile = "assembly_code.asm";
+        String instructionsFile = "codificare_instructiuni.csv";
+        String registersAndAddressingModesFile = "registri_moduri_adresare.csv";
+        String binaryInstructionsFile = "instructiuni_codificate_binar.bin";
 
         //given code
         List<String> assemblyCodeLines = new List<String>();
@@ -52,6 +53,7 @@ namespace Assembler
             InitializeComponent();
             getDefaultInstructionsRegistersAddressingModes();
             parseAssemblyCode();
+            fileParser.writeBinaryFile(binaryInstructionsFile, binaryInstructions);
 
         }
 
@@ -286,7 +288,15 @@ namespace Assembler
         public String getBinaryOffset(String offset)
         {
             int integerOffset = Convert.ToInt16(offset);
-            return Convert.ToString(integerOffset, 2);
+            var stringOffset = Convert.ToString(integerOffset, 2);
+
+            String zeros = "0";
+            for(int i = 0; i < (15 - stringOffset.Length); i++)
+            {
+                zeros += "0";
+            }
+
+            return zeros + stringOffset;
         }
 
 

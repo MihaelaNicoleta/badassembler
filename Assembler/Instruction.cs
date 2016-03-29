@@ -10,7 +10,6 @@ namespace Assembler
     {
         public string name;
         public string opcode;
-        //public string classType;
 
         public Instruction()
         {            
@@ -27,19 +26,10 @@ namespace Assembler
             this.name = name;
         }
 
-        /*public String getClassType()
-        {
-            return this.classType;
-        */
-
         public void setOpcode(String opcode)
         {
             this.opcode = opcode;
         }
 
-        /*public void setClassType(String classType)
-        {
-            this.classType = classType;
-        }*/
     }
 }
