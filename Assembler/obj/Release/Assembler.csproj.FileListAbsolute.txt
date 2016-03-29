@@ -1,0 +1,10 @@
+E:\Facultate\ProiectC#\Assembler\Assembler\bin\Release\Assembler.exe.config
+E:\Facultate\ProiectC#\Assembler\Assembler\bin\Release\Assembler.exe
+E:\Facultate\ProiectC#\Assembler\Assembler\bin\Release\Assembler.pdb
+E:\Facultate\ProiectC#\Assembler\Assembler\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+E:\Facultate\ProiectC#\Assembler\Assembler\bin\Release\Microsoft.VisualBasic.PowerPacks.xml
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Release\Assembler.mainForm.resources
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Release\Assembler.Properties.Resources.resources
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Release\Assembler.csproj.GenerateResource.Cache
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Release\Assembler.exe
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Release\Assembler.pdb

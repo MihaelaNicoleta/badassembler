@@ -9,6 +9,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Assembler
 {
@@ -23,13 +24,10 @@ namespace Assembler
         List<String> assemblyCodeLines = new List<String>();
 
         //not used
-        List<String> instructions = new List<String>();
+        List<Instruction> instructions = new List<Instruction>();
 
-        //the number of instructions for each class
-        int numberOfB1 = 7;
-        int numberOfB2 = 15;
-        int numberOfB3 = 9;
-        int numberOfB4 = 19;
+        //the 01 only instructions
+        List<Instruction> binaryInstructions = new List<Instruction>();
 
         //dictionaries to keep the intruction and its binary codification
         Dictionary<string, string> B1 = new Dictionary<string, string>();
@@ -37,112 +35,37 @@ namespace Assembler
         Dictionary<string, string> B3 = new Dictionary<string, string>();
         Dictionary<string, string> B4 = new Dictionary<string, string>();
 
-        //the number of registers and addressing modes
-        int numberOfRegisters = 16;
-        int numberOfAddressingModes = 4;
-
         //dictionaries for registers and addressing modes
         Dictionary<string, string> registers = new Dictionary<string, string>();
         Dictionary<string, string> addressingModes = new Dictionary<string, string>();
 
+        FileParser fileParser = new FileParser();
+        InstructionHelper instrHelper = new InstructionHelper();
+        //Thread
+        
 
         public mainForm()
         {
             InitializeComponent();
             getDefaultInstructionsRegistersAddressingModes();
-            //parseAssemblyCode();
+            parseAssemblyCode();
 
-        }
-        
-        //read asm file and display output
-        private void showAsmCode(String fileName) {
-            String asmCodeLine;
-
-            StreamReader sr = new StreamReader(fileName);
-            while ((asmCodeLine = sr.ReadLine()) != null)
-            {
-                //this.asmCode.Text += "\n" + asmCodeLine;
-                assemblyCodeLines.Add(asmCodeLine);
-            }
-
-            sr.Close();
-          
-        }
-
-        //read and parse instructions file
-        private void createBinaryInstructionsCodes(String fileName) {
-            String instructionsLine;
-            StreamReader sr = new StreamReader(fileName);
-
-            int ct = 0;
-            while ((instructionsLine = sr.ReadLine()) != null)
-            {
-
-                string[] instr_binaryCode = instructionsLine.Split(';');
-
-                if (ct < numberOfB1)
-                {
-                    B1.Add(instr_binaryCode[0], instr_binaryCode[1]);
-                    ct++;
-                }
-                else {
-                    if (ct < (numberOfB1 + numberOfB2))
-                    {
-                        B2.Add(instr_binaryCode[0], instr_binaryCode[1]);
-                        ct++;
-                    }
-                    else
-                    {
-                        if (ct < (numberOfB1 + numberOfB2 + numberOfB3))
-                        {
-                            B3.Add(instr_binaryCode[0], instr_binaryCode[1]);
-                            ct++;
-                        }
-                        else
-                        {
-                            B4.Add(instr_binaryCode[0], instr_binaryCode[1]);
-                            ct++;
-                        }
-                    }
-                }
-            }
-
-            sr.Close();
-        }
-
-        //read and parse registers/addressing modes file
-        private void createBinaryRegistersAndAddressingModesCodes(String fileName)
-        {
-            String line;
-            StreamReader sr = new StreamReader(fileName);
-
-            int ct = 0;
-            while ((line = sr.ReadLine()) != null)
-            {
-
-                string[] values = line.Split(';');
-
-                if (ct < numberOfRegisters)
-                {
-                    registers.Add(values[0], values[1]);
-                    ct++;
-                }
-                else
-                {                  
-                    addressingModes.Add(values[0], values[1]);
-                    ct++;
-                }
-                    
-            }
-
-            sr.Close();
         }
 
         private void getDefaultInstructionsRegistersAddressingModes()
         {
-            showAsmCode(assemblyCodeFile);
-            createBinaryInstructionsCodes(instructionsFile);
-            createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile);
+            fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
+            fileParser.createBinaryInstructionsCodes(instructionsFile);
+            fileParser.createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile, registers, addressingModes);
+            /*instrHelper.B1 = this.B1;
+            instrHelper.B2 = this.B2;
+            instrHelper.B3 = this.B3;
+            instrHelper.B4 = this.B4;*/
+
+            instrHelper.B1 = fileParser.B1;
+            instrHelper.B2 = fileParser.B2;
+            instrHelper.B3 = fileParser.B3;
+            instrHelper.B4 = fileParser.B4;
         }
 
 
@@ -151,6 +74,7 @@ namespace Assembler
             //pt directive cu punct
             // String pattern = @"\.[a-zA-z]+)";
 
+            Dictionary<String, String> result = new Dictionary<String, String>();
             String pattern = @"([a-zA-z]+\s)";
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
@@ -158,19 +82,190 @@ namespace Assembler
             {
                 if (line.Contains(".DATA") == false && line.Contains(".CODE") == false && line.Contains("END") == false)
                 {
-                    this.asmCode.Text += "\n" + line;
-                    Match m = regex.Match(line);
-                    if (m.Success)
-                    {
-                        Group g = m.Groups[1];
-                        this.asmCode.Text += "\n" + g;
-                    }
+                    //Match m = regex.Match(line);
+                    //if (m.Success)
+                    //{
+                    //Group ginstrName = m.Groups[1];
+                    //String instrName = ginstrName.ToString();
+                    //instrName = Regex.Replace(instrName, @"\s+", "");                        
+                    //Instruction instruction = new Instruction(instrName);
+
+                        String[] values = line.Split(new char[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                        result = instrHelper.getInstructionType(values[0].Trim());
+
+                        if (result != null)
+                        {
+                            switch (result.First().Key)
+                            {
+                                case "B1":
+                                    B1Instruction B1instr = new B1Instruction(result.First().Value);
+                                    binaryInstructions.Add(B1instr);
+
+                                    //source
+                                    List<String> adrRegMAS = getAddressingMode(values[1].Trim());
+
+                                    if ((adrRegMAS != null))
+                                    {
+                                        B1instr.MAS = adrRegMAS[0];
+                                        B1instr.RS = adrRegMAS[1];
+                                        if (adrRegMAS[2] != null)
+                                        {
+                                            B1instr.offsetS = adrRegMAS[2];
+                                        }
+                                    }             
+
+
+                                    //destinstion
+                                    List<String> adrRegMAD = getAddressingMode(values[2].Trim());
+                                    if ((adrRegMAD != null))
+                                    {
+                                        B1instr.MAD = adrRegMAD[0];
+                                        B1instr.RD = adrRegMAD[1];
+                                        if (adrRegMAD[2] != null)
+                                        {
+                                            B1instr.offsetD = adrRegMAD[2];
+                                        }
+                                    }                         
+                                   
+
+                                    break;
+                                case "B2":
+                                    B2Instruction B2instr = new B2Instruction(result.First().Value);
+                                    binaryInstructions.Add(B2instr);                                    
+                                    break;
+                                case "B3":
+                                    B3Instruction B3instr = new B3Instruction(result.First().Value);
+                                    binaryInstructions.Add(B3instr);
+                                    break;
+                                case "B4":
+                                    B4Instruction B4instr = new B4Instruction(result.First().Value);
+                                    binaryInstructions.Add(B4instr);
+                                    break;
+                                default:
+                                    //show error message
+                                    break;
+                            }
+                        }
+                       else
+                        {
+                            //TO DO: Return not an existing instruction
+                            //return null;
+                        } 
+
+                        
+                        //instructions.Add(instruction);
+                        //this.asmCode.Text += "\n" + g;
+                    /*}
                     else {
                         //TO DO: not correct code, try again
                         //check if comment
-                    }
+                    }*/
                 }
             }
+            /*foreach (Instruction instr in binaryInstructions)
+            {
+                this.asmCode.Text += "\n" + instr.ToString();
+            }*/
+        }
+
+        public List<String> getAddressingMode(String operand)
+        {
+            operand = operand.ToUpper();
+
+            List<String> result = new List<String>();
+
+            String indexedPattern = @"[0-9]{1,3}\(R[0-9]{1,2}\)";
+            Regex indexedRegex = new Regex(indexedPattern, RegexOptions.IgnoreCase);
+
+            String indirectPattern = @"\(R[0-9]{1,2}\)";
+            Regex indirectRegex = new Regex(indirectPattern, RegexOptions.IgnoreCase);
+
+            String directPattern = @"R[0-9]{1,2}";
+            Regex directRegex = new Regex(directPattern, RegexOptions.IgnoreCase);
+
+            String immediatPattern = @"[0-9]{1,3}";
+            Regex immediatRegex = new Regex(immediatPattern, RegexOptions.IgnoreCase);
+
+            //check if indexed addressing mode
+            Match m = indexedRegex.Match(operand);
+            if (m.Success)
+            {
+                String[] values = operand.Split(new char[] {'(', ')'});           
+                String offset = getBinaryOffset(values[0]);
+                String register = getRegister(values[1]);
+
+                String addressingMode;
+                addressingModes.TryGetValue("AX", out addressingMode);
+                result.Add(addressingMode);
+                result.Add(register);
+                result.Add(offset);
+                return result;
+            }
+            else
+            {
+                m = indirectRegex.Match(operand);
+                if (m.Success)
+                {
+                    String[] values = operand.Split(new char[] { '(', ')' });
+                    String register = getRegister(values[1]);
+
+                    String addressingMode;
+                    addressingModes.TryGetValue("AI", out addressingMode);
+                    result.Add(addressingMode);
+                    result.Add(register);
+                    return result;
+                }
+                else
+                {
+                    m = directRegex.Match(operand);
+                    if (m.Success)
+                    {
+                        String register = getRegister(operand);
+                        String addressingMode;
+
+                        addressingModes.TryGetValue("AD", out addressingMode);
+                        result.Add(addressingMode);
+                        result.Add(register);
+                        return result;
+                    }
+                    else
+                    {
+                        m = immediatRegex.Match(operand);
+                        if (m.Success)
+                        {
+                            String valImm = getBinaryOffset(operand);
+                            String addressingMode;
+
+                            addressingModes.TryGetValue("AM", out addressingMode);
+                            result.Add(addressingMode);
+                            result.Add(valImm);
+                            return result;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }         
+        }
+     
+        public String getRegister(String registerName)
+        {
+            foreach (KeyValuePair<String, String> temp in registers)
+            {
+                if (temp.Key == registerName)
+                {
+                    return temp.Value;
+                }
+            }
+            return null;
+        }
+
+        public String getBinaryOffset(String offset)
+        {
+            int integerOffset = Convert.ToInt16(offset);
+            return Convert.ToString(integerOffset, 2);
         }
 
 
