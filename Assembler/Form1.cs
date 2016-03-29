@@ -27,7 +27,10 @@ namespace Assembler
         List<Instruction> instructions = new List<Instruction>();
 
         //the 01 only instructions
-        List<Instruction> binaryInstructions = new List<Instruction>();
+        List<Instruction> binaryInstructionss = new List<Instruction>(); //-- not used
+
+        //save instruction and its type
+        Dictionary<Instruction, string> binaryInstructions = new Dictionary<Instruction, string>();
 
         //dictionaries to keep the intruction and its binary codification
         Dictionary<string, string> B1 = new Dictionary<string, string>();
@@ -80,7 +83,7 @@ namespace Assembler
 
             foreach (var line in assemblyCodeLines)
             {
-                if (line.Contains(".DATA") == false && line.Contains(".CODE") == false && line.Contains("END") == false)
+                if (line.ToUpper().Contains(".DATA") == false && line.ToUpper().Contains(".CODE") == false && line.ToUpper().Contains("END") == false)
                 {
                     //Match m = regex.Match(line);
                     //if (m.Success)
@@ -99,47 +102,62 @@ namespace Assembler
                             {
                                 case "B1":
                                     B1Instruction B1instr = new B1Instruction(result.First().Value);
-                                    binaryInstructions.Add(B1instr);
+                                    binaryInstructions.Add(B1instr, result.First().Key);
 
                                     //source
-                                    List<String> adrRegMAS = getAddressingMode(values[1].Trim());
+                                    List<String> b1_adrRegMAS = getAddressingMode(values[1].Trim());
 
-                                    if ((adrRegMAS != null))
-                                    {
-                                        B1instr.MAS = adrRegMAS[0];
-                                        B1instr.RS = adrRegMAS[1];
-                                        if (adrRegMAS[2] != null)
+                                    if ((b1_adrRegMAS != null))
+                                    {                                       
+                                        B1instr.MAS = b1_adrRegMAS[0];
+                                        B1instr.RS = b1_adrRegMAS[1];
+                                        if (b1_adrRegMAS.Count() == 3)
                                         {
-                                            B1instr.offsetS = adrRegMAS[2];
+                                            B1instr.offsetS = b1_adrRegMAS[2];
                                         }
-                                    }             
-
+                                    }  
 
                                     //destinstion
-                                    List<String> adrRegMAD = getAddressingMode(values[2].Trim());
-                                    if ((adrRegMAD != null))
+                                    List<String> b1_adrRegMAD = getAddressingMode(values[2].Trim());
+                                    if ((b1_adrRegMAD != null))
                                     {
-                                        B1instr.MAD = adrRegMAD[0];
-                                        B1instr.RD = adrRegMAD[1];
-                                        if (adrRegMAD[2] != null)
+                                        B1instr.MAD = b1_adrRegMAD[0];
+                                        B1instr.RD = b1_adrRegMAD[1];
+                                        if (b1_adrRegMAD.Count() == 3)
                                         {
-                                            B1instr.offsetD = adrRegMAD[2];
+                                            B1instr.offsetD = b1_adrRegMAD[2];
                                         }
-                                    }                         
-                                   
-
+                                    }       
                                     break;
+
                                 case "B2":
                                     B2Instruction B2instr = new B2Instruction(result.First().Value);
-                                    binaryInstructions.Add(B2instr);                                    
+                                    binaryInstructions.Add(B2instr, result.First().Key);
+
+                                    //destinstion
+                                    List<String> b2_adrRegMAD = getAddressingMode(values[1].Trim());
+                                    if ((b2_adrRegMAD != null))
+                                    {
+                                        B2instr.MAD = b2_adrRegMAD[0];
+                                        B2instr.RD = b2_adrRegMAD[1];
+                                        if (b2_adrRegMAD.Count() == 3)
+                                        {
+                                            B2instr.offsetD = b2_adrRegMAD[2];
+                                        }
+                                    }
                                     break;
+
                                 case "B3":
                                     B3Instruction B3instr = new B3Instruction(result.First().Value);
-                                    binaryInstructions.Add(B3instr);
+                                    binaryInstructions.Add(B3instr, result.First().Key);
+
+                                    //TODO: check intervals
+                                    B3instr.offset = getBinaryOffset(values[1].Trim());
                                     break;
+
                                 case "B4":
                                     B4Instruction B4instr = new B4Instruction(result.First().Value);
-                                    binaryInstructions.Add(B4instr);
+                                    binaryInstructions.Add(B4instr, result.First().Key);
                                     break;
                                 default:
                                     //show error message
@@ -148,7 +166,7 @@ namespace Assembler
                         }
                        else
                         {
-                            //TO DO: Return not an existing instruction
+                            //TODO: Return not an existing instruction
                             //return null;
                         } 
 
@@ -162,9 +180,10 @@ namespace Assembler
                     }*/
                 }
             }
-            /*foreach (Instruction instr in binaryInstructions)
+
+            /*foreach (KeyValuePair<Instruction, string> temp4 in binaryInstructions)
             {
-                this.asmCode.Text += "\n" + instr.ToString();
+                this.asmCode.Text += "\n" + temp4.Value + " " + temp4.Key;               
             }*/
         }
 
@@ -234,10 +253,12 @@ namespace Assembler
                         if (m.Success)
                         {
                             String valImm = getBinaryOffset(operand);
+                            String register = "0000";
                             String addressingMode;
 
                             addressingModes.TryGetValue("AM", out addressingMode);
                             result.Add(addressingMode);
+                            result.Add(register);
                             result.Add(valImm);
                             return result;
                         }

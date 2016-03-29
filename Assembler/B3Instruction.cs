@@ -8,13 +8,16 @@ namespace Assembler
 {
     class B3Instruction : Instruction
     {
+        public String offset;
+
         public B3Instruction(String opcode)
         {
             this.opcode = opcode;
         }
-        /*public override string ToString()
+
+        public override string ToString()
         {
-            return opcode + MAS + RS + MAD + RD;
-        }*/
+            return opcode + offset;
+        }
     }
 }

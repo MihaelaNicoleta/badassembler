@@ -8,14 +8,18 @@ namespace Assembler
 {
     class B2Instruction : Instruction
     {
+        public String MAD;
+        public String RD;
+        public String offsetD;
+
         public B2Instruction(String opcode)
         {
             this.opcode = opcode;
         }
 
-        /*public override string ToString()
+        public override string ToString()
         {
-            return opcode + MAS + RS + MAD + RD;
-        }*/
+            return opcode + MAD + RD;
+        }
     }
 }

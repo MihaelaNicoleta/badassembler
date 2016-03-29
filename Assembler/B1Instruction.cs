@@ -24,27 +24,8 @@ namespace Assembler
 
         public override string ToString()
         {
-            return opcode + MAS + RS + MAD + RD + "\r\n" + offsetS + offsetD;
+            return opcode + MAS + RS + MAD + RD;
         }
 
-        /*public void setMAS(String mas)
-        {
-            this.MAS = mas;
-        }
-
-        public void setMAD(String mad)
-        {
-            this.MAD = mad;
-        }
-
-        public void setRS(String rs)
-        {
-            this.RS = rs;
-        }
-
-        public void setRD(String rd)
-        {
-            this.RD = rd;
-        }*/
     }
 }
