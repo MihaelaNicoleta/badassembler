@@ -33,7 +33,7 @@ namespace Assembler
         //save instruction and its type
         Dictionary<Instruction, string> binaryInstructions = new Dictionary<Instruction, string>();
 
-        //dictionaries to keep the intruction and its binary codification
+        //dictionaries to keep the intruction and its binary  --not used
         Dictionary<string, string> B1 = new Dictionary<string, string>();
         Dictionary<string, string> B2 = new Dictionary<string, string>();
         Dictionary<string, string> B3 = new Dictionary<string, string>();
@@ -62,10 +62,6 @@ namespace Assembler
             fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             fileParser.createBinaryInstructionsCodes(instructionsFile);
             fileParser.createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile, registers, addressingModes);
-            /*instrHelper.B1 = this.B1;
-            instrHelper.B2 = this.B2;
-            instrHelper.B3 = this.B3;
-            instrHelper.B4 = this.B4;*/
 
             instrHelper.B1 = fileParser.B1;
             instrHelper.B2 = fileParser.B2;
@@ -107,7 +103,7 @@ namespace Assembler
                                     binaryInstructions.Add(B1instr, result.First().Key);
 
                                     //source
-                                    List<String> b1_adrRegMAS = getAddressingMode(values[1].Trim());
+                                    List<String> b1_adrRegMAS = instrHelper.getAddressingMode(values[1].Trim());
 
                                     if ((b1_adrRegMAS != null))
                                     {                                       
@@ -120,7 +116,7 @@ namespace Assembler
                                     }  
 
                                     //destinstion
-                                    List<String> b1_adrRegMAD = getAddressingMode(values[2].Trim());
+                                    List<String> b1_adrRegMAD = instrHelper.getAddressingMode(values[2].Trim());
                                     if ((b1_adrRegMAD != null))
                                     {
                                         B1instr.MAD = b1_adrRegMAD[0];
@@ -137,7 +133,7 @@ namespace Assembler
                                     binaryInstructions.Add(B2instr, result.First().Key);
 
                                     //destinstion
-                                    List<String> b2_adrRegMAD = getAddressingMode(values[1].Trim());
+                                    List<String> b2_adrRegMAD = instrHelper.getAddressingMode(values[1].Trim());
                                     if ((b2_adrRegMAD != null))
                                     {
                                         B2instr.MAD = b2_adrRegMAD[0];
@@ -154,7 +150,7 @@ namespace Assembler
                                     binaryInstructions.Add(B3instr, result.First().Key);
 
                                     //TODO: check intervals
-                                    B3instr.offset = getBinaryOffset(values[1].Trim());
+                                    B3instr.offset = instrHelper.getBinaryOffset(values[1].Trim());
                                     break;
 
                                 case "B4":
@@ -189,117 +185,7 @@ namespace Assembler
             }*/
         }
 
-        public List<String> getAddressingMode(String operand)
-        {
-            operand = operand.ToUpper();
-
-            List<String> result = new List<String>();
-
-            String indexedPattern = @"[0-9]{1,3}\(R[0-9]{1,2}\)";
-            Regex indexedRegex = new Regex(indexedPattern, RegexOptions.IgnoreCase);
-
-            String indirectPattern = @"\(R[0-9]{1,2}\)";
-            Regex indirectRegex = new Regex(indirectPattern, RegexOptions.IgnoreCase);
-
-            String directPattern = @"R[0-9]{1,2}";
-            Regex directRegex = new Regex(directPattern, RegexOptions.IgnoreCase);
-
-            String immediatPattern = @"[0-9]{1,3}";
-            Regex immediatRegex = new Regex(immediatPattern, RegexOptions.IgnoreCase);
-
-            //check if indexed addressing mode
-            Match m = indexedRegex.Match(operand);
-            if (m.Success)
-            {
-                String[] values = operand.Split(new char[] {'(', ')'});           
-                String offset = getBinaryOffset(values[0]);
-                String register = getRegister(values[1]);
-
-                String addressingMode;
-                addressingModes.TryGetValue("AX", out addressingMode);
-                result.Add(addressingMode);
-                result.Add(register);
-                result.Add(offset);
-                return result;
-            }
-            else
-            {
-                m = indirectRegex.Match(operand);
-                if (m.Success)
-                {
-                    String[] values = operand.Split(new char[] { '(', ')' });
-                    String register = getRegister(values[1]);
-
-                    String addressingMode;
-                    addressingModes.TryGetValue("AI", out addressingMode);
-                    result.Add(addressingMode);
-                    result.Add(register);
-                    return result;
-                }
-                else
-                {
-                    m = directRegex.Match(operand);
-                    if (m.Success)
-                    {
-                        String register = getRegister(operand);
-                        String addressingMode;
-
-                        addressingModes.TryGetValue("AD", out addressingMode);
-                        result.Add(addressingMode);
-                        result.Add(register);
-                        return result;
-                    }
-                    else
-                    {
-                        m = immediatRegex.Match(operand);
-                        if (m.Success)
-                        {
-                            String valImm = getBinaryOffset(operand);
-                            String register = "0000";
-                            String addressingMode;
-
-                            addressingModes.TryGetValue("AM", out addressingMode);
-                            result.Add(addressingMode);
-                            result.Add(register);
-                            result.Add(valImm);
-                            return result;
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-                }
-            }         
-        }
-     
-        public String getRegister(String registerName)
-        {
-            foreach (KeyValuePair<String, String> temp in registers)
-            {
-                if (temp.Key == registerName)
-                {
-                    return temp.Value;
-                }
-            }
-            return null;
-        }
-
-        public String getBinaryOffset(String offset)
-        {
-            int integerOffset = Convert.ToInt16(offset);
-            var stringOffset = Convert.ToString(integerOffset, 2);
-
-            String zeros = "0";
-            for(int i = 0; i < (15 - stringOffset.Length); i++)
-            {
-                zeros += "0";
-            }
-
-            return zeros + stringOffset;
-        }
-
-
+        
 
     }
 }
