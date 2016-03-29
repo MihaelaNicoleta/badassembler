@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace Assembler
 {
-    class FileParser
+    class FileHelper
     {
         public Dictionary<String, String> B1 = new Dictionary<String, String>();
         public Dictionary<String, String> B2 = new Dictionary<String, String>();
@@ -113,20 +113,6 @@ namespace Assembler
             sr.Close();
         }
 
-        
-
-        /*private Dictionary<String, String> getDictionary(String instrName, Dictionary<String, String> currentInstr, String instrClassName, Dictionary<String, String> classInstructions)
-        {
-                Dictionary<String, String> result = new Dictionary<String, String>();
-
-                if (currentInstr.Key == instrName)
-                {
-                    result.Add(instrClassName, currentInstr.Value); //add classtype and opcode      
-                    return result;
-                }
-            return null;
-
-        }*/
 
     }
 }

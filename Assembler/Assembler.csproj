@@ -53,7 +53,7 @@
     <Compile Include="B2Instruction.cs" />
     <Compile Include="B3Instruction.cs" />
     <Compile Include="B4Instruction.cs" />
-    <Compile Include="FileParser.cs" />
+    <Compile Include="FileHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

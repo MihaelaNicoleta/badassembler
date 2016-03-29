@@ -42,7 +42,7 @@ namespace Assembler
         Dictionary<string, string> registers = new Dictionary<string, string>();
         Dictionary<string, string> addressingModes = new Dictionary<string, string>();
 
-        FileParser fileParser = new FileParser();
+        FileHelper fileParser = new FileHelper();
         InstructionHelper instrHelper = new InstructionHelper();
         //Thread
         
