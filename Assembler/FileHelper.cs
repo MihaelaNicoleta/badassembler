@@ -118,12 +118,9 @@ namespace Assembler
             //write to a test file
             StreamWriter streamWriter = new StreamWriter("output.txt");
            
-            //createa .bin file
+            //create .bin file
             FileStream fileStream = new FileStream(fileName, FileMode.Create);
             BinaryWriter binaryWriter = new BinaryWriter(fileStream);
-
-            //fisIesire.WriteLine(codif);
-            //bw.Write(Convert.ToInt16(codif, 2));
 
             if (instructions != null)
             {
