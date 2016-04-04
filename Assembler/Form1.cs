@@ -67,6 +67,9 @@ namespace Assembler
             instrHelper.B2 = fileParser.B2;
             instrHelper.B3 = fileParser.B3;
             instrHelper.B4 = fileParser.B4;
+
+            instrHelper.registers = registers;
+            instrHelper.addressingModes = addressingModes;
         }
 
 

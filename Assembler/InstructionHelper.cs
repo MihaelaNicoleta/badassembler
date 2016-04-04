@@ -14,8 +14,8 @@ namespace Assembler
         public Dictionary<String, String> B3 = new Dictionary<String, String>();
         public Dictionary<String, String> B4 = new Dictionary<String, String>();
 
-        Dictionary<String, String> registers = new Dictionary<String, String>();
-        Dictionary<String, String> addressingModes = new Dictionary<String, String>();
+        public Dictionary<String, String> registers = new Dictionary<String, String>();
+        public Dictionary<String, String> addressingModes = new Dictionary<String, String>();
 
         public Dictionary<String, String> getInstructionType(String instrName)
         {
