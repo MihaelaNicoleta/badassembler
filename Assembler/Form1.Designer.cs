@@ -89,6 +89,11 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.asmButton = new System.Windows.Forms.Button();
+            this.microcodeButton = new System.Windows.Forms.Button();
+            this.messagesTextBox = new System.Windows.Forms.TextBox();
+            this.assembleButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,6 +103,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.assembleButton);
+            this.panel1.Controls.Add(this.microcodeButton);
+            this.panel1.Controls.Add(this.asmButton);
             this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(195, 122);
@@ -653,16 +661,55 @@
             this.lineShape1.Y1 = 125;
             this.lineShape1.Y2 = 116;
             // 
+            // asmButton
+            // 
+            this.asmButton.Location = new System.Drawing.Point(3, 3);
+            this.asmButton.Name = "asmButton";
+            this.asmButton.Size = new System.Drawing.Size(110, 23);
+            this.asmButton.TabIndex = 0;
+            this.asmButton.Text = "Read asm code";
+            this.asmButton.UseVisualStyleBackColor = true;
+            this.asmButton.Click += new System.EventHandler(this.asmButton_Click);
+            // 
+            // microcodeButton
+            // 
+            this.microcodeButton.Location = new System.Drawing.Point(3, 61);
+            this.microcodeButton.Name = "microcodeButton";
+            this.microcodeButton.Size = new System.Drawing.Size(110, 23);
+            this.microcodeButton.TabIndex = 1;
+            this.microcodeButton.Text = "Open microcode";
+            this.microcodeButton.UseVisualStyleBackColor = true;
+            // 
+            // messagesTextBox
+            // 
+            this.messagesTextBox.Location = new System.Drawing.Point(208, 68);
+            this.messagesTextBox.Multiline = true;
+            this.messagesTextBox.Name = "messagesTextBox";
+            this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
+            this.messagesTextBox.TabIndex = 3;
+            // 
+            // assembleButton
+            // 
+            this.assembleButton.Location = new System.Drawing.Point(3, 32);
+            this.assembleButton.Name = "assembleButton";
+            this.assembleButton.Size = new System.Drawing.Size(110, 23);
+            this.assembleButton.TabIndex = 2;
+            this.assembleButton.Text = "Assemble";
+            this.assembleButton.UseVisualStyleBackColor = true;
+            this.assembleButton.Click += new System.EventHandler(this.assembleButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 658);
+            this.Controls.Add(this.messagesTextBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "mainForm";
             this.Text = "Assembler";
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -670,6 +717,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -735,6 +783,10 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label asmCode;
+        private System.Windows.Forms.Button microcodeButton;
+        private System.Windows.Forms.Button asmButton;
+        private System.Windows.Forms.TextBox messagesTextBox;
+        private System.Windows.Forms.Button assembleButton;
     }
 }
 

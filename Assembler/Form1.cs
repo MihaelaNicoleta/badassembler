@@ -51,15 +51,13 @@ namespace Assembler
         public mainForm()
         {
             InitializeComponent();
-            getDefaultInstructionsRegistersAddressingModes();
-            parseAssemblyCode();
-            fileParser.writeBinaryFile(binaryInstructionsFile, binaryInstructions);
+           
 
         }
 
         private void getDefaultInstructionsRegistersAddressingModes()
         {
-            fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
+            // fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             fileParser.createBinaryInstructionsCodes(instructionsFile);
             fileParser.createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile, registers, addressingModes);
 
@@ -188,7 +186,23 @@ namespace Assembler
             }*/
         }
 
-        
+        private void asmButton_Click(object sender, EventArgs e)
+        {
+            fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
+            foreach(String instruction in assemblyCodeLines)
+            {
+                asmCode.Text += "\n" + instruction;
+            }
 
+        }
+
+        private void assembleButton_Click(object sender, EventArgs e)
+        {
+            getDefaultInstructionsRegistersAddressingModes();
+            parseAssemblyCode();
+            fileParser.writeBinaryFile(binaryInstructionsFile, binaryInstructions);
+
+            messagesTextBox.Text += "\n Assembly process completed";
+        }
     }
 }
