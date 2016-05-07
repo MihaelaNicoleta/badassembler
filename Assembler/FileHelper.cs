@@ -213,5 +213,26 @@ namespace Assembler
 
             binaryWriter.Close();
         }
+
+        public List<UInt64> loadMicrocodeToMPM(String fileName)
+        {
+            List<UInt64> mpm = new List<ulong>();
+
+            FileStream fileStream = new FileStream(fileName, FileMode.Open);
+            if(fileStream != null)
+            {
+                BinaryReader binaryReader = new BinaryReader(fileStream);
+
+                while(binaryReader.PeekChar() != -1)
+                {
+                    Console.WriteLine(binaryReader.ReadUInt64());
+                    mpm.Add(binaryReader.ReadUInt64());
+                }
+                
+            }
+
+            return mpm;
+            
+        }
     }
 }

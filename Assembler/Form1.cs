@@ -55,6 +55,9 @@ namespace Assembler
 
         bool assemblySuccess = true;
 
+        //sequencer vars
+        List<UInt64> MPM = new List<ulong>();
+
         public mainForm()
         {
             InitializeComponent();
@@ -185,11 +188,11 @@ namespace Assembler
 
             if(assemblySuccess == true)
             {
-                messagesTextBox.Text += "\n Assembly process was a great success.";
+                messagesTextBox.Text += "\r\nAssembly process was a great success.";
             }
             else
             {
-                messagesTextBox.Text += "\n Assembly process was a failure.";
+                messagesTextBox.Text += "\r\nAssembly process was a failure.";
             }
             
         }
@@ -198,7 +201,16 @@ namespace Assembler
         {
             microCodeLines = fileParser.readMicrocode(microcodeText);
             fileParser.writeBinaryMicrocode(microcodeBinaryTextFile, microcodeBinaryFile);
-            //microCodeBinaryLines
+            MPM = fileParser.loadMicrocodeToMPM(microcodeBinaryFile);
+
+            if (MPM != null)
+            {
+                messagesTextBox.Text += "\r\nMicrocode loading was a great success.";
+            }
+            else
+            {
+                messagesTextBox.Text += "\r\nMicrocode loading was a failure.";
+            }
         }
     }
 }
