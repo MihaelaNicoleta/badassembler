@@ -20,9 +20,14 @@ namespace Assembler
         String instructionsFile = "codificare_instructiuni.csv";
         String registersAndAddressingModesFile = "registri_moduri_adresare.csv";
         String binaryInstructionsFile = "instructiuni_codificate_binar.bin";
+        String microcodeText = "microcode_text.txt";
+        String microcodeBinaryTextFile = "microcode_binar_textfile.txt";
+        String microcodeBinaryFile = "microcode_binar_binfile.bin";
 
         //given code
         List<String> assemblyCodeLines = new List<String>();
+        List<String> microCodeLines = new List<String>();
+        List<String> microCodeBinaryLines = new List<String>();
 
         //not used
         List<Instruction> instructions = new List<Instruction>();
@@ -46,7 +51,9 @@ namespace Assembler
         FileHelper fileParser = new FileHelper();
         InstructionHelper instrHelper = new InstructionHelper();
         //Thread
-        
+
+
+        bool assemblySuccess = true;
 
         public mainForm()
         {
@@ -73,25 +80,12 @@ namespace Assembler
 
         private void parseAssemblyCode()
         {
-            //pt directive cu punct
-            // String pattern = @"\.[a-zA-z]+)";
-
             Dictionary<String, String> result = new Dictionary<String, String>();
-            String pattern = @"([a-zA-z]+\s)";
-            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-
+          
             foreach (var line in assemblyCodeLines)
             {
                 if (line.ToUpper().Contains(".DATA") == false && line.ToUpper().Contains(".CODE") == false && line.ToUpper().Contains("END") == false)
                 {
-                    //Match m = regex.Match(line);
-                    //if (m.Success)
-                    //{
-                    //Group ginstrName = m.Groups[1];
-                    //String instrName = ginstrName.ToString();
-                    //instrName = Regex.Replace(instrName, @"\s+", "");                        
-                    //Instruction instruction = new Instruction(instrName);
-
                         String[] values = line.Split(new char[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
                         result = instrHelper.getInstructionType(values[0].Trim());
 
@@ -165,25 +159,12 @@ namespace Assembler
                         }
                        else
                         {
+                            assemblySuccess = false;
                             //TODO: Return not an existing instruction
                             //return null;
                         } 
-
-                        
-                        //instructions.Add(instruction);
-                        //this.asmCode.Text += "\n" + g;
-                    /*}
-                    else {
-                        //TO DO: not correct code, try again
-                        //check if comment
-                    }*/
                 }
             }
-
-            /*foreach (KeyValuePair<Instruction, string> temp4 in binaryInstructions)
-            {
-                this.asmCode.Text += "\n" + temp4.Value + " " + temp4.Key;               
-            }*/
         }
 
         private void asmButton_Click(object sender, EventArgs e)
@@ -202,7 +183,22 @@ namespace Assembler
             parseAssemblyCode();
             fileParser.writeBinaryFile(binaryInstructionsFile, binaryInstructions);
 
-            messagesTextBox.Text += "\n Assembly process completed";
+            if(assemblySuccess == true)
+            {
+                messagesTextBox.Text += "\n Assembly process was a great success.";
+            }
+            else
+            {
+                messagesTextBox.Text += "\n Assembly process was a failure.";
+            }
+            
+        }
+
+        private void microcodeButton_Click(object sender, EventArgs e)
+        {
+            microCodeLines = fileParser.readMicrocode(microcodeText);
+            fileParser.writeBinaryMicrocode(microcodeBinaryTextFile, microcodeBinaryFile);
+            //microCodeBinaryLines
         }
     }
 }

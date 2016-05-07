@@ -170,5 +170,48 @@ namespace Assembler
             binaryWriter.Close();
 
         }
+
+        public List<String> readMicrocode(String fileName)
+        {
+            List<String> microcode = new List<String>();
+            String microcodeLine;
+
+            StreamReader sr = new StreamReader(fileName);
+            while ((microcodeLine = sr.ReadLine()) != null)
+            {
+                microcode.Add(microcodeLine);
+            }
+
+            sr.Close();
+
+            return microcode;
+        }
+
+        public void writeBinaryMicrocode(String fileName, String binaryFileName)
+        {           
+            //write to a test file
+            StreamWriter streamWriter = new StreamWriter("output_microcode.txt");
+
+            //create .bin file
+            FileStream fileStream = new FileStream(binaryFileName, FileMode.Create);
+            BinaryWriter binaryWriter = new BinaryWriter(fileStream);
+
+            StreamReader sr = new StreamReader(fileName);
+
+            String microcodeLineString;
+            while ((microcodeLineString = sr.ReadLine()) != null)
+            {
+                streamWriter.WriteLine(microcodeLineString);
+                binaryWriter.Write(Convert.ToInt64(microcodeLineString, 2));
+            }        
+
+            fileStream.Flush();
+            fileStream.Close();
+
+            streamWriter.Flush();
+            streamWriter.Close();
+
+            binaryWriter.Close();
+        }
     }
 }

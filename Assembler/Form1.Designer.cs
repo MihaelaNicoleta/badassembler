@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.assembleButton = new System.Windows.Forms.Button();
+            this.microcodeButton = new System.Windows.Forms.Button();
+            this.asmButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.asmCode = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,10 +92,7 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.asmButton = new System.Windows.Forms.Button();
-            this.microcodeButton = new System.Windows.Forms.Button();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
-            this.assembleButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,6 +111,36 @@
             this.panel1.Size = new System.Drawing.Size(195, 122);
             this.panel1.TabIndex = 0;
             // 
+            // assembleButton
+            // 
+            this.assembleButton.Location = new System.Drawing.Point(3, 32);
+            this.assembleButton.Name = "assembleButton";
+            this.assembleButton.Size = new System.Drawing.Size(110, 23);
+            this.assembleButton.TabIndex = 2;
+            this.assembleButton.Text = "Assemble";
+            this.assembleButton.UseVisualStyleBackColor = true;
+            this.assembleButton.Click += new System.EventHandler(this.assembleButton_Click);
+            // 
+            // microcodeButton
+            // 
+            this.microcodeButton.Location = new System.Drawing.Point(3, 61);
+            this.microcodeButton.Name = "microcodeButton";
+            this.microcodeButton.Size = new System.Drawing.Size(110, 23);
+            this.microcodeButton.TabIndex = 1;
+            this.microcodeButton.Text = "Open microcode";
+            this.microcodeButton.UseVisualStyleBackColor = true;
+            this.microcodeButton.Click += new System.EventHandler(this.microcodeButton_Click);
+            // 
+            // asmButton
+            // 
+            this.asmButton.Location = new System.Drawing.Point(3, 3);
+            this.asmButton.Name = "asmButton";
+            this.asmButton.Size = new System.Drawing.Size(110, 23);
+            this.asmButton.TabIndex = 0;
+            this.asmButton.Text = "Read asm code";
+            this.asmButton.UseVisualStyleBackColor = true;
+            this.asmButton.Click += new System.EventHandler(this.asmButton_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.asmCode);
@@ -123,7 +153,7 @@
             // 
             this.asmCode.Location = new System.Drawing.Point(3, 0);
             this.asmCode.Name = "asmCode";
-            this.asmCode.Size = new System.Drawing.Size(189, 246);
+            this.asmCode.Size = new System.Drawing.Size(189, 361);
             this.asmCode.TabIndex = 3;
             this.asmCode.Text = "ASM CODE";
             // 
@@ -661,25 +691,6 @@
             this.lineShape1.Y1 = 125;
             this.lineShape1.Y2 = 116;
             // 
-            // asmButton
-            // 
-            this.asmButton.Location = new System.Drawing.Point(3, 3);
-            this.asmButton.Name = "asmButton";
-            this.asmButton.Size = new System.Drawing.Size(110, 23);
-            this.asmButton.TabIndex = 0;
-            this.asmButton.Text = "Read asm code";
-            this.asmButton.UseVisualStyleBackColor = true;
-            this.asmButton.Click += new System.EventHandler(this.asmButton_Click);
-            // 
-            // microcodeButton
-            // 
-            this.microcodeButton.Location = new System.Drawing.Point(3, 61);
-            this.microcodeButton.Name = "microcodeButton";
-            this.microcodeButton.Size = new System.Drawing.Size(110, 23);
-            this.microcodeButton.TabIndex = 1;
-            this.microcodeButton.Text = "Open microcode";
-            this.microcodeButton.UseVisualStyleBackColor = true;
-            // 
             // messagesTextBox
             // 
             this.messagesTextBox.Location = new System.Drawing.Point(208, 68);
@@ -687,16 +698,6 @@
             this.messagesTextBox.Name = "messagesTextBox";
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
-            // 
-            // assembleButton
-            // 
-            this.assembleButton.Location = new System.Drawing.Point(3, 32);
-            this.assembleButton.Name = "assembleButton";
-            this.assembleButton.Size = new System.Drawing.Size(110, 23);
-            this.assembleButton.TabIndex = 2;
-            this.assembleButton.Text = "Assemble";
-            this.assembleButton.UseVisualStyleBackColor = true;
-            this.assembleButton.Click += new System.EventHandler(this.assembleButton_Click);
             // 
             // mainForm
             // 
