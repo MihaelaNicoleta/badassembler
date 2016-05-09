@@ -37,6 +37,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.asmCode = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -62,6 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.IR = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MDR = new System.Windows.Forms.Label();
             this.ADR = new System.Windows.Forms.Label();
             this.IVR = new System.Windows.Forms.Label();
@@ -85,65 +91,66 @@
             this.R2 = new System.Windows.Forms.Label();
             this.R1 = new System.Windows.Forms.Label();
             this.R0 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape35 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape34 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape33 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape32 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape31 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape30 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape29 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape28 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape27 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape26 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape25 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape24 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape23 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape22 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape21 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape19 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape20 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape18 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape17 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape16 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape15 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape13 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.rectangleShape24 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape22 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape21 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape20 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape19 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape18 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.RBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.DBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.SBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
-            this.rectangleShape18 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape19 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape20 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape21 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape22 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.rectangleShape24 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape13 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape15 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape16 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape17 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape18 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape20 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape19 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape21 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape22 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape23 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape24 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape25 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape26 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape27 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape28 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape29 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lineShape30 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape31 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape32 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape33 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape34 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape35 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape36 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape37 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape38 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -218,6 +225,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label25);
@@ -277,6 +286,50 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1124, 643);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(16, 304);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(128, 165);
+            this.pictureBox5.TabIndex = 56;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.TabIndex = 55;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(1046, 624);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(37, 13);
+            this.label27.TabIndex = 54;
+            this.label27.Text = "RBUS";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(1084, 196);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(37, 13);
+            this.label26.TabIndex = 53;
+            this.label26.Text = "DBUS";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(1085, 95);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(36, 13);
+            this.label25.TabIndex = 52;
+            this.label25.Text = "SBUS";
             // 
             // label24
             // 
@@ -502,6 +555,15 @@
             this.IR.TabIndex = 27;
             this.IR.Text = "0000000000000000";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Assembler.Properties.Resources.muxR;
+            this.pictureBox3.Location = new System.Drawing.Point(102, 543);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 40);
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            // 
             // MDR
             // 
             this.MDR.Location = new System.Drawing.Point(180, 329);
@@ -686,12 +748,33 @@
             this.R0.TabIndex = 18;
             this.R0.Text = "0000000000000000";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Assembler.Properties.Resources.muxL;
+            this.pictureBox2.Location = new System.Drawing.Point(1007, 547);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 41);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1007, 319);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 52);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape38,
+            this.lineShape37,
+            this.lineShape36,
             this.lineShape35,
             this.lineShape34,
             this.lineShape33,
@@ -743,6 +826,375 @@
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape35
+            // 
+            this.lineShape35.BorderWidth = 3;
+            this.lineShape35.Name = "lineShape35";
+            this.lineShape35.X1 = 1056;
+            this.lineShape35.X2 = 1056;
+            this.lineShape35.Y1 = 575;
+            this.lineShape35.Y2 = 604;
+            // 
+            // lineShape34
+            // 
+            this.lineShape34.BorderWidth = 3;
+            this.lineShape34.Name = "lineShape34";
+            this.lineShape34.X1 = 1056;
+            this.lineShape34.X2 = 1033;
+            this.lineShape34.Y1 = 574;
+            this.lineShape34.Y2 = 574;
+            // 
+            // lineShape33
+            // 
+            this.lineShape33.BorderWidth = 3;
+            this.lineShape33.Name = "lineShape33";
+            this.lineShape33.X1 = 1058;
+            this.lineShape33.X2 = 1035;
+            this.lineShape33.Y1 = 555;
+            this.lineShape33.Y2 = 555;
+            // 
+            // lineShape32
+            // 
+            this.lineShape32.BorderWidth = 3;
+            this.lineShape32.Name = "lineShape32";
+            this.lineShape32.X1 = 1056;
+            this.lineShape32.X2 = 1057;
+            this.lineShape32.Y1 = 367;
+            this.lineShape32.Y2 = 553;
+            // 
+            // lineShape31
+            // 
+            this.lineShape31.BorderWidth = 3;
+            this.lineShape31.Name = "lineShape31";
+            this.lineShape31.X1 = 972;
+            this.lineShape31.X2 = 1015;
+            this.lineShape31.Y1 = 567;
+            this.lineShape31.Y2 = 567;
+            // 
+            // lineShape30
+            // 
+            this.lineShape30.BorderWidth = 3;
+            this.lineShape30.Name = "lineShape30";
+            this.lineShape30.X1 = 972;
+            this.lineShape30.X2 = 972;
+            this.lineShape30.Y1 = 548;
+            this.lineShape30.Y2 = 566;
+            // 
+            // lineShape29
+            // 
+            this.lineShape29.BorderWidth = 3;
+            this.lineShape29.Name = "lineShape29";
+            this.lineShape29.X1 = 100;
+            this.lineShape29.X2 = 16;
+            this.lineShape29.Y1 = 551;
+            this.lineShape29.Y2 = 551;
+            // 
+            // lineShape28
+            // 
+            this.lineShape28.BorderWidth = 3;
+            this.lineShape28.Name = "lineShape28";
+            this.lineShape28.X1 = 82;
+            this.lineShape28.X2 = 82;
+            this.lineShape28.Y1 = 577;
+            this.lineShape28.Y2 = 614;
+            // 
+            // lineShape27
+            // 
+            this.lineShape27.BorderWidth = 3;
+            this.lineShape27.Name = "lineShape27";
+            this.lineShape27.X1 = 98;
+            this.lineShape27.X2 = 81;
+            this.lineShape27.Y1 = 575;
+            this.lineShape27.Y2 = 575;
+            // 
+            // lineShape26
+            // 
+            this.lineShape26.BorderWidth = 3;
+            this.lineShape26.Name = "lineShape26";
+            this.lineShape26.X1 = 186;
+            this.lineShape26.X2 = 186;
+            this.lineShape26.Y1 = 543;
+            this.lineShape26.Y2 = 561;
+            // 
+            // lineShape25
+            // 
+            this.lineShape25.BorderWidth = 3;
+            this.lineShape25.Name = "lineShape25";
+            this.lineShape25.X1 = 126;
+            this.lineShape25.X2 = 185;
+            this.lineShape25.Y1 = 561;
+            this.lineShape25.Y2 = 561;
+            // 
+            // lineShape24
+            // 
+            this.lineShape24.BorderWidth = 3;
+            this.lineShape24.Name = "lineShape24";
+            this.lineShape24.X1 = 741;
+            this.lineShape24.X2 = 741;
+            this.lineShape24.Y1 = 546;
+            this.lineShape24.Y2 = 606;
+            // 
+            // lineShape23
+            // 
+            this.lineShape23.BorderWidth = 3;
+            this.lineShape23.Name = "lineShape23";
+            this.lineShape23.X1 = 537;
+            this.lineShape23.X2 = 537;
+            this.lineShape23.Y1 = 546;
+            this.lineShape23.Y2 = 606;
+            // 
+            // lineShape22
+            // 
+            this.lineShape22.BorderWidth = 3;
+            this.lineShape22.Name = "lineShape22";
+            this.lineShape22.X1 = 467;
+            this.lineShape22.X2 = 467;
+            this.lineShape22.Y1 = 546;
+            this.lineShape22.Y2 = 606;
+            // 
+            // lineShape21
+            // 
+            this.lineShape21.BorderWidth = 3;
+            this.lineShape21.Name = "lineShape21";
+            this.lineShape21.X1 = 395;
+            this.lineShape21.X2 = 395;
+            this.lineShape21.Y1 = 545;
+            this.lineShape21.Y2 = 605;
+            // 
+            // lineShape19
+            // 
+            this.lineShape19.BorderWidth = 3;
+            this.lineShape19.Name = "lineShape19";
+            this.lineShape19.X1 = 325;
+            this.lineShape19.X2 = 325;
+            this.lineShape19.Y1 = 546;
+            this.lineShape19.Y2 = 606;
+            // 
+            // lineShape20
+            // 
+            this.lineShape20.BorderWidth = 3;
+            this.lineShape20.Name = "lineShape20";
+            this.lineShape20.X1 = 253;
+            this.lineShape20.X2 = 253;
+            this.lineShape20.Y1 = 547;
+            this.lineShape20.Y2 = 607;
+            // 
+            // lineShape18
+            // 
+            this.lineShape18.BorderWidth = 3;
+            this.lineShape18.Name = "lineShape18";
+            this.lineShape18.X1 = 1075;
+            this.lineShape18.X2 = 1075;
+            this.lineShape18.Y1 = 227;
+            this.lineShape18.Y2 = 316;
+            // 
+            // lineShape17
+            // 
+            this.lineShape17.BorderWidth = 3;
+            this.lineShape17.Name = "lineShape17";
+            this.lineShape17.X1 = 1023;
+            this.lineShape17.X2 = 1024;
+            this.lineShape17.Y1 = 129;
+            this.lineShape17.Y2 = 315;
+            // 
+            // lineShape16
+            // 
+            this.lineShape16.BorderWidth = 3;
+            this.lineShape16.Name = "lineShape16";
+            this.lineShape16.X1 = 961;
+            this.lineShape16.X2 = 962;
+            this.lineShape16.Y1 = 129;
+            this.lineShape16.Y2 = 315;
+            // 
+            // lineShape15
+            // 
+            this.lineShape15.BorderWidth = 3;
+            this.lineShape15.Name = "lineShape15";
+            this.lineShape15.X1 = 609;
+            this.lineShape15.X2 = 610;
+            this.lineShape15.Y1 = 129;
+            this.lineShape15.Y2 = 315;
+            // 
+            // lineShape14
+            // 
+            this.lineShape14.BorderWidth = 3;
+            this.lineShape14.Name = "lineShape14";
+            this.lineShape14.X1 = 522;
+            this.lineShape14.X2 = 523;
+            this.lineShape14.Y1 = 130;
+            this.lineShape14.Y2 = 316;
+            // 
+            // lineShape13
+            // 
+            this.lineShape13.BorderWidth = 3;
+            this.lineShape13.Name = "lineShape13";
+            this.lineShape13.X1 = 456;
+            this.lineShape13.X2 = 457;
+            this.lineShape13.Y1 = 130;
+            this.lineShape13.Y2 = 316;
+            // 
+            // lineShape12
+            // 
+            this.lineShape12.BorderWidth = 3;
+            this.lineShape12.Name = "lineShape12";
+            this.lineShape12.X1 = 381;
+            this.lineShape12.X2 = 382;
+            this.lineShape12.Y1 = 129;
+            this.lineShape12.Y2 = 315;
+            // 
+            // lineShape11
+            // 
+            this.lineShape11.BorderWidth = 3;
+            this.lineShape11.Name = "lineShape11";
+            this.lineShape11.X1 = 310;
+            this.lineShape11.X2 = 311;
+            this.lineShape11.Y1 = 131;
+            this.lineShape11.Y2 = 317;
+            // 
+            // lineShape10
+            // 
+            this.lineShape10.BorderWidth = 3;
+            this.lineShape10.Name = "lineShape10";
+            this.lineShape10.X1 = 240;
+            this.lineShape10.X2 = 241;
+            this.lineShape10.Y1 = 131;
+            this.lineShape10.Y2 = 317;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.BorderWidth = 3;
+            this.lineShape9.Name = "lineShape9";
+            this.lineShape9.X1 = 170;
+            this.lineShape9.X2 = 171;
+            this.lineShape9.Y1 = 130;
+            this.lineShape9.Y2 = 316;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.BorderWidth = 3;
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 978;
+            this.lineShape8.X2 = 978;
+            this.lineShape8.Y1 = 230;
+            this.lineShape8.Y2 = 319;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.BorderWidth = 3;
+            this.lineShape7.Name = "lineShape7";
+            this.lineShape7.X1 = 771;
+            this.lineShape7.X2 = 771;
+            this.lineShape7.Y1 = 228;
+            this.lineShape7.Y2 = 317;
+            // 
+            // rectangleShape2
+            // 
+            this.rectangleShape2.Location = new System.Drawing.Point(572, 321);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(350, 225);
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.BorderWidth = 3;
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 546;
+            this.lineShape6.X2 = 546;
+            this.lineShape6.Y1 = 229;
+            this.lineShape6.Y2 = 318;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderWidth = 3;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 476;
+            this.lineShape5.X2 = 476;
+            this.lineShape5.Y1 = 229;
+            this.lineShape5.Y2 = 318;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderWidth = 3;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 404;
+            this.lineShape4.X2 = 404;
+            this.lineShape4.Y1 = 228;
+            this.lineShape4.Y2 = 317;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderWidth = 3;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 333;
+            this.lineShape3.X2 = 333;
+            this.lineShape3.Y1 = 227;
+            this.lineShape3.Y2 = 316;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderWidth = 3;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 266;
+            this.lineShape2.X2 = 266;
+            this.lineShape2.Y1 = 228;
+            this.lineShape2.Y2 = 317;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderWidth = 3;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 200;
+            this.lineShape1.X2 = 200;
+            this.lineShape1.Y1 = 227;
+            this.lineShape1.Y2 = 316;
+            // 
+            // rectangleShape24
+            // 
+            this.rectangleShape24.Location = new System.Drawing.Point(74, 43);
+            this.rectangleShape24.Name = "rectangleShape24";
+            this.rectangleShape24.Size = new System.Drawing.Size(113, 24);
+            // 
+            // rectangleShape23
+            // 
+            this.rectangleShape23.Location = new System.Drawing.Point(169, 320);
+            this.rectangleShape23.Name = "rectangleShape23";
+            this.rectangleShape23.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape22
+            // 
+            this.rectangleShape22.Location = new System.Drawing.Point(236, 321);
+            this.rectangleShape22.Name = "rectangleShape22";
+            this.rectangleShape22.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape21
+            // 
+            this.rectangleShape21.Location = new System.Drawing.Point(307, 319);
+            this.rectangleShape21.Name = "rectangleShape21";
+            this.rectangleShape21.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape20
+            // 
+            this.rectangleShape20.Location = new System.Drawing.Point(377, 319);
+            this.rectangleShape20.Name = "rectangleShape20";
+            this.rectangleShape20.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape1
+            // 
+            this.rectangleShape1.Location = new System.Drawing.Point(449, 321);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape19
+            // 
+            this.rectangleShape19.Location = new System.Drawing.Point(519, 321);
+            this.rectangleShape19.Name = "rectangleShape19";
+            this.rectangleShape19.Size = new System.Drawing.Size(34, 225);
+            // 
+            // rectangleShape18
+            // 
+            this.rectangleShape18.Location = new System.Drawing.Point(958, 323);
+            this.rectangleShape18.Name = "rectangleShape18";
+            this.rectangleShape18.Size = new System.Drawing.Size(25, 225);
+            // 
             // RBUS
             // 
             this.RBUS.BorderWidth = 10;
@@ -778,428 +1230,32 @@
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
             // 
-            // rectangleShape18
-            // 
-            this.rectangleShape18.Location = new System.Drawing.Point(958, 323);
-            this.rectangleShape18.Name = "rectangleShape18";
-            this.rectangleShape18.Size = new System.Drawing.Size(25, 225);
-            // 
-            // rectangleShape19
-            // 
-            this.rectangleShape19.Location = new System.Drawing.Point(519, 321);
-            this.rectangleShape19.Name = "rectangleShape19";
-            this.rectangleShape19.Size = new System.Drawing.Size(34, 225);
-            // 
-            // rectangleShape1
-            // 
-            this.rectangleShape1.Location = new System.Drawing.Point(449, 321);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(34, 225);
-            // 
-            // rectangleShape20
-            // 
-            this.rectangleShape20.Location = new System.Drawing.Point(377, 319);
-            this.rectangleShape20.Name = "rectangleShape20";
-            this.rectangleShape20.Size = new System.Drawing.Size(34, 225);
-            // 
-            // rectangleShape21
-            // 
-            this.rectangleShape21.Location = new System.Drawing.Point(307, 319);
-            this.rectangleShape21.Name = "rectangleShape21";
-            this.rectangleShape21.Size = new System.Drawing.Size(34, 225);
-            // 
-            // rectangleShape22
-            // 
-            this.rectangleShape22.Location = new System.Drawing.Point(236, 321);
-            this.rectangleShape22.Name = "rectangleShape22";
-            this.rectangleShape22.Size = new System.Drawing.Size(34, 225);
-            // 
-            // rectangleShape23
-            // 
-            this.rectangleShape23.Location = new System.Drawing.Point(169, 320);
-            this.rectangleShape23.Name = "rectangleShape23";
-            this.rectangleShape23.Size = new System.Drawing.Size(34, 225);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(1085, 95);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(36, 13);
-            this.label25.TabIndex = 52;
-            this.label25.Text = "SBUS";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1084, 196);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 13);
-            this.label26.TabIndex = 53;
-            this.label26.Text = "DBUS";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1046, 624);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(37, 13);
-            this.label27.TabIndex = 54;
-            this.label27.Text = "RBUS";
-            // 
-            // rectangleShape24
-            // 
-            this.rectangleShape24.Location = new System.Drawing.Point(74, 43);
-            this.rectangleShape24.Name = "rectangleShape24";
-            this.rectangleShape24.Size = new System.Drawing.Size(113, 24);
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderWidth = 3;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 200;
-            this.lineShape1.X2 = 200;
-            this.lineShape1.Y1 = 227;
-            this.lineShape1.Y2 = 316;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderWidth = 3;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 266;
-            this.lineShape2.X2 = 266;
-            this.lineShape2.Y1 = 228;
-            this.lineShape2.Y2 = 317;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderWidth = 3;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 333;
-            this.lineShape3.X2 = 333;
-            this.lineShape3.Y1 = 227;
-            this.lineShape3.Y2 = 316;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderWidth = 3;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 404;
-            this.lineShape4.X2 = 404;
-            this.lineShape4.Y1 = 228;
-            this.lineShape4.Y2 = 317;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.BorderWidth = 3;
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 476;
-            this.lineShape5.X2 = 476;
-            this.lineShape5.Y1 = 229;
-            this.lineShape5.Y2 = 318;
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.BorderWidth = 3;
-            this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 546;
-            this.lineShape6.X2 = 546;
-            this.lineShape6.Y1 = 229;
-            this.lineShape6.Y2 = 318;
-            // 
-            // rectangleShape2
-            // 
-            this.rectangleShape2.Location = new System.Drawing.Point(572, 321);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(350, 225);
-            // 
-            // lineShape7
-            // 
-            this.lineShape7.BorderWidth = 3;
-            this.lineShape7.Name = "lineShape7";
-            this.lineShape7.X1 = 771;
-            this.lineShape7.X2 = 771;
-            this.lineShape7.Y1 = 228;
-            this.lineShape7.Y2 = 317;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.BorderWidth = 3;
-            this.lineShape8.Name = "lineShape8";
-            this.lineShape8.X1 = 978;
-            this.lineShape8.X2 = 978;
-            this.lineShape8.Y1 = 230;
-            this.lineShape8.Y2 = 319;
-            // 
-            // lineShape9
-            // 
-            this.lineShape9.BorderWidth = 3;
-            this.lineShape9.Name = "lineShape9";
-            this.lineShape9.X1 = 170;
-            this.lineShape9.X2 = 171;
-            this.lineShape9.Y1 = 130;
-            this.lineShape9.Y2 = 316;
-            // 
-            // lineShape10
-            // 
-            this.lineShape10.BorderWidth = 3;
-            this.lineShape10.Name = "lineShape10";
-            this.lineShape10.X1 = 240;
-            this.lineShape10.X2 = 241;
-            this.lineShape10.Y1 = 131;
-            this.lineShape10.Y2 = 317;
-            // 
-            // lineShape11
-            // 
-            this.lineShape11.BorderWidth = 3;
-            this.lineShape11.Name = "lineShape11";
-            this.lineShape11.X1 = 310;
-            this.lineShape11.X2 = 311;
-            this.lineShape11.Y1 = 131;
-            this.lineShape11.Y2 = 317;
-            // 
-            // lineShape12
-            // 
-            this.lineShape12.BorderWidth = 3;
-            this.lineShape12.Name = "lineShape12";
-            this.lineShape12.X1 = 381;
-            this.lineShape12.X2 = 382;
-            this.lineShape12.Y1 = 129;
-            this.lineShape12.Y2 = 315;
-            // 
-            // lineShape13
-            // 
-            this.lineShape13.BorderWidth = 3;
-            this.lineShape13.Name = "lineShape13";
-            this.lineShape13.X1 = 456;
-            this.lineShape13.X2 = 457;
-            this.lineShape13.Y1 = 130;
-            this.lineShape13.Y2 = 316;
-            // 
-            // lineShape14
-            // 
-            this.lineShape14.BorderWidth = 3;
-            this.lineShape14.Name = "lineShape14";
-            this.lineShape14.X1 = 522;
-            this.lineShape14.X2 = 523;
-            this.lineShape14.Y1 = 130;
-            this.lineShape14.Y2 = 316;
-            // 
-            // lineShape15
-            // 
-            this.lineShape15.BorderWidth = 3;
-            this.lineShape15.Name = "lineShape15";
-            this.lineShape15.X1 = 609;
-            this.lineShape15.X2 = 610;
-            this.lineShape15.Y1 = 129;
-            this.lineShape15.Y2 = 315;
-            // 
-            // lineShape16
-            // 
-            this.lineShape16.BorderWidth = 3;
-            this.lineShape16.Name = "lineShape16";
-            this.lineShape16.X1 = 961;
-            this.lineShape16.X2 = 962;
-            this.lineShape16.Y1 = 129;
-            this.lineShape16.Y2 = 315;
-            // 
-            // lineShape17
-            // 
-            this.lineShape17.BorderWidth = 3;
-            this.lineShape17.Name = "lineShape17";
-            this.lineShape17.X1 = 1023;
-            this.lineShape17.X2 = 1024;
-            this.lineShape17.Y1 = 129;
-            this.lineShape17.Y2 = 315;
-            // 
-            // lineShape18
-            // 
-            this.lineShape18.BorderWidth = 3;
-            this.lineShape18.Name = "lineShape18";
-            this.lineShape18.X1 = 1075;
-            this.lineShape18.X2 = 1075;
-            this.lineShape18.Y1 = 227;
-            this.lineShape18.Y2 = 316;
-            // 
-            // lineShape20
-            // 
-            this.lineShape20.BorderWidth = 3;
-            this.lineShape20.Name = "lineShape20";
-            this.lineShape20.X1 = 253;
-            this.lineShape20.X2 = 253;
-            this.lineShape20.Y1 = 547;
-            this.lineShape20.Y2 = 607;
-            // 
-            // lineShape19
-            // 
-            this.lineShape19.BorderWidth = 3;
-            this.lineShape19.Name = "lineShape19";
-            this.lineShape19.X1 = 325;
-            this.lineShape19.X2 = 325;
-            this.lineShape19.Y1 = 546;
-            this.lineShape19.Y2 = 606;
-            // 
-            // lineShape21
-            // 
-            this.lineShape21.BorderWidth = 3;
-            this.lineShape21.Name = "lineShape21";
-            this.lineShape21.X1 = 395;
-            this.lineShape21.X2 = 395;
-            this.lineShape21.Y1 = 545;
-            this.lineShape21.Y2 = 605;
-            // 
-            // lineShape22
-            // 
-            this.lineShape22.BorderWidth = 3;
-            this.lineShape22.Name = "lineShape22";
-            this.lineShape22.X1 = 467;
-            this.lineShape22.X2 = 467;
-            this.lineShape22.Y1 = 546;
-            this.lineShape22.Y2 = 606;
-            // 
-            // lineShape23
-            // 
-            this.lineShape23.BorderWidth = 3;
-            this.lineShape23.Name = "lineShape23";
-            this.lineShape23.X1 = 537;
-            this.lineShape23.X2 = 537;
-            this.lineShape23.Y1 = 546;
-            this.lineShape23.Y2 = 606;
-            // 
-            // lineShape24
-            // 
-            this.lineShape24.BorderWidth = 3;
-            this.lineShape24.Name = "lineShape24";
-            this.lineShape24.X1 = 741;
-            this.lineShape24.X2 = 741;
-            this.lineShape24.Y1 = 546;
-            this.lineShape24.Y2 = 606;
-            // 
-            // lineShape25
-            // 
-            this.lineShape25.BorderWidth = 3;
-            this.lineShape25.Name = "lineShape25";
-            this.lineShape25.X1 = 126;
-            this.lineShape25.X2 = 185;
-            this.lineShape25.Y1 = 561;
-            this.lineShape25.Y2 = 561;
-            // 
-            // lineShape26
-            // 
-            this.lineShape26.BorderWidth = 3;
-            this.lineShape26.Name = "lineShape26";
-            this.lineShape26.X1 = 186;
-            this.lineShape26.X2 = 186;
-            this.lineShape26.Y1 = 543;
-            this.lineShape26.Y2 = 561;
-            // 
-            // lineShape27
-            // 
-            this.lineShape27.BorderWidth = 3;
-            this.lineShape27.Name = "lineShape27";
-            this.lineShape27.X1 = 98;
-            this.lineShape27.X2 = 81;
-            this.lineShape27.Y1 = 575;
-            this.lineShape27.Y2 = 575;
-            // 
-            // lineShape28
-            // 
-            this.lineShape28.BorderWidth = 3;
-            this.lineShape28.Name = "lineShape28";
-            this.lineShape28.X1 = 82;
-            this.lineShape28.X2 = 82;
-            this.lineShape28.Y1 = 577;
-            this.lineShape28.Y2 = 614;
-            // 
-            // lineShape29
-            // 
-            this.lineShape29.BorderWidth = 3;
-            this.lineShape29.Name = "lineShape29";
-            this.lineShape29.X1 = 100;
-            this.lineShape29.X2 = 16;
-            this.lineShape29.Y1 = 551;
-            this.lineShape29.Y2 = 551;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Assembler.Properties.Resources.muxR;
-            this.pictureBox3.Location = new System.Drawing.Point(102, 543);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 40);
-            this.pictureBox3.TabIndex = 26;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Assembler.Properties.Resources.muxL;
-            this.pictureBox2.Location = new System.Drawing.Point(1007, 547);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 41);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1007, 319);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 52);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lineShape30
-            // 
-            this.lineShape30.BorderWidth = 3;
-            this.lineShape30.Name = "lineShape30";
-            this.lineShape30.X1 = 972;
-            this.lineShape30.X2 = 972;
-            this.lineShape30.Y1 = 548;
-            this.lineShape30.Y2 = 566;
-            // 
-            // lineShape31
-            // 
-            this.lineShape31.BorderWidth = 3;
-            this.lineShape31.Name = "lineShape31";
-            this.lineShape31.X1 = 972;
-            this.lineShape31.X2 = 1015;
-            this.lineShape31.Y1 = 567;
-            this.lineShape31.Y2 = 567;
-            // 
-            // lineShape32
-            // 
-            this.lineShape32.BorderWidth = 3;
-            this.lineShape32.Name = "lineShape32";
-            this.lineShape32.X1 = 1056;
-            this.lineShape32.X2 = 1057;
-            this.lineShape32.Y1 = 367;
-            this.lineShape32.Y2 = 553;
-            // 
-            // lineShape33
-            // 
-            this.lineShape33.BorderWidth = 3;
-            this.lineShape33.Name = "lineShape33";
-            this.lineShape33.X1 = 1058;
-            this.lineShape33.X2 = 1035;
-            this.lineShape33.Y1 = 555;
-            this.lineShape33.Y2 = 555;
-            // 
-            // lineShape34
-            // 
-            this.lineShape34.BorderWidth = 3;
-            this.lineShape34.Name = "lineShape34";
-            this.lineShape34.X1 = 1056;
-            this.lineShape34.X2 = 1033;
-            this.lineShape34.Y1 = 574;
-            this.lineShape34.Y2 = 574;
-            // 
-            // lineShape35
-            // 
-            this.lineShape35.BorderWidth = 3;
-            this.lineShape35.Name = "lineShape35";
-            this.lineShape35.X1 = 1056;
-            this.lineShape35.X2 = 1056;
-            this.lineShape35.Y1 = 575;
-            this.lineShape35.Y2 = 604;
+            // lineShape36
+            // 
+            this.lineShape36.BorderWidth = 3;
+            this.lineShape36.Name = "lineShape36";
+            this.lineShape36.X1 = 154;
+            this.lineShape36.X2 = 155;
+            this.lineShape36.Y1 = 246;
+            this.lineShape36.Y2 = 386;
+            // 
+            // lineShape37
+            // 
+            this.lineShape37.BorderWidth = 3;
+            this.lineShape37.Name = "lineShape37";
+            this.lineShape37.X1 = 156;
+            this.lineShape37.X2 = 139;
+            this.lineShape37.Y1 = 386;
+            this.lineShape37.Y2 = 386;
+            // 
+            // lineShape38
+            // 
+            this.lineShape38.BorderWidth = 3;
+            this.lineShape38.Name = "lineShape38";
+            this.lineShape38.X1 = 27;
+            this.lineShape38.X2 = 4;
+            this.lineShape38.Y1 = 383;
+            this.lineShape38.Y2 = 383;
             // 
             // mainForm
             // 
@@ -1216,6 +1272,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1338,6 +1396,11 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape32;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape31;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape30;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape36;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape37;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape38;
     }
 }
 

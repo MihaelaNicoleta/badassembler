@@ -124,13 +124,16 @@
   <data name="muxR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muxR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mux" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
