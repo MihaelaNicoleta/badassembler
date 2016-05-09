@@ -225,7 +225,6 @@ namespace Assembler
 
                 while(binaryReader.PeekChar() != -1)
                 {
-                    Console.WriteLine(binaryReader.ReadUInt64());
                     mpm.Add(binaryReader.ReadUInt64());
                 }
                 

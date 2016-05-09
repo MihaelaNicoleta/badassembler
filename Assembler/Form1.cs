@@ -50,6 +50,8 @@ namespace Assembler
 
         FileHelper fileParser = new FileHelper();
         InstructionHelper instrHelper = new InstructionHelper();
+        Sequencer sequencer = new Sequencer();
+
         //Thread
 
 
@@ -188,11 +190,11 @@ namespace Assembler
 
             if(assemblySuccess == true)
             {
-                messagesTextBox.Text += "\r\nAssembly process was a great success.";
+                messagesTextBox.Text += "Assembly process was a great success.\r\n";
             }
             else
             {
-                messagesTextBox.Text += "\r\nAssembly process was a failure.";
+                messagesTextBox.Text += "Assembly process was a failure.\r\n";
             }
             
         }
@@ -205,12 +207,17 @@ namespace Assembler
 
             if (MPM != null)
             {
-                messagesTextBox.Text += "\r\nMicrocode loading was a great success.";
+                messagesTextBox.Text += "Microcode loading was a great success.\r\n";
             }
             else
             {
-                messagesTextBox.Text += "\r\nMicrocode loading was a failure.";
+                messagesTextBox.Text += "Microcode loading was a failure.\r\n";
             }
+        }
+
+        private void runButton_Click(object sender, EventArgs e)
+        {
+            sequencer.runSimulation();
         }
     }
 }
