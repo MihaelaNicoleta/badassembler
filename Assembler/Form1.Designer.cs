@@ -196,6 +196,8 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
+            this.lineShape53 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape54 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -417,7 +419,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(51, 47);
+            this.label23.Location = new System.Drawing.Point(51, 37);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(18, 13);
             this.label23.TabIndex = 50;
@@ -846,6 +848,8 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape54,
+            this.lineShape53,
             this.lineShape52,
             this.lineShape51,
             this.lineShape50,
@@ -1798,6 +1802,24 @@
             this.label61.TabIndex = 90;
             this.label61.Text = "Pd0d";
             // 
+            // lineShape53
+            // 
+            this.lineShape53.BorderWidth = 3;
+            this.lineShape53.Name = "lineShape53";
+            this.lineShape53.X1 = 7;
+            this.lineShape53.X2 = 8;
+            this.lineShape53.Y1 = 56;
+            this.lineShape53.Y2 = 386;
+            // 
+            // lineShape54
+            // 
+            this.lineShape54.BorderWidth = 3;
+            this.lineShape54.Name = "lineShape54";
+            this.lineShape54.X1 = 73;
+            this.lineShape54.X2 = 8;
+            this.lineShape54.Y1 = 57;
+            this.lineShape54.Y2 = 57;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1991,6 +2013,8 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label58;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape54;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape53;
     }
 }
 
