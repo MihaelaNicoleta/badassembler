@@ -314,5 +314,53 @@ namespace Assembler
             myForm.flags.ForeColor = changeColor;
         }
 
+        public void plusSP()
+        {
+            myForm.SP.ForeColor = changeColor;
+        }
+
+        public void minusSP()
+        {
+            myForm.SP.ForeColor = changeColor;
+        }
+
+        public void plusPC()
+        {
+            myForm.PC.ForeColor = changeColor;
+        }
+
+        public void IFCH()
+        {
+            myForm.ADRLine1.BorderColor = changeColor;
+            myForm.ADRLine2.BorderColor = changeColor;
+            myForm.DataOUTLine4.BorderColor = changeColor;
+            myForm.DataOUTLine5.BorderColor = changeColor;
+            myForm.IR.ForeColor = changeColor;
+        }
+
+        public void Read()
+        {
+            myForm.PdADRs.BorderColor = changeColor;
+            myForm.ALUDLine.BorderColor = changeColor;
+            myForm.ALUDLine.BorderColor = changeColor;
+            myForm.DataOUTLine1.BorderColor = changeColor;
+            myForm.DataOUTLine2.BorderColor = changeColor;
+            myForm.DataOUTLine3.BorderColor = changeColor;
+            myForm.PmMDR.BorderColor = changeColor;
+            myForm.PmMDR1.BorderColor = changeColor;
+            myForm.MDR.ForeColor = changeColor;
+        }
+
+        public void Write()
+        {
+            myForm.PdADRs.BorderColor = changeColor;
+            myForm.ALUDLine.BorderColor = changeColor;
+            myForm.ALUDLine.BorderColor = changeColor;
+            myForm.PdMDRs.BorderColor = changeColor;
+            myForm.MDRLine1.BorderColor = changeColor;
+            myForm.MDRLine2.BorderColor = changeColor;
+            myForm.MDRLine3.BorderColor = changeColor;
+        }
+
     }
 }

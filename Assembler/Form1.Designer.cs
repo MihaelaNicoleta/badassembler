@@ -127,8 +127,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape54 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape53 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.DataOUTLine5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.DataOUTLine4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pd0d = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pd0s = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pdminus1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -138,24 +138,24 @@
             this.oneShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.PdIRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdIRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape46 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape45 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape44 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape43 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.DataOUTLine2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.MDRLine1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ADRLine2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ADRLine1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape38 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape37 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape36 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.DataOUTLine1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.MDRLine3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.MDRLine2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmFLAG = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmFLAG1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.ALURLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.muxFlagLine1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.muxFlagLine2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape29 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.DataOUTLine3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape26 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -679,6 +679,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.Image = global::Assembler.Properties.Resources.memory;
             this.pictureBox5.Location = new System.Drawing.Point(16, 304);
             this.pictureBox5.Name = "pictureBox5";
@@ -1154,8 +1155,8 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape54,
-            this.lineShape53,
+            this.DataOUTLine5,
+            this.DataOUTLine4,
             this.Pd0d,
             this.Pd0s,
             this.Pdminus1,
@@ -1165,24 +1166,24 @@
             this.oneShape,
             this.PdIRs,
             this.PdIRd,
-            this.lineShape46,
-            this.lineShape45,
-            this.lineShape44,
-            this.lineShape43,
+            this.DataOUTLine2,
+            this.MDRLine1,
+            this.ADRLine2,
+            this.ADRLine1,
             this.PdCond4,
             this.PdCond3,
             this.PdCond1,
             this.PdCond2,
-            this.lineShape38,
-            this.lineShape37,
-            this.lineShape36,
+            this.DataOUTLine1,
+            this.MDRLine3,
+            this.MDRLine2,
             this.PmFLAG,
             this.PmFLAG1,
             this.PdCond5,
             this.ALURLine,
             this.muxFlagLine1,
             this.muxFlagLine2,
-            this.lineShape29,
+            this.DataOUTLine3,
             this.PmMDR,
             this.PmMDR1,
             this.lineShape26,
@@ -1227,23 +1228,23 @@
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape54
+            // DataOUTLine5
             // 
-            this.lineShape54.BorderWidth = 3;
-            this.lineShape54.Name = "lineShape54";
-            this.lineShape54.X1 = 73;
-            this.lineShape54.X2 = 8;
-            this.lineShape54.Y1 = 57;
-            this.lineShape54.Y2 = 57;
+            this.DataOUTLine5.BorderWidth = 3;
+            this.DataOUTLine5.Name = "DataOUTLine5";
+            this.DataOUTLine5.X1 = 73;
+            this.DataOUTLine5.X2 = 8;
+            this.DataOUTLine5.Y1 = 57;
+            this.DataOUTLine5.Y2 = 57;
             // 
-            // lineShape53
+            // DataOUTLine4
             // 
-            this.lineShape53.BorderWidth = 3;
-            this.lineShape53.Name = "lineShape53";
-            this.lineShape53.X1 = 7;
-            this.lineShape53.X2 = 8;
-            this.lineShape53.Y1 = 56;
-            this.lineShape53.Y2 = 386;
+            this.DataOUTLine4.BorderWidth = 3;
+            this.DataOUTLine4.Name = "DataOUTLine4";
+            this.DataOUTLine4.X1 = 7;
+            this.DataOUTLine4.X2 = 8;
+            this.DataOUTLine4.Y1 = 56;
+            this.DataOUTLine4.Y2 = 386;
             // 
             // Pd0d
             // 
@@ -1317,41 +1318,41 @@
             this.PdIRd.Y1 = 66;
             this.PdIRd.Y2 = 212;
             // 
-            // lineShape46
+            // DataOUTLine2
             // 
-            this.lineShape46.BorderWidth = 3;
-            this.lineShape46.Name = "lineShape46";
-            this.lineShape46.X1 = 7;
-            this.lineShape46.X2 = 8;
-            this.lineShape46.Y1 = 382;
-            this.lineShape46.Y2 = 550;
+            this.DataOUTLine2.BorderWidth = 3;
+            this.DataOUTLine2.Name = "DataOUTLine2";
+            this.DataOUTLine2.X1 = 7;
+            this.DataOUTLine2.X2 = 8;
+            this.DataOUTLine2.Y1 = 382;
+            this.DataOUTLine2.Y2 = 550;
             // 
-            // lineShape45
+            // MDRLine1
             // 
-            this.lineShape45.BorderWidth = 3;
-            this.lineShape45.Name = "lineShape45";
-            this.lineShape45.X1 = 154;
-            this.lineShape45.X2 = 201;
-            this.lineShape45.Y1 = 248;
-            this.lineShape45.Y2 = 248;
+            this.MDRLine1.BorderWidth = 3;
+            this.MDRLine1.Name = "MDRLine1";
+            this.MDRLine1.X1 = 154;
+            this.MDRLine1.X2 = 201;
+            this.MDRLine1.Y1 = 248;
+            this.MDRLine1.Y2 = 248;
             // 
-            // lineShape44
+            // ADRLine2
             // 
-            this.lineShape44.BorderWidth = 3;
-            this.lineShape44.Name = "lineShape44";
-            this.lineShape44.X1 = 45;
-            this.lineShape44.X2 = 46;
-            this.lineShape44.Y1 = 286;
-            this.lineShape44.Y2 = 307;
+            this.ADRLine2.BorderWidth = 3;
+            this.ADRLine2.Name = "ADRLine2";
+            this.ADRLine2.X1 = 45;
+            this.ADRLine2.X2 = 46;
+            this.ADRLine2.Y1 = 286;
+            this.ADRLine2.Y2 = 307;
             // 
-            // lineShape43
+            // ADRLine1
             // 
-            this.lineShape43.BorderWidth = 3;
-            this.lineShape43.Name = "lineShape43";
-            this.lineShape43.X1 = 241;
-            this.lineShape43.X2 = 46;
-            this.lineShape43.Y1 = 287;
-            this.lineShape43.Y2 = 287;
+            this.ADRLine1.BorderWidth = 3;
+            this.ADRLine1.Name = "ADRLine1";
+            this.ADRLine1.X1 = 241;
+            this.ADRLine1.X2 = 46;
+            this.ADRLine1.Y1 = 287;
+            this.ADRLine1.Y2 = 287;
             // 
             // PdCond4
             // 
@@ -1389,32 +1390,32 @@
             this.PdCond2.Y1 = 351;
             this.PdCond2.Y2 = 351;
             // 
-            // lineShape38
+            // DataOUTLine1
             // 
-            this.lineShape38.BorderWidth = 3;
-            this.lineShape38.Name = "lineShape38";
-            this.lineShape38.X1 = 27;
-            this.lineShape38.X2 = 4;
-            this.lineShape38.Y1 = 383;
-            this.lineShape38.Y2 = 383;
+            this.DataOUTLine1.BorderWidth = 3;
+            this.DataOUTLine1.Name = "DataOUTLine1";
+            this.DataOUTLine1.X1 = 27;
+            this.DataOUTLine1.X2 = 4;
+            this.DataOUTLine1.Y1 = 383;
+            this.DataOUTLine1.Y2 = 383;
             // 
-            // lineShape37
+            // MDRLine3
             // 
-            this.lineShape37.BorderWidth = 3;
-            this.lineShape37.Name = "lineShape37";
-            this.lineShape37.X1 = 156;
-            this.lineShape37.X2 = 139;
-            this.lineShape37.Y1 = 386;
-            this.lineShape37.Y2 = 386;
+            this.MDRLine3.BorderWidth = 3;
+            this.MDRLine3.Name = "MDRLine3";
+            this.MDRLine3.X1 = 156;
+            this.MDRLine3.X2 = 139;
+            this.MDRLine3.Y1 = 386;
+            this.MDRLine3.Y2 = 386;
             // 
-            // lineShape36
+            // MDRLine2
             // 
-            this.lineShape36.BorderWidth = 3;
-            this.lineShape36.Name = "lineShape36";
-            this.lineShape36.X1 = 154;
-            this.lineShape36.X2 = 155;
-            this.lineShape36.Y1 = 246;
-            this.lineShape36.Y2 = 386;
+            this.MDRLine2.BorderWidth = 3;
+            this.MDRLine2.Name = "MDRLine2";
+            this.MDRLine2.X1 = 154;
+            this.MDRLine2.X2 = 155;
+            this.MDRLine2.Y1 = 246;
+            this.MDRLine2.Y2 = 386;
             // 
             // PmFLAG
             // 
@@ -1470,14 +1471,14 @@
             this.muxFlagLine2.Y1 = 547;
             this.muxFlagLine2.Y2 = 565;
             // 
-            // lineShape29
+            // DataOUTLine3
             // 
-            this.lineShape29.BorderWidth = 3;
-            this.lineShape29.Name = "lineShape29";
-            this.lineShape29.X1 = 100;
-            this.lineShape29.X2 = 9;
-            this.lineShape29.Y1 = 551;
-            this.lineShape29.Y2 = 551;
+            this.DataOUTLine3.BorderWidth = 3;
+            this.DataOUTLine3.Name = "DataOUTLine3";
+            this.DataOUTLine3.X1 = 100;
+            this.DataOUTLine3.X2 = 9;
+            this.DataOUTLine3.Y1 = 551;
+            this.DataOUTLine3.Y2 = 551;
             // 
             // PmMDR
             // 
@@ -1951,7 +1952,7 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape lineShape25;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR1;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape29;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine3;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG1;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdCond5;
@@ -1959,9 +1960,9 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape muxFlagLine1;
         public Microsoft.VisualBasic.PowerPacks.LineShape muxFlagLine2;
         public System.Windows.Forms.PictureBox pictureBox5;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape36;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape37;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape38;
+        public Microsoft.VisualBasic.PowerPacks.LineShape MDRLine2;
+        public Microsoft.VisualBasic.PowerPacks.LineShape MDRLine3;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine1;
         public System.Windows.Forms.Label label37;
         public System.Windows.Forms.Label label36;
         public System.Windows.Forms.Label label35;
@@ -1991,10 +1992,10 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape PdCond1;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdCond2;
         public System.Windows.Forms.Label label52;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape44;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape43;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape45;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape46;
+        public Microsoft.VisualBasic.PowerPacks.LineShape ADRLine2;
+        public Microsoft.VisualBasic.PowerPacks.LineShape ADRLine1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape MDRLine1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine2;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdIRs;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdIRd;
         public System.Windows.Forms.Label label54;
@@ -2013,8 +2014,8 @@
         public System.Windows.Forms.Label label60;
         public System.Windows.Forms.Label label59;
         public System.Windows.Forms.Label label58;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape54;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape53;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine5;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine4;
 
     }
 }
