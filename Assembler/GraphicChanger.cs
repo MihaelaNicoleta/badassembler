@@ -221,5 +221,98 @@ namespace Assembler
         }
 
 
+        public void PdRGs()
+        {
+            myForm.PdRGs.BorderColor = changeColor;
+            myForm.SBUS.BorderColor = changeColor;
+        }
+
+        public void PdRGd()
+        {
+            myForm.PdRGd.BorderColor = changeColor;
+            myForm.DBUS.BorderColor = changeColor;
+        }
+
+        public void PdFLAGs()
+        {
+            myForm.PdFLAGs.BorderColor = changeColor;
+            myForm.flags.ForeColor = changeColor;
+            myForm.SBUS.BorderColor = changeColor;
+        }
+
+        public void PdFLAGd()
+        {
+            myForm.PdFLAGd.BorderColor = changeColor;
+            myForm.flags.ForeColor = changeColor;
+            myForm.DBUS.BorderColor = changeColor;
+        }
+
+        public void PdCond()
+        {
+            myForm.PdCond1.BorderColor = changeColor;
+            myForm.PdCond2.BorderColor = changeColor;
+            myForm.PdCond3.BorderColor = changeColor;
+            myForm.PdCond4.BorderColor = changeColor;
+            myForm.PdCond5.BorderColor = changeColor;
+            myForm.muxFlagLine1.BorderColor = changeColor;
+            myForm.muxFlagLine2.BorderColor = changeColor;
+        }
+
+        public void ColorAlu()
+        {
+            myForm.ALUSLine.BorderColor = changeColor;
+            myForm.ALUDLine.BorderColor = changeColor;
+            myForm.ALURLine.BorderColor = changeColor;
+            myForm.RBUS.BorderColor = changeColor;
+        }
+
+        public void PmMDR()
+        {
+            myForm.PmMDR.BorderColor = changeColor;
+            myForm.PmMDR1.BorderColor = changeColor;
+            myForm.MDR.ForeColor = changeColor;
+        }
+
+        public void PmADR()
+        {
+            myForm.PmADR.BorderColor = changeColor;
+            myForm.ADR.ForeColor = changeColor;
+        }
+
+        public void PmIVR()
+        {
+            myForm.PmIVR.BorderColor = changeColor;
+            myForm.IVR.ForeColor = changeColor;
+        }
+
+        public void PmPC()
+        {
+            myForm.PmPC.BorderColor = changeColor;
+            myForm.PC.ForeColor = changeColor;
+        }
+
+        public void PmT()
+        {
+            myForm.PmT.BorderColor = changeColor;
+            myForm.T.ForeColor = changeColor;
+        }
+
+        public void PmSP()
+        {
+            myForm.PmSP.BorderColor = changeColor;
+            myForm.SP.ForeColor = changeColor;
+        }
+
+        public void PmRG()
+        {
+            myForm.PmRG.BorderColor = changeColor;
+        }
+
+        public void PmFLAG()
+        {
+            myForm.PmFLAG.BorderColor = changeColor;
+            myForm.flags.ForeColor = changeColor;
+        }
+
     }
 }

@@ -152,9 +152,9 @@
             this.PmFLAG = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmFLAG1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdCond5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape32 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape31 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape30 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ALURLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.muxFlagLine1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.muxFlagLine2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape29 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -166,8 +166,8 @@
             this.PmPC = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmIVR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmADR = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape18 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape17 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ALUDLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ALUSLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdFLAGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdRGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdSPd = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -1179,9 +1179,9 @@
             this.PmFLAG,
             this.PmFLAG1,
             this.PdCond5,
-            this.lineShape32,
-            this.lineShape31,
-            this.lineShape30,
+            this.ALURLine,
+            this.muxFlagLine1,
+            this.muxFlagLine2,
             this.lineShape29,
             this.PmMDR,
             this.PmMDR1,
@@ -1193,8 +1193,8 @@
             this.PmPC,
             this.PmIVR,
             this.PmADR,
-            this.lineShape18,
-            this.lineShape17,
+            this.ALUDLine,
+            this.ALUSLine,
             this.PdFLAGd,
             this.PdRGd,
             this.PdSPd,
@@ -1443,32 +1443,32 @@
             this.PdCond5.Y1 = 555;
             this.PdCond5.Y2 = 555;
             // 
-            // lineShape32
+            // ALURLine
             // 
-            this.lineShape32.BorderWidth = 3;
-            this.lineShape32.Name = "lineShape32";
-            this.lineShape32.X1 = 1063;
-            this.lineShape32.X2 = 1064;
-            this.lineShape32.Y1 = 368;
-            this.lineShape32.Y2 = 610;
+            this.ALURLine.BorderWidth = 3;
+            this.ALURLine.Name = "ALURLine";
+            this.ALURLine.X1 = 1063;
+            this.ALURLine.X2 = 1064;
+            this.ALURLine.Y1 = 368;
+            this.ALURLine.Y2 = 610;
             // 
-            // lineShape31
+            // muxFlagLine1
             // 
-            this.lineShape31.BorderWidth = 3;
-            this.lineShape31.Name = "lineShape31";
-            this.lineShape31.X1 = 954;
-            this.lineShape31.X2 = 997;
-            this.lineShape31.Y1 = 567;
-            this.lineShape31.Y2 = 567;
+            this.muxFlagLine1.BorderWidth = 3;
+            this.muxFlagLine1.Name = "muxFlagLine1";
+            this.muxFlagLine1.X1 = 954;
+            this.muxFlagLine1.X2 = 997;
+            this.muxFlagLine1.Y1 = 567;
+            this.muxFlagLine1.Y2 = 567;
             // 
-            // lineShape30
+            // muxFlagLine2
             // 
-            this.lineShape30.BorderWidth = 3;
-            this.lineShape30.Name = "lineShape30";
-            this.lineShape30.X1 = 955;
-            this.lineShape30.X2 = 955;
-            this.lineShape30.Y1 = 547;
-            this.lineShape30.Y2 = 565;
+            this.muxFlagLine2.BorderWidth = 3;
+            this.muxFlagLine2.Name = "muxFlagLine2";
+            this.muxFlagLine2.X1 = 955;
+            this.muxFlagLine2.X2 = 955;
+            this.muxFlagLine2.Y1 = 547;
+            this.muxFlagLine2.Y2 = 565;
             // 
             // lineShape29
             // 
@@ -1569,23 +1569,23 @@
             this.PmADR.Y1 = 547;
             this.PmADR.Y2 = 607;
             // 
-            // lineShape18
+            // ALUDLine
             // 
-            this.lineShape18.BorderWidth = 3;
-            this.lineShape18.Name = "lineShape18";
-            this.lineShape18.X1 = 1075;
-            this.lineShape18.X2 = 1075;
-            this.lineShape18.Y1 = 227;
-            this.lineShape18.Y2 = 316;
+            this.ALUDLine.BorderWidth = 3;
+            this.ALUDLine.Name = "ALUDLine";
+            this.ALUDLine.X1 = 1075;
+            this.ALUDLine.X2 = 1075;
+            this.ALUDLine.Y1 = 227;
+            this.ALUDLine.Y2 = 316;
             // 
-            // lineShape17
+            // ALUSLine
             // 
-            this.lineShape17.BorderWidth = 3;
-            this.lineShape17.Name = "lineShape17";
-            this.lineShape17.X1 = 1023;
-            this.lineShape17.X2 = 1024;
-            this.lineShape17.Y1 = 129;
-            this.lineShape17.Y2 = 315;
+            this.ALUSLine.BorderWidth = 3;
+            this.ALUSLine.Name = "ALUSLine";
+            this.ALUSLine.X1 = 1023;
+            this.ALUSLine.X2 = 1024;
+            this.ALUSLine.Y1 = 129;
+            this.ALUSLine.Y2 = 315;
             // 
             // PdFLAGd
             // 
@@ -1939,8 +1939,8 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape PdPCd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdADRd;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape18;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape17;
+        public Microsoft.VisualBasic.PowerPacks.LineShape ALUDLine;
+        public Microsoft.VisualBasic.PowerPacks.LineShape ALUSLine;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmRG;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmSP;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmT;
@@ -1955,9 +1955,9 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG1;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdCond5;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape32;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape31;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape30;
+        public Microsoft.VisualBasic.PowerPacks.LineShape ALURLine;
+        public Microsoft.VisualBasic.PowerPacks.LineShape muxFlagLine1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape muxFlagLine2;
         public System.Windows.Forms.PictureBox pictureBox5;
         public Microsoft.VisualBasic.PowerPacks.LineShape lineShape36;
         public Microsoft.VisualBasic.PowerPacks.LineShape lineShape37;
