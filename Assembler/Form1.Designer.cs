@@ -37,6 +37,40 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.asmCode = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -93,45 +127,64 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape54 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape53 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.Pd0d = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.Pd0s = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.Pdminus1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.Pd1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.PdIRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdIRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape46 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape45 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape44 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape43 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdCond4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdCond3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdCond1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdCond2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape38 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape37 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape36 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape35 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape34 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape33 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmFLAG = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmFLAG1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdCond5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape32 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape31 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape30 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape29 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape28 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape27 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmMDR = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmMDR1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape26 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape25 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape24 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape23 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape22 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape21 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape19 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape20 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmRG = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmSP = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmT = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmPC = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmIVR = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmADR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape18 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape17 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape16 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape15 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape14 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape13 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdFLAGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdRGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdSPd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdTd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdPCd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdIVRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdADRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdMDRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdFLAGs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdRGs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdSPs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdTs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdPCs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdIVRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdADRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdMDRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.rectangleShape24 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape22 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -145,59 +198,6 @@
             this.SBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.lineShape39 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape40 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape41 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape42 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label52 = new System.Windows.Forms.Label();
-            this.lineShape43 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape44 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape45 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape46 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape47 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape48 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.lineShape49 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape50 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape51 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape52 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.lineShape53 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape54 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -370,6 +370,312 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1124, 643);
             this.panel3.TabIndex = 2;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(810, 165);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(32, 13);
+            this.label61.TabIndex = 90;
+            this.label61.Text = "Pd0d";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(786, 71);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(31, 13);
+            this.label60.TabIndex = 89;
+            this.label60.Text = "Pd0s";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(738, 71);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(29, 13);
+            this.label59.TabIndex = 88;
+            this.label59.Text = "Pd-1";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(676, 71);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(26, 13);
+            this.label58.TabIndex = 87;
+            this.label58.Text = "Pd1";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(810, 32);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(13, 13);
+            this.label57.TabIndex = 86;
+            this.label57.Text = "0";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(746, 32);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(16, 13);
+            this.label56.TabIndex = 85;
+            this.label56.Text = "-1";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(689, 32);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(13, 13);
+            this.label55.TabIndex = 84;
+            this.label55.Text = "1";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(71, 165);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(37, 13);
+            this.label54.TabIndex = 83;
+            this.label54.Text = "PdIRd";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(108, 90);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(36, 13);
+            this.label53.TabIndex = 82;
+            this.label53.Text = "PdIRs";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(980, 429);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(45, 13);
+            this.label52.TabIndex = 81;
+            this.label52.Text = "PdCond";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(1011, 586);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(49, 13);
+            this.label51.TabIndex = 80;
+            this.label51.Text = "PmFLAG";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(727, 586);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(38, 13);
+            this.label50.TabIndex = 79;
+            this.label50.Text = "PmRG";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(524, 586);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(36, 13);
+            this.label49.TabIndex = 78;
+            this.label49.Text = "PmSP";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(448, 586);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(29, 13);
+            this.label48.TabIndex = 77;
+            this.label48.Text = "PmT";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(379, 586);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(36, 13);
+            this.label47.TabIndex = 76;
+            this.label47.Text = "PmPC";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(304, 586);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(40, 13);
+            this.label46.TabIndex = 75;
+            this.label46.Text = "PmIVR";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(224, 586);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(45, 13);
+            this.label45.TabIndex = 74;
+            this.label45.Text = "PmADR";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(51, 586);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(47, 13);
+            this.label44.TabIndex = 73;
+            this.label44.Text = "PmMDR";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(180, 270);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(50, 13);
+            this.label43.TabIndex = 72;
+            this.label43.Text = "PdMDRs";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(142, 165);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(51, 13);
+            this.label42.TabIndex = 71;
+            this.label42.Text = "PdMDRd";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(945, 270);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(52, 13);
+            this.label41.TabIndex = 70;
+            this.label41.Text = "PdFLAGs";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(921, 165);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(53, 13);
+            this.label40.TabIndex = 69;
+            this.label40.Text = "PdFLAGd";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(588, 165);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(42, 13);
+            this.label39.TabIndex = 68;
+            this.label39.Text = "PdRGd";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(754, 270);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(41, 13);
+            this.label38.TabIndex = 67;
+            this.label38.Text = "PdRGs";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(498, 165);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(40, 13);
+            this.label37.TabIndex = 66;
+            this.label37.Text = "PdSPd";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(532, 270);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(39, 13);
+            this.label36.TabIndex = 65;
+            this.label36.Text = "PdSPs";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(440, 165);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(33, 13);
+            this.label35.TabIndex = 64;
+            this.label35.Text = "PdTd";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(460, 270);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(32, 13);
+            this.label34.TabIndex = 63;
+            this.label34.Text = "PdTs";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(392, 270);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(39, 13);
+            this.label33.TabIndex = 62;
+            this.label33.Text = "PdPCs";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(360, 165);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(40, 13);
+            this.label32.TabIndex = 61;
+            this.label32.Text = "PdPCd";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(289, 165);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(44, 13);
+            this.label31.TabIndex = 60;
+            this.label31.Text = "PdIVRd";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(320, 270);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.TabIndex = 59;
+            this.label30.Text = "PdIVRs";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(250, 270);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(48, 13);
+            this.label29.TabIndex = 58;
+            this.label29.Text = "PdADRs";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(212, 165);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(49, 13);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "PdADRd";
             // 
             // pictureBox5
             // 
@@ -850,62 +1156,62 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape54,
             this.lineShape53,
-            this.lineShape52,
-            this.lineShape51,
-            this.lineShape50,
-            this.lineShape49,
+            this.Pd0d,
+            this.Pd0s,
+            this.Pdminus1,
+            this.Pd1,
             this.rectangleShape5,
             this.rectangleShape4,
             this.rectangleShape3,
-            this.lineShape48,
-            this.lineShape47,
+            this.PdIRs,
+            this.PdIRd,
             this.lineShape46,
             this.lineShape45,
             this.lineShape44,
             this.lineShape43,
-            this.lineShape42,
-            this.lineShape41,
-            this.lineShape40,
-            this.lineShape39,
+            this.PdCond4,
+            this.PdCond3,
+            this.PdCond1,
+            this.PdCond2,
             this.lineShape38,
             this.lineShape37,
             this.lineShape36,
-            this.lineShape35,
-            this.lineShape34,
-            this.lineShape33,
+            this.PmFLAG,
+            this.PmFLAG1,
+            this.PdCond5,
             this.lineShape32,
             this.lineShape31,
             this.lineShape30,
             this.lineShape29,
-            this.lineShape28,
-            this.lineShape27,
+            this.PmMDR,
+            this.PmMDR1,
             this.lineShape26,
             this.lineShape25,
-            this.lineShape24,
-            this.lineShape23,
-            this.lineShape22,
-            this.lineShape21,
-            this.lineShape19,
-            this.lineShape20,
+            this.PmRG,
+            this.PmSP,
+            this.PmT,
+            this.PmPC,
+            this.PmIVR,
+            this.PmADR,
             this.lineShape18,
             this.lineShape17,
-            this.lineShape16,
-            this.lineShape15,
-            this.lineShape14,
-            this.lineShape13,
-            this.lineShape12,
-            this.lineShape11,
-            this.lineShape10,
-            this.lineShape9,
-            this.lineShape8,
-            this.lineShape7,
+            this.PdFLAGd,
+            this.PdRGd,
+            this.PdSPd,
+            this.PdTd,
+            this.PdPCd,
+            this.PdIVRd,
+            this.PdADRd,
+            this.PdMDRd,
+            this.PdFLAGs,
+            this.PdRGs,
             this.rectangleShape2,
-            this.lineShape6,
-            this.lineShape5,
-            this.lineShape4,
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1,
+            this.PdSPs,
+            this.PdTs,
+            this.PdPCs,
+            this.PdIVRs,
+            this.PdADRs,
+            this.PdMDRs,
             this.rectangleShape24,
             this.rectangleShape23,
             this.rectangleShape22,
@@ -920,6 +1226,168 @@
             this.shapeContainer1.Size = new System.Drawing.Size(1124, 643);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape54
+            // 
+            this.lineShape54.BorderWidth = 3;
+            this.lineShape54.Name = "lineShape54";
+            this.lineShape54.X1 = 73;
+            this.lineShape54.X2 = 8;
+            this.lineShape54.Y1 = 57;
+            this.lineShape54.Y2 = 57;
+            // 
+            // lineShape53
+            // 
+            this.lineShape53.BorderWidth = 3;
+            this.lineShape53.Name = "lineShape53";
+            this.lineShape53.X1 = 7;
+            this.lineShape53.X2 = 8;
+            this.lineShape53.Y1 = 56;
+            this.lineShape53.Y2 = 386;
+            // 
+            // Pd0d
+            // 
+            this.Pd0d.BorderWidth = 3;
+            this.Pd0d.Name = "Pd0d";
+            this.Pd0d.X1 = 822;
+            this.Pd0d.X2 = 822;
+            this.Pd0d.Y1 = 60;
+            this.Pd0d.Y2 = 213;
+            // 
+            // Pd0s
+            // 
+            this.Pd0s.BorderWidth = 3;
+            this.Pd0s.Name = "Pd0s";
+            this.Pd0s.X1 = 799;
+            this.Pd0s.X2 = 799;
+            this.Pd0s.Y1 = 58;
+            this.Pd0s.Y2 = 110;
+            // 
+            // Pdminus1
+            // 
+            this.Pdminus1.BorderWidth = 3;
+            this.Pdminus1.Name = "Pdminus1";
+            this.Pdminus1.X1 = 751;
+            this.Pdminus1.X2 = 751;
+            this.Pdminus1.Y1 = 58;
+            this.Pdminus1.Y2 = 110;
+            // 
+            // Pd1
+            // 
+            this.Pd1.BorderWidth = 3;
+            this.Pd1.Name = "Pd1";
+            this.Pd1.X1 = 691;
+            this.Pd1.X2 = 691;
+            this.Pd1.Y1 = 58;
+            this.Pd1.Y2 = 110;
+            // 
+            // rectangleShape5
+            // 
+            this.rectangleShape5.Location = new System.Drawing.Point(789, 14);
+            this.rectangleShape5.Name = "rectangleShape5";
+            this.rectangleShape5.Size = new System.Drawing.Size(40, 44);
+            // 
+            // rectangleShape4
+            // 
+            this.rectangleShape4.Location = new System.Drawing.Point(731, 13);
+            this.rectangleShape4.Name = "rectangleShape4";
+            this.rectangleShape4.Size = new System.Drawing.Size(38, 45);
+            // 
+            // rectangleShape3
+            // 
+            this.rectangleShape3.Location = new System.Drawing.Point(671, 14);
+            this.rectangleShape3.Name = "rectangleShape3";
+            this.rectangleShape3.Size = new System.Drawing.Size(40, 43);
+            // 
+            // PdIRs
+            // 
+            this.PdIRs.BorderWidth = 3;
+            this.PdIRs.Name = "PdIRs";
+            this.PdIRs.X1 = 130;
+            this.PdIRs.X2 = 130;
+            this.PdIRs.Y1 = 67;
+            this.PdIRs.Y2 = 116;
+            // 
+            // PdIRd
+            // 
+            this.PdIRd.BorderWidth = 3;
+            this.PdIRd.Name = "PdIRd";
+            this.PdIRd.X1 = 88;
+            this.PdIRd.X2 = 88;
+            this.PdIRd.Y1 = 66;
+            this.PdIRd.Y2 = 212;
+            // 
+            // lineShape46
+            // 
+            this.lineShape46.BorderWidth = 3;
+            this.lineShape46.Name = "lineShape46";
+            this.lineShape46.X1 = 7;
+            this.lineShape46.X2 = 8;
+            this.lineShape46.Y1 = 382;
+            this.lineShape46.Y2 = 550;
+            // 
+            // lineShape45
+            // 
+            this.lineShape45.BorderWidth = 3;
+            this.lineShape45.Name = "lineShape45";
+            this.lineShape45.X1 = 154;
+            this.lineShape45.X2 = 201;
+            this.lineShape45.Y1 = 248;
+            this.lineShape45.Y2 = 248;
+            // 
+            // lineShape44
+            // 
+            this.lineShape44.BorderWidth = 3;
+            this.lineShape44.Name = "lineShape44";
+            this.lineShape44.X1 = 45;
+            this.lineShape44.X2 = 46;
+            this.lineShape44.Y1 = 286;
+            this.lineShape44.Y2 = 307;
+            // 
+            // lineShape43
+            // 
+            this.lineShape43.BorderWidth = 3;
+            this.lineShape43.Name = "lineShape43";
+            this.lineShape43.X1 = 241;
+            this.lineShape43.X2 = 46;
+            this.lineShape43.Y1 = 287;
+            this.lineShape43.Y2 = 287;
+            // 
+            // PdCond4
+            // 
+            this.PdCond4.BorderWidth = 3;
+            this.PdCond4.Name = "PdCond4";
+            this.PdCond4.X1 = 1036;
+            this.PdCond4.X2 = 1036;
+            this.PdCond4.Y1 = 515;
+            this.PdCond4.Y2 = 555;
+            // 
+            // PdCond3
+            // 
+            this.PdCond3.BorderWidth = 3;
+            this.PdCond3.Name = "PdCond3";
+            this.PdCond3.X1 = 1037;
+            this.PdCond3.X2 = 993;
+            this.PdCond3.Y1 = 517;
+            this.PdCond3.Y2 = 517;
+            // 
+            // PdCond1
+            // 
+            this.PdCond1.BorderWidth = 3;
+            this.PdCond1.Name = "PdCond1";
+            this.PdCond1.X1 = 992;
+            this.PdCond1.X2 = 993;
+            this.PdCond1.Y1 = 351;
+            this.PdCond1.Y2 = 517;
+            // 
+            // PdCond2
+            // 
+            this.PdCond2.BorderWidth = 3;
+            this.PdCond2.Name = "PdCond2";
+            this.PdCond2.X1 = 1015;
+            this.PdCond2.X2 = 992;
+            this.PdCond2.Y1 = 351;
+            this.PdCond2.Y2 = 351;
             // 
             // lineShape38
             // 
@@ -948,32 +1416,32 @@
             this.lineShape36.Y1 = 246;
             this.lineShape36.Y2 = 386;
             // 
-            // lineShape35
+            // PmFLAG
             // 
-            this.lineShape35.BorderWidth = 3;
-            this.lineShape35.Name = "lineShape35";
-            this.lineShape35.X1 = 1036;
-            this.lineShape35.X2 = 1036;
-            this.lineShape35.Y1 = 576;
-            this.lineShape35.Y2 = 605;
+            this.PmFLAG.BorderWidth = 3;
+            this.PmFLAG.Name = "PmFLAG";
+            this.PmFLAG.X1 = 1036;
+            this.PmFLAG.X2 = 1036;
+            this.PmFLAG.Y1 = 576;
+            this.PmFLAG.Y2 = 605;
             // 
-            // lineShape34
+            // PmFLAG1
             // 
-            this.lineShape34.BorderWidth = 3;
-            this.lineShape34.Name = "lineShape34";
-            this.lineShape34.X1 = 1037;
-            this.lineShape34.X2 = 1014;
-            this.lineShape34.Y1 = 575;
-            this.lineShape34.Y2 = 575;
+            this.PmFLAG1.BorderWidth = 3;
+            this.PmFLAG1.Name = "PmFLAG1";
+            this.PmFLAG1.X1 = 1037;
+            this.PmFLAG1.X2 = 1014;
+            this.PmFLAG1.Y1 = 575;
+            this.PmFLAG1.Y2 = 575;
             // 
-            // lineShape33
+            // PdCond5
             // 
-            this.lineShape33.BorderWidth = 3;
-            this.lineShape33.Name = "lineShape33";
-            this.lineShape33.X1 = 1036;
-            this.lineShape33.X2 = 1013;
-            this.lineShape33.Y1 = 555;
-            this.lineShape33.Y2 = 555;
+            this.PdCond5.BorderWidth = 3;
+            this.PdCond5.Name = "PdCond5";
+            this.PdCond5.X1 = 1036;
+            this.PdCond5.X2 = 1013;
+            this.PdCond5.Y1 = 555;
+            this.PdCond5.Y2 = 555;
             // 
             // lineShape32
             // 
@@ -1011,23 +1479,23 @@
             this.lineShape29.Y1 = 551;
             this.lineShape29.Y2 = 551;
             // 
-            // lineShape28
+            // PmMDR
             // 
-            this.lineShape28.BorderWidth = 3;
-            this.lineShape28.Name = "lineShape28";
-            this.lineShape28.X1 = 82;
-            this.lineShape28.X2 = 82;
-            this.lineShape28.Y1 = 577;
-            this.lineShape28.Y2 = 614;
+            this.PmMDR.BorderWidth = 3;
+            this.PmMDR.Name = "PmMDR";
+            this.PmMDR.X1 = 82;
+            this.PmMDR.X2 = 82;
+            this.PmMDR.Y1 = 577;
+            this.PmMDR.Y2 = 614;
             // 
-            // lineShape27
+            // PmMDR1
             // 
-            this.lineShape27.BorderWidth = 3;
-            this.lineShape27.Name = "lineShape27";
-            this.lineShape27.X1 = 98;
-            this.lineShape27.X2 = 81;
-            this.lineShape27.Y1 = 575;
-            this.lineShape27.Y2 = 575;
+            this.PmMDR1.BorderWidth = 3;
+            this.PmMDR1.Name = "PmMDR1";
+            this.PmMDR1.X1 = 98;
+            this.PmMDR1.X2 = 81;
+            this.PmMDR1.Y1 = 575;
+            this.PmMDR1.Y2 = 575;
             // 
             // lineShape26
             // 
@@ -1047,59 +1515,59 @@
             this.lineShape25.Y1 = 561;
             this.lineShape25.Y2 = 561;
             // 
-            // lineShape24
+            // PmRG
             // 
-            this.lineShape24.BorderWidth = 3;
-            this.lineShape24.Name = "lineShape24";
-            this.lineShape24.X1 = 741;
-            this.lineShape24.X2 = 741;
-            this.lineShape24.Y1 = 546;
-            this.lineShape24.Y2 = 606;
+            this.PmRG.BorderWidth = 3;
+            this.PmRG.Name = "PmRG";
+            this.PmRG.X1 = 741;
+            this.PmRG.X2 = 741;
+            this.PmRG.Y1 = 546;
+            this.PmRG.Y2 = 606;
             // 
-            // lineShape23
+            // PmSP
             // 
-            this.lineShape23.BorderWidth = 3;
-            this.lineShape23.Name = "lineShape23";
-            this.lineShape23.X1 = 537;
-            this.lineShape23.X2 = 537;
-            this.lineShape23.Y1 = 546;
-            this.lineShape23.Y2 = 606;
+            this.PmSP.BorderWidth = 3;
+            this.PmSP.Name = "PmSP";
+            this.PmSP.X1 = 537;
+            this.PmSP.X2 = 537;
+            this.PmSP.Y1 = 546;
+            this.PmSP.Y2 = 606;
             // 
-            // lineShape22
+            // PmT
             // 
-            this.lineShape22.BorderWidth = 3;
-            this.lineShape22.Name = "lineShape22";
-            this.lineShape22.X1 = 467;
-            this.lineShape22.X2 = 467;
-            this.lineShape22.Y1 = 546;
-            this.lineShape22.Y2 = 606;
+            this.PmT.BorderWidth = 3;
+            this.PmT.Name = "PmT";
+            this.PmT.X1 = 467;
+            this.PmT.X2 = 467;
+            this.PmT.Y1 = 546;
+            this.PmT.Y2 = 606;
             // 
-            // lineShape21
+            // PmPC
             // 
-            this.lineShape21.BorderWidth = 3;
-            this.lineShape21.Name = "lineShape21";
-            this.lineShape21.X1 = 395;
-            this.lineShape21.X2 = 395;
-            this.lineShape21.Y1 = 545;
-            this.lineShape21.Y2 = 605;
+            this.PmPC.BorderWidth = 3;
+            this.PmPC.Name = "PmPC";
+            this.PmPC.X1 = 395;
+            this.PmPC.X2 = 395;
+            this.PmPC.Y1 = 545;
+            this.PmPC.Y2 = 605;
             // 
-            // lineShape19
+            // PmIVR
             // 
-            this.lineShape19.BorderWidth = 3;
-            this.lineShape19.Name = "lineShape19";
-            this.lineShape19.X1 = 325;
-            this.lineShape19.X2 = 325;
-            this.lineShape19.Y1 = 546;
-            this.lineShape19.Y2 = 606;
+            this.PmIVR.BorderWidth = 3;
+            this.PmIVR.Name = "PmIVR";
+            this.PmIVR.X1 = 325;
+            this.PmIVR.X2 = 325;
+            this.PmIVR.Y1 = 546;
+            this.PmIVR.Y2 = 606;
             // 
-            // lineShape20
+            // PmADR
             // 
-            this.lineShape20.BorderWidth = 3;
-            this.lineShape20.Name = "lineShape20";
-            this.lineShape20.X1 = 253;
-            this.lineShape20.X2 = 253;
-            this.lineShape20.Y1 = 547;
-            this.lineShape20.Y2 = 607;
+            this.PmADR.BorderWidth = 3;
+            this.PmADR.Name = "PmADR";
+            this.PmADR.X1 = 253;
+            this.PmADR.X2 = 253;
+            this.PmADR.Y1 = 547;
+            this.PmADR.Y2 = 607;
             // 
             // lineShape18
             // 
@@ -1119,95 +1587,95 @@
             this.lineShape17.Y1 = 129;
             this.lineShape17.Y2 = 315;
             // 
-            // lineShape16
+            // PdFLAGd
             // 
-            this.lineShape16.BorderWidth = 3;
-            this.lineShape16.Name = "lineShape16";
-            this.lineShape16.X1 = 942;
-            this.lineShape16.X2 = 943;
-            this.lineShape16.Y1 = 130;
-            this.lineShape16.Y2 = 316;
+            this.PdFLAGd.BorderWidth = 3;
+            this.PdFLAGd.Name = "PdFLAGd";
+            this.PdFLAGd.X1 = 942;
+            this.PdFLAGd.X2 = 943;
+            this.PdFLAGd.Y1 = 130;
+            this.PdFLAGd.Y2 = 316;
             // 
-            // lineShape15
+            // PdRGd
             // 
-            this.lineShape15.BorderWidth = 3;
-            this.lineShape15.Name = "lineShape15";
-            this.lineShape15.X1 = 609;
-            this.lineShape15.X2 = 610;
-            this.lineShape15.Y1 = 129;
-            this.lineShape15.Y2 = 315;
+            this.PdRGd.BorderWidth = 3;
+            this.PdRGd.Name = "PdRGd";
+            this.PdRGd.X1 = 609;
+            this.PdRGd.X2 = 610;
+            this.PdRGd.Y1 = 129;
+            this.PdRGd.Y2 = 315;
             // 
-            // lineShape14
+            // PdSPd
             // 
-            this.lineShape14.BorderWidth = 3;
-            this.lineShape14.Name = "lineShape14";
-            this.lineShape14.X1 = 522;
-            this.lineShape14.X2 = 523;
-            this.lineShape14.Y1 = 130;
-            this.lineShape14.Y2 = 316;
+            this.PdSPd.BorderWidth = 3;
+            this.PdSPd.Name = "PdSPd";
+            this.PdSPd.X1 = 522;
+            this.PdSPd.X2 = 523;
+            this.PdSPd.Y1 = 130;
+            this.PdSPd.Y2 = 316;
             // 
-            // lineShape13
+            // PdTd
             // 
-            this.lineShape13.BorderWidth = 3;
-            this.lineShape13.Name = "lineShape13";
-            this.lineShape13.X1 = 456;
-            this.lineShape13.X2 = 457;
-            this.lineShape13.Y1 = 130;
-            this.lineShape13.Y2 = 316;
+            this.PdTd.BorderWidth = 3;
+            this.PdTd.Name = "PdTd";
+            this.PdTd.X1 = 456;
+            this.PdTd.X2 = 457;
+            this.PdTd.Y1 = 130;
+            this.PdTd.Y2 = 316;
             // 
-            // lineShape12
+            // PdPCd
             // 
-            this.lineShape12.BorderWidth = 3;
-            this.lineShape12.Name = "lineShape12";
-            this.lineShape12.X1 = 381;
-            this.lineShape12.X2 = 382;
-            this.lineShape12.Y1 = 129;
-            this.lineShape12.Y2 = 315;
+            this.PdPCd.BorderWidth = 3;
+            this.PdPCd.Name = "PdPCd";
+            this.PdPCd.X1 = 381;
+            this.PdPCd.X2 = 382;
+            this.PdPCd.Y1 = 129;
+            this.PdPCd.Y2 = 315;
             // 
-            // lineShape11
+            // PdIVRd
             // 
-            this.lineShape11.BorderWidth = 3;
-            this.lineShape11.Name = "lineShape11";
-            this.lineShape11.X1 = 310;
-            this.lineShape11.X2 = 311;
-            this.lineShape11.Y1 = 131;
-            this.lineShape11.Y2 = 317;
+            this.PdIVRd.BorderWidth = 3;
+            this.PdIVRd.Name = "PdIVRd";
+            this.PdIVRd.X1 = 310;
+            this.PdIVRd.X2 = 311;
+            this.PdIVRd.Y1 = 131;
+            this.PdIVRd.Y2 = 317;
             // 
-            // lineShape10
+            // PdADRd
             // 
-            this.lineShape10.BorderWidth = 3;
-            this.lineShape10.Name = "lineShape10";
-            this.lineShape10.X1 = 240;
-            this.lineShape10.X2 = 241;
-            this.lineShape10.Y1 = 131;
-            this.lineShape10.Y2 = 317;
+            this.PdADRd.BorderWidth = 3;
+            this.PdADRd.Name = "PdADRd";
+            this.PdADRd.X1 = 240;
+            this.PdADRd.X2 = 241;
+            this.PdADRd.Y1 = 131;
+            this.PdADRd.Y2 = 317;
             // 
-            // lineShape9
+            // PdMDRd
             // 
-            this.lineShape9.BorderWidth = 3;
-            this.lineShape9.Name = "lineShape9";
-            this.lineShape9.X1 = 170;
-            this.lineShape9.X2 = 171;
-            this.lineShape9.Y1 = 130;
-            this.lineShape9.Y2 = 316;
+            this.PdMDRd.BorderWidth = 3;
+            this.PdMDRd.Name = "PdMDRd";
+            this.PdMDRd.X1 = 170;
+            this.PdMDRd.X2 = 171;
+            this.PdMDRd.Y1 = 130;
+            this.PdMDRd.Y2 = 316;
             // 
-            // lineShape8
+            // PdFLAGs
             // 
-            this.lineShape8.BorderWidth = 3;
-            this.lineShape8.Name = "lineShape8";
-            this.lineShape8.X1 = 966;
-            this.lineShape8.X2 = 966;
-            this.lineShape8.Y1 = 230;
-            this.lineShape8.Y2 = 319;
+            this.PdFLAGs.BorderWidth = 3;
+            this.PdFLAGs.Name = "PdFLAGs";
+            this.PdFLAGs.X1 = 966;
+            this.PdFLAGs.X2 = 966;
+            this.PdFLAGs.Y1 = 230;
+            this.PdFLAGs.Y2 = 319;
             // 
-            // lineShape7
+            // PdRGs
             // 
-            this.lineShape7.BorderWidth = 3;
-            this.lineShape7.Name = "lineShape7";
-            this.lineShape7.X1 = 771;
-            this.lineShape7.X2 = 771;
-            this.lineShape7.Y1 = 228;
-            this.lineShape7.Y2 = 317;
+            this.PdRGs.BorderWidth = 3;
+            this.PdRGs.Name = "PdRGs";
+            this.PdRGs.X1 = 771;
+            this.PdRGs.X2 = 771;
+            this.PdRGs.Y1 = 228;
+            this.PdRGs.Y2 = 317;
             // 
             // rectangleShape2
             // 
@@ -1215,59 +1683,59 @@
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(350, 225);
             // 
-            // lineShape6
+            // PdSPs
             // 
-            this.lineShape6.BorderWidth = 3;
-            this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 546;
-            this.lineShape6.X2 = 546;
-            this.lineShape6.Y1 = 229;
-            this.lineShape6.Y2 = 318;
+            this.PdSPs.BorderWidth = 3;
+            this.PdSPs.Name = "PdSPs";
+            this.PdSPs.X1 = 546;
+            this.PdSPs.X2 = 546;
+            this.PdSPs.Y1 = 229;
+            this.PdSPs.Y2 = 318;
             // 
-            // lineShape5
+            // PdTs
             // 
-            this.lineShape5.BorderWidth = 3;
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 476;
-            this.lineShape5.X2 = 476;
-            this.lineShape5.Y1 = 229;
-            this.lineShape5.Y2 = 318;
+            this.PdTs.BorderWidth = 3;
+            this.PdTs.Name = "PdTs";
+            this.PdTs.X1 = 476;
+            this.PdTs.X2 = 476;
+            this.PdTs.Y1 = 229;
+            this.PdTs.Y2 = 318;
             // 
-            // lineShape4
+            // PdPCs
             // 
-            this.lineShape4.BorderWidth = 3;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 404;
-            this.lineShape4.X2 = 404;
-            this.lineShape4.Y1 = 228;
-            this.lineShape4.Y2 = 317;
+            this.PdPCs.BorderWidth = 3;
+            this.PdPCs.Name = "PdPCs";
+            this.PdPCs.X1 = 404;
+            this.PdPCs.X2 = 404;
+            this.PdPCs.Y1 = 228;
+            this.PdPCs.Y2 = 317;
             // 
-            // lineShape3
+            // PdIVRs
             // 
-            this.lineShape3.BorderWidth = 3;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 333;
-            this.lineShape3.X2 = 333;
-            this.lineShape3.Y1 = 227;
-            this.lineShape3.Y2 = 316;
+            this.PdIVRs.BorderWidth = 3;
+            this.PdIVRs.Name = "PdIVRs";
+            this.PdIVRs.X1 = 333;
+            this.PdIVRs.X2 = 333;
+            this.PdIVRs.Y1 = 227;
+            this.PdIVRs.Y2 = 316;
             // 
-            // lineShape2
+            // PdADRs
             // 
-            this.lineShape2.BorderWidth = 3;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 266;
-            this.lineShape2.X2 = 266;
-            this.lineShape2.Y1 = 228;
-            this.lineShape2.Y2 = 317;
+            this.PdADRs.BorderWidth = 3;
+            this.PdADRs.Name = "PdADRs";
+            this.PdADRs.X1 = 266;
+            this.PdADRs.X2 = 266;
+            this.PdADRs.Y1 = 228;
+            this.PdADRs.Y2 = 317;
             // 
-            // lineShape1
+            // PdMDRs
             // 
-            this.lineShape1.BorderWidth = 3;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 200;
-            this.lineShape1.X2 = 200;
-            this.lineShape1.Y1 = 227;
-            this.lineShape1.Y2 = 316;
+            this.PdMDRs.BorderWidth = 3;
+            this.PdMDRs.Name = "PdMDRs";
+            this.PdMDRs.X1 = 200;
+            this.PdMDRs.X2 = 200;
+            this.PdMDRs.Y1 = 227;
+            this.PdMDRs.Y2 = 316;
             // 
             // rectangleShape24
             // 
@@ -1351,474 +1819,6 @@
             this.messagesTextBox.Name = "messagesTextBox";
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(212, 165);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(49, 13);
-            this.label28.TabIndex = 57;
-            this.label28.Text = "PdADRd";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(250, 270);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(48, 13);
-            this.label29.TabIndex = 58;
-            this.label29.Text = "PdADRs";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(320, 270);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(43, 13);
-            this.label30.TabIndex = 59;
-            this.label30.Text = "PdIVRs";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(289, 165);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(44, 13);
-            this.label31.TabIndex = 60;
-            this.label31.Text = "PdIVRd";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(360, 165);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(40, 13);
-            this.label32.TabIndex = 61;
-            this.label32.Text = "PdPCd";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(392, 270);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(39, 13);
-            this.label33.TabIndex = 62;
-            this.label33.Text = "PdPCs";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(460, 270);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 13);
-            this.label34.TabIndex = 63;
-            this.label34.Text = "PdTs";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(440, 165);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(33, 13);
-            this.label35.TabIndex = 64;
-            this.label35.Text = "PdTd";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(532, 270);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(39, 13);
-            this.label36.TabIndex = 65;
-            this.label36.Text = "PdSPs";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(498, 165);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(40, 13);
-            this.label37.TabIndex = 66;
-            this.label37.Text = "PdSPd";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(754, 270);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(41, 13);
-            this.label38.TabIndex = 67;
-            this.label38.Text = "PdRGs";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(588, 165);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(42, 13);
-            this.label39.TabIndex = 68;
-            this.label39.Text = "PdRGd";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(921, 165);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(53, 13);
-            this.label40.TabIndex = 69;
-            this.label40.Text = "PdFLAGd";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(945, 270);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(52, 13);
-            this.label41.TabIndex = 70;
-            this.label41.Text = "PdFLAGs";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(142, 165);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(51, 13);
-            this.label42.TabIndex = 71;
-            this.label42.Text = "PdMDRd";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(180, 270);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(50, 13);
-            this.label43.TabIndex = 72;
-            this.label43.Text = "PdMDRs";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(51, 586);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(47, 13);
-            this.label44.TabIndex = 73;
-            this.label44.Text = "PmMDR";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(224, 586);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(45, 13);
-            this.label45.TabIndex = 74;
-            this.label45.Text = "PmADR";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(304, 586);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(40, 13);
-            this.label46.TabIndex = 75;
-            this.label46.Text = "PmIVR";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(379, 586);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(36, 13);
-            this.label47.TabIndex = 76;
-            this.label47.Text = "PmPC";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(448, 586);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(29, 13);
-            this.label48.TabIndex = 77;
-            this.label48.Text = "PmT";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(524, 586);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(36, 13);
-            this.label49.TabIndex = 78;
-            this.label49.Text = "PmSP";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(727, 586);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(38, 13);
-            this.label50.TabIndex = 79;
-            this.label50.Text = "PmRG";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(1011, 586);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(49, 13);
-            this.label51.TabIndex = 80;
-            this.label51.Text = "PmFLAG";
-            // 
-            // lineShape39
-            // 
-            this.lineShape39.BorderWidth = 3;
-            this.lineShape39.Name = "lineShape39";
-            this.lineShape39.X1 = 1015;
-            this.lineShape39.X2 = 992;
-            this.lineShape39.Y1 = 351;
-            this.lineShape39.Y2 = 351;
-            // 
-            // lineShape40
-            // 
-            this.lineShape40.BorderWidth = 3;
-            this.lineShape40.Name = "lineShape40";
-            this.lineShape40.X1 = 992;
-            this.lineShape40.X2 = 993;
-            this.lineShape40.Y1 = 351;
-            this.lineShape40.Y2 = 517;
-            // 
-            // lineShape41
-            // 
-            this.lineShape41.BorderWidth = 3;
-            this.lineShape41.Name = "lineShape41";
-            this.lineShape41.X1 = 1037;
-            this.lineShape41.X2 = 993;
-            this.lineShape41.Y1 = 517;
-            this.lineShape41.Y2 = 517;
-            // 
-            // lineShape42
-            // 
-            this.lineShape42.BorderWidth = 3;
-            this.lineShape42.Name = "lineShape42";
-            this.lineShape42.X1 = 1036;
-            this.lineShape42.X2 = 1036;
-            this.lineShape42.Y1 = 515;
-            this.lineShape42.Y2 = 555;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(980, 429);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(45, 13);
-            this.label52.TabIndex = 81;
-            this.label52.Text = "PdCond";
-            // 
-            // lineShape43
-            // 
-            this.lineShape43.BorderWidth = 3;
-            this.lineShape43.Name = "lineShape43";
-            this.lineShape43.X1 = 241;
-            this.lineShape43.X2 = 46;
-            this.lineShape43.Y1 = 287;
-            this.lineShape43.Y2 = 287;
-            // 
-            // lineShape44
-            // 
-            this.lineShape44.BorderWidth = 3;
-            this.lineShape44.Name = "lineShape44";
-            this.lineShape44.X1 = 45;
-            this.lineShape44.X2 = 46;
-            this.lineShape44.Y1 = 286;
-            this.lineShape44.Y2 = 307;
-            // 
-            // lineShape45
-            // 
-            this.lineShape45.BorderWidth = 3;
-            this.lineShape45.Name = "lineShape45";
-            this.lineShape45.X1 = 154;
-            this.lineShape45.X2 = 201;
-            this.lineShape45.Y1 = 248;
-            this.lineShape45.Y2 = 248;
-            // 
-            // lineShape46
-            // 
-            this.lineShape46.BorderWidth = 3;
-            this.lineShape46.Name = "lineShape46";
-            this.lineShape46.X1 = 7;
-            this.lineShape46.X2 = 8;
-            this.lineShape46.Y1 = 382;
-            this.lineShape46.Y2 = 550;
-            // 
-            // lineShape47
-            // 
-            this.lineShape47.BorderWidth = 3;
-            this.lineShape47.Name = "lineShape47";
-            this.lineShape47.X1 = 88;
-            this.lineShape47.X2 = 88;
-            this.lineShape47.Y1 = 66;
-            this.lineShape47.Y2 = 212;
-            // 
-            // lineShape48
-            // 
-            this.lineShape48.BorderWidth = 3;
-            this.lineShape48.Name = "lineShape48";
-            this.lineShape48.X1 = 130;
-            this.lineShape48.X2 = 130;
-            this.lineShape48.Y1 = 67;
-            this.lineShape48.Y2 = 116;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(108, 90);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(36, 13);
-            this.label53.TabIndex = 82;
-            this.label53.Text = "PdIRs";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(71, 165);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(37, 13);
-            this.label54.TabIndex = 83;
-            this.label54.Text = "PdIRd";
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.Location = new System.Drawing.Point(671, 14);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.Size = new System.Drawing.Size(40, 43);
-            // 
-            // rectangleShape4
-            // 
-            this.rectangleShape4.Location = new System.Drawing.Point(731, 13);
-            this.rectangleShape4.Name = "rectangleShape4";
-            this.rectangleShape4.Size = new System.Drawing.Size(38, 45);
-            // 
-            // rectangleShape5
-            // 
-            this.rectangleShape5.Location = new System.Drawing.Point(789, 14);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(40, 44);
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(689, 32);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(13, 13);
-            this.label55.TabIndex = 84;
-            this.label55.Text = "1";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(746, 32);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(16, 13);
-            this.label56.TabIndex = 85;
-            this.label56.Text = "-1";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(810, 32);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(13, 13);
-            this.label57.TabIndex = 86;
-            this.label57.Text = "0";
-            // 
-            // lineShape49
-            // 
-            this.lineShape49.BorderWidth = 3;
-            this.lineShape49.Name = "lineShape49";
-            this.lineShape49.X1 = 691;
-            this.lineShape49.X2 = 691;
-            this.lineShape49.Y1 = 58;
-            this.lineShape49.Y2 = 110;
-            // 
-            // lineShape50
-            // 
-            this.lineShape50.BorderWidth = 3;
-            this.lineShape50.Name = "lineShape50";
-            this.lineShape50.X1 = 751;
-            this.lineShape50.X2 = 751;
-            this.lineShape50.Y1 = 58;
-            this.lineShape50.Y2 = 110;
-            // 
-            // lineShape51
-            // 
-            this.lineShape51.BorderWidth = 3;
-            this.lineShape51.Name = "lineShape51";
-            this.lineShape51.X1 = 799;
-            this.lineShape51.X2 = 799;
-            this.lineShape51.Y1 = 58;
-            this.lineShape51.Y2 = 110;
-            // 
-            // lineShape52
-            // 
-            this.lineShape52.BorderWidth = 3;
-            this.lineShape52.Name = "lineShape52";
-            this.lineShape52.X1 = 822;
-            this.lineShape52.X2 = 822;
-            this.lineShape52.Y1 = 60;
-            this.lineShape52.Y2 = 213;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(676, 71);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(26, 13);
-            this.label58.TabIndex = 87;
-            this.label58.Text = "Pd1";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(738, 71);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(29, 13);
-            this.label59.TabIndex = 88;
-            this.label59.Text = "Pd-1";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(786, 71);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(31, 13);
-            this.label60.TabIndex = 89;
-            this.label60.Text = "Pd0s";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(810, 165);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(32, 13);
-            this.label61.TabIndex = 90;
-            this.label61.Text = "Pd0d";
-            // 
-            // lineShape53
-            // 
-            this.lineShape53.BorderWidth = 3;
-            this.lineShape53.Name = "lineShape53";
-            this.lineShape53.X1 = 7;
-            this.lineShape53.X2 = 8;
-            this.lineShape53.Y1 = 56;
-            this.lineShape53.Y2 = 386;
-            // 
-            // lineShape54
-            // 
-            this.lineShape54.BorderWidth = 3;
-            this.lineShape54.Name = "lineShape54";
-            this.lineShape54.X1 = 73;
-            this.lineShape54.X2 = 8;
-            this.lineShape54.Y1 = 57;
-            this.lineShape54.Y2 = 57;
             // 
             // mainForm
             // 
@@ -1922,39 +1922,39 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape24;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdTs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdPCs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdIVRs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdADRs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdMDRs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdSPs;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape9;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape16;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape15;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape14;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape13;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape12;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape11;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape10;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdRGs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdMDRd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdRGd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdSPd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdTd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdPCd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdIVRd;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdADRd;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape18;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape17;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape24;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape23;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape22;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape21;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape19;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape20;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmRG;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmSP;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmT;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmPC;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmIVR;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmADR;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape26;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape25;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape28;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape27;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmMDR;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmMDR1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape29;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape35;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape34;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape33;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond5;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape32;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape31;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape30;
@@ -1986,17 +1986,17 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape42;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape41;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape40;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape39;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond2;
         private System.Windows.Forms.Label label52;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape44;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape43;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape45;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape46;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape48;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape47;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdIRs;
+        private Microsoft.VisualBasic.PowerPacks.LineShape PdIRd;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label53;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
@@ -2005,10 +2005,10 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label55;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape51;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape50;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape49;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape52;
+        private Microsoft.VisualBasic.PowerPacks.LineShape Pd0s;
+        private Microsoft.VisualBasic.PowerPacks.LineShape Pdminus1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape Pd1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape Pd0d;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label59;
