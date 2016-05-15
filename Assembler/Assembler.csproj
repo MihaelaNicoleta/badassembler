@@ -60,6 +60,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraphicChanger.cs" />
     <Compile Include="Instruction.cs" />
     <Compile Include="InstructionHelper.cs" />
     <Compile Include="Program.cs" />

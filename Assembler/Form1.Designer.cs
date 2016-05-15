@@ -133,9 +133,9 @@
             this.Pd0s = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pdminus1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Pd1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.zeroShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.minusOneShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.oneShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.PdIRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdIRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape46 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -185,7 +185,7 @@
             this.PdIVRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdADRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdMDRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.rectangleShape24 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.IRShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape22 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape21 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -1160,9 +1160,9 @@
             this.Pd0s,
             this.Pdminus1,
             this.Pd1,
-            this.rectangleShape5,
-            this.rectangleShape4,
-            this.rectangleShape3,
+            this.zeroShape,
+            this.minusOneShape,
+            this.oneShape,
             this.PdIRs,
             this.PdIRd,
             this.lineShape46,
@@ -1212,7 +1212,7 @@
             this.PdIVRs,
             this.PdADRs,
             this.PdMDRs,
-            this.rectangleShape24,
+            this.IRShape,
             this.rectangleShape23,
             this.rectangleShape22,
             this.rectangleShape21,
@@ -1281,23 +1281,23 @@
             this.Pd1.Y1 = 58;
             this.Pd1.Y2 = 110;
             // 
-            // rectangleShape5
+            // zeroShape
             // 
-            this.rectangleShape5.Location = new System.Drawing.Point(789, 14);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(40, 44);
+            this.zeroShape.Location = new System.Drawing.Point(789, 14);
+            this.zeroShape.Name = "zeroShape";
+            this.zeroShape.Size = new System.Drawing.Size(40, 44);
             // 
-            // rectangleShape4
+            // minusOneShape
             // 
-            this.rectangleShape4.Location = new System.Drawing.Point(731, 13);
-            this.rectangleShape4.Name = "rectangleShape4";
-            this.rectangleShape4.Size = new System.Drawing.Size(38, 45);
+            this.minusOneShape.Location = new System.Drawing.Point(731, 13);
+            this.minusOneShape.Name = "minusOneShape";
+            this.minusOneShape.Size = new System.Drawing.Size(38, 45);
             // 
-            // rectangleShape3
+            // oneShape
             // 
-            this.rectangleShape3.Location = new System.Drawing.Point(671, 14);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.Size = new System.Drawing.Size(40, 43);
+            this.oneShape.Location = new System.Drawing.Point(671, 14);
+            this.oneShape.Name = "oneShape";
+            this.oneShape.Size = new System.Drawing.Size(40, 43);
             // 
             // PdIRs
             // 
@@ -1737,11 +1737,11 @@
             this.PdMDRs.Y1 = 227;
             this.PdMDRs.Y2 = 316;
             // 
-            // rectangleShape24
+            // IRShape
             // 
-            this.rectangleShape24.Location = new System.Drawing.Point(74, 43);
-            this.rectangleShape24.Name = "rectangleShape24";
-            this.rectangleShape24.Size = new System.Drawing.Size(113, 24);
+            this.IRShape.Location = new System.Drawing.Point(74, 43);
+            this.IRShape.Name = "IRShape";
+            this.IRShape.Size = new System.Drawing.Size(113, 24);
             // 
             // rectangleShape23
             // 
@@ -1846,175 +1846,176 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape RBUS;
-        private Microsoft.VisualBasic.PowerPacks.LineShape DBUS;
-        private Microsoft.VisualBasic.PowerPacks.LineShape SBUS;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label R15;
-        private System.Windows.Forms.Label R14;
-        private System.Windows.Forms.Label R13;
-        private System.Windows.Forms.Label R12;
-        private System.Windows.Forms.Label R11;
-        private System.Windows.Forms.Label R10;
-        private System.Windows.Forms.Label R9;
-        private System.Windows.Forms.Label R8;
-        private System.Windows.Forms.Label R7;
-        private System.Windows.Forms.Label R6;
-        private System.Windows.Forms.Label R5;
-        private System.Windows.Forms.Label R4;
-        private System.Windows.Forms.Label R3;
-        private System.Windows.Forms.Label R2;
-        private System.Windows.Forms.Label R1;
-        private System.Windows.Forms.Label R0;
-        private System.Windows.Forms.Label flags;
-        private System.Windows.Forms.Label SP;
-        private System.Windows.Forms.Label T;
-        private System.Windows.Forms.Label PC;
-        private System.Windows.Forms.Label IVR;
-        private System.Windows.Forms.Label ADR;
-        private System.Windows.Forms.Label MDR;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label IR;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label asmCode;
-        private System.Windows.Forms.Button microcodeButton;
-        private System.Windows.Forms.Button asmButton;
-        private System.Windows.Forms.TextBox messagesTextBox;
-        private System.Windows.Forms.Button assembleButton;
-        private System.Windows.Forms.Button runButton;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape19;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape18;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape23;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape22;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape21;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape20;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape24;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdTs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdPCs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdIVRs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdADRs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdMDRs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdSPs;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdRGs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdMDRd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdRGd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdSPd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdTd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdPCd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdIVRd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdADRd;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape18;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape17;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmRG;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmSP;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmT;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmPC;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmIVR;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmADR;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape26;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape25;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmMDR;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmMDR1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape29;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape32;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape31;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape30;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape36;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape37;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdCond2;
-        private System.Windows.Forms.Label label52;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape44;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape43;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape45;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape46;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdIRs;
-        private Microsoft.VisualBasic.PowerPacks.LineShape PdIRd;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label53;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label55;
-        private Microsoft.VisualBasic.PowerPacks.LineShape Pd0s;
-        private Microsoft.VisualBasic.PowerPacks.LineShape Pdminus1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape Pd1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape Pd0d;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label58;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape54;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape53;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape RBUS;
+        public Microsoft.VisualBasic.PowerPacks.LineShape DBUS;
+        public Microsoft.VisualBasic.PowerPacks.LineShape SBUS;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label R15;
+        public System.Windows.Forms.Label R14;
+        public System.Windows.Forms.Label R13;
+        public System.Windows.Forms.Label R12;
+        public System.Windows.Forms.Label R11;
+        public System.Windows.Forms.Label R10;
+        public System.Windows.Forms.Label R9;
+        public System.Windows.Forms.Label R8;
+        public System.Windows.Forms.Label R7;
+        public System.Windows.Forms.Label R6;
+        public System.Windows.Forms.Label R5;
+        public System.Windows.Forms.Label R4;
+        public System.Windows.Forms.Label R3;
+        public System.Windows.Forms.Label R2;
+        public System.Windows.Forms.Label R1;
+        public System.Windows.Forms.Label R0;
+        public System.Windows.Forms.Label flags;
+        public System.Windows.Forms.Label SP;
+        public System.Windows.Forms.Label T;
+        public System.Windows.Forms.Label PC;
+        public System.Windows.Forms.Label IVR;
+        public System.Windows.Forms.Label ADR;
+        public System.Windows.Forms.Label MDR;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label IR;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label asmCode;
+        public System.Windows.Forms.Button microcodeButton;
+        public System.Windows.Forms.Button asmButton;
+        public System.Windows.Forms.TextBox messagesTextBox;
+        public System.Windows.Forms.Button assembleButton;
+        public System.Windows.Forms.Button runButton;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape19;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape18;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape23;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape22;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape21;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape20;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Label label25;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape IRShape;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdTs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdPCs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdADRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPs;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdTd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdPCd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdADRd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape18;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape17;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmRG;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmSP;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmT;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmPC;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmIVR;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmADR;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape26;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape25;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape29;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmFLAG1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdCond5;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape32;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape31;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape30;
+        public System.Windows.Forms.PictureBox pictureBox5;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape36;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape37;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape38;
+        public System.Windows.Forms.Label label37;
+        public System.Windows.Forms.Label label36;
+        public System.Windows.Forms.Label label35;
+        public System.Windows.Forms.Label label34;
+        public System.Windows.Forms.Label label33;
+        public System.Windows.Forms.Label label32;
+        public System.Windows.Forms.Label label31;
+        public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.Label label29;
+        public System.Windows.Forms.Label label28;
+        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label label38;
+        public System.Windows.Forms.Label label41;
+        public System.Windows.Forms.Label label40;
+        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Label label42;
+        public System.Windows.Forms.Label label49;
+        public System.Windows.Forms.Label label48;
+        public System.Windows.Forms.Label label47;
+        public System.Windows.Forms.Label label46;
+        public System.Windows.Forms.Label label45;
+        public System.Windows.Forms.Label label44;
+        public System.Windows.Forms.Label label51;
+        public System.Windows.Forms.Label label50;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdCond4;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdCond3;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdCond1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdCond2;
+        public System.Windows.Forms.Label label52;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape44;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape43;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape45;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape46;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdIRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdIRd;
+        public System.Windows.Forms.Label label54;
+        public System.Windows.Forms.Label label53;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape zeroShape;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape minusOneShape;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape oneShape;
+        public System.Windows.Forms.Label label57;
+        public System.Windows.Forms.Label label56;
+        public System.Windows.Forms.Label label55;
+        public Microsoft.VisualBasic.PowerPacks.LineShape Pd0s;
+        public Microsoft.VisualBasic.PowerPacks.LineShape Pdminus1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape Pd1;
+        public Microsoft.VisualBasic.PowerPacks.LineShape Pd0d;
+        public System.Windows.Forms.Label label61;
+        public System.Windows.Forms.Label label60;
+        public System.Windows.Forms.Label label59;
+        public System.Windows.Forms.Label label58;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape54;
+        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape53;
+
     }
 }
 

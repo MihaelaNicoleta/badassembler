@@ -15,6 +15,9 @@ namespace Assembler
 {
     public partial class mainForm : Form
     {
+
+        public static mainForm currentForm = null;
+
         //given files
         String assemblyCodeFile = "assembly_code.asm";
         String instructionsFile = "codificare_instructiuni.csv";
@@ -63,11 +66,11 @@ namespace Assembler
         public mainForm()
         {
             InitializeComponent();
-           
 
+            currentForm = this;
         }
 
-        private void getDefaultInstructionsRegistersAddressingModes()
+    private void getDefaultInstructionsRegistersAddressingModes()
         {
             // fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             fileParser.createBinaryInstructionsCodes(instructionsFile);
@@ -217,7 +220,9 @@ namespace Assembler
 
         private void runButton_Click(object sender, EventArgs e)
         {
+            
             sequencer.runSimulation();
+
         }
     }
 }
