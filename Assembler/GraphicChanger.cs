@@ -60,28 +60,28 @@ namespace Assembler
 
         public void PdMDRs()
         {
-            myForm.PdMDRs.BorderColor = changeColor;
+            myForm.PdMDRd.BorderColor = changeColor;
             myForm.MDR.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdMDRd()
         {
-            myForm.PdMDRd.BorderColor = changeColor;
+            myForm.PdMDRs.BorderColor = changeColor;
             myForm.MDR.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void PdADRs()
         {
-            myForm.PdADRs.BorderColor = changeColor;
+            myForm.PdADRd.BorderColor = changeColor;
             myForm.ADR.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdADRd()
         {
-            myForm.PdADRd.BorderColor = changeColor;
+            myForm.PdADRs.BorderColor = changeColor;
             myForm.ADR.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
@@ -89,56 +89,56 @@ namespace Assembler
 
         public void PdIVRs()
         {
-            myForm.PdIVRs.BorderColor = changeColor;
+            myForm.PdIVRd.BorderColor = changeColor;
             myForm.IVR.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdIVRd()
         {
-            myForm.PdIVRd.BorderColor = changeColor;
+            myForm.PdIVRs.BorderColor = changeColor;
             myForm.IVR.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void PdPCs()
         {
-            myForm.PdPCs.BorderColor = changeColor;
+            myForm.PdPCd.BorderColor = changeColor;
             myForm.PC.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdPCd()
         {
-            myForm.PdPCd.BorderColor = changeColor;
+            myForm.PdPCs.BorderColor = changeColor;
             myForm.PC.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void PdTs()
         {
-            myForm.PdTs.BorderColor = changeColor;
+            myForm.PdTd.BorderColor = changeColor;
             myForm.T.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdTd()
         {
-            myForm.PdTd.BorderColor = changeColor;
+            myForm.PdTs.BorderColor = changeColor;
             myForm.T.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void PdSPs()
         {
-            myForm.PdSPs.BorderColor = changeColor;
+            myForm.PdSPd.BorderColor = changeColor;
             myForm.SP.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdSPd()
         {
-            myForm.PdSPd.BorderColor = changeColor;
+            myForm.PdSPs.BorderColor = changeColor;
             myForm.SP.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
@@ -226,26 +226,26 @@ namespace Assembler
 
         public void PdRGs()
         {
-            myForm.PdRGs.BorderColor = changeColor;
+            myForm.PdRGd.BorderColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdRGd()
         {
-            myForm.PdRGd.BorderColor = changeColor;
+            myForm.PdRGs.BorderColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void PdFLAGs()
         {
-            myForm.PdFLAGs.BorderColor = changeColor;
+            myForm.PdFLAGd.BorderColor = changeColor;
             myForm.flags.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void PdFLAGd()
         {
-            myForm.PdFLAGd.BorderColor = changeColor;
+            myForm.PdFLAGs.BorderColor = changeColor;
             myForm.flags.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
@@ -348,7 +348,7 @@ namespace Assembler
 
         public void Read()
         {
-            myForm.PdADRs.BorderColor = changeColor;
+            myForm.PdADRd.BorderColor = changeColor;
             myForm.ALUDLine.BorderColor = changeColor;
             myForm.ALUDLine.BorderColor = changeColor;
             myForm.DataOUTLine1.BorderColor = changeColor;
@@ -361,10 +361,10 @@ namespace Assembler
 
         public void Write()
         {
-            myForm.PdADRs.BorderColor = changeColor;
+            myForm.PdADRd.BorderColor = changeColor;
             myForm.ALUDLine.BorderColor = changeColor;
             myForm.ALUDLine.BorderColor = changeColor;
-            myForm.PdMDRs.BorderColor = changeColor;
+            myForm.PdMDRd.BorderColor = changeColor;
             myForm.MDRLine1.BorderColor = changeColor;
             myForm.MDRLine2.BorderColor = changeColor;
             myForm.MDRLine3.BorderColor = changeColor;
@@ -520,22 +520,22 @@ namespace Assembler
             myForm.Pdminus1.BorderColor = defaultColor;
             myForm.PdIRs.BorderColor = defaultColor;
             myForm.PdIRs.BorderColor = defaultColor;
-            myForm.PdMDRs.BorderColor = defaultColor;
-            myForm.PdMDRs.BorderColor = defaultColor;
-            myForm.PdADRs.BorderColor = defaultColor;
+            myForm.PdMDRd.BorderColor = defaultColor;
+            myForm.PdMDRd.BorderColor = defaultColor;
             myForm.PdADRd.BorderColor = defaultColor;
-            myForm.PdIVRs.BorderColor = defaultColor;
+            myForm.PdADRs.BorderColor = defaultColor;
             myForm.PdIVRd.BorderColor = defaultColor;
-            myForm.PdPCs.BorderColor = defaultColor;
+            myForm.PdIVRs.BorderColor = defaultColor;
             myForm.PdPCd.BorderColor = defaultColor;
-            myForm.PdTs.BorderColor = defaultColor;
+            myForm.PdPCs.BorderColor = defaultColor;
             myForm.PdTd.BorderColor = defaultColor;
-            myForm.PdSPs.BorderColor = defaultColor;
+            myForm.PdTs.BorderColor = defaultColor;
             myForm.PdSPd.BorderColor = defaultColor;
-            myForm.PdRGs.BorderColor = defaultColor;
+            myForm.PdSPs.BorderColor = defaultColor;
             myForm.PdRGd.BorderColor = defaultColor;
-            myForm.PdFLAGs.BorderColor = defaultColor;
+            myForm.PdRGs.BorderColor = defaultColor;
             myForm.PdFLAGd.BorderColor = defaultColor;
+            myForm.PdFLAGs.BorderColor = defaultColor;
             myForm.PdCond1.BorderColor = defaultColor;
             myForm.PdCond2.BorderColor = defaultColor;
             myForm.PdCond3.BorderColor = defaultColor;

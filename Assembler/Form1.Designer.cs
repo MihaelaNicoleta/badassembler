@@ -169,23 +169,23 @@
             this.PmADR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.ALUDLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.ALUSLine = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdFLAGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdRGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdSPd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdTd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdPCd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdIVRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdADRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.PdMDRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdFLAGs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdRGs = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.PdSPs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdTs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdPCs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdIVRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdADRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PdMDRs = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdFLAGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdRGd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.PdSPd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdTd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdPCd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdIVRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdADRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PdMDRd = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.IRShape = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape22 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -553,7 +553,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(180, 270);
+            this.label43.Location = new System.Drawing.Point(143, 165);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(50, 13);
             this.label43.TabIndex = 72;
@@ -562,7 +562,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(142, 165);
+            this.label42.Location = new System.Drawing.Point(180, 261);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(51, 13);
             this.label42.TabIndex = 71;
@@ -571,7 +571,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(945, 270);
+            this.label41.Location = new System.Drawing.Point(915, 165);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(52, 13);
             this.label41.TabIndex = 70;
@@ -580,7 +580,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(921, 165);
+            this.label40.Location = new System.Drawing.Point(948, 270);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(53, 13);
             this.label40.TabIndex = 69;
@@ -589,7 +589,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(588, 165);
+            this.label39.Location = new System.Drawing.Point(754, 270);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(42, 13);
             this.label39.TabIndex = 68;
@@ -598,7 +598,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(754, 270);
+            this.label38.Location = new System.Drawing.Point(588, 165);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(41, 13);
             this.label38.TabIndex = 67;
@@ -607,7 +607,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(498, 165);
+            this.label37.Location = new System.Drawing.Point(532, 270);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(40, 13);
             this.label37.TabIndex = 66;
@@ -616,7 +616,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(532, 270);
+            this.label36.Location = new System.Drawing.Point(506, 165);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(39, 13);
             this.label36.TabIndex = 65;
@@ -625,7 +625,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(440, 165);
+            this.label35.Location = new System.Drawing.Point(468, 270);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(33, 13);
             this.label35.TabIndex = 64;
@@ -634,7 +634,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(460, 270);
+            this.label34.Location = new System.Drawing.Point(445, 165);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(32, 13);
             this.label34.TabIndex = 63;
@@ -643,7 +643,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(392, 270);
+            this.label33.Location = new System.Drawing.Point(361, 165);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(39, 13);
             this.label33.TabIndex = 62;
@@ -652,7 +652,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(360, 165);
+            this.label32.Location = new System.Drawing.Point(392, 270);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(40, 13);
             this.label32.TabIndex = 61;
@@ -661,7 +661,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(289, 165);
+            this.label31.Location = new System.Drawing.Point(322, 270);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(44, 13);
             this.label31.TabIndex = 60;
@@ -670,7 +670,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(320, 270);
+            this.label30.Location = new System.Drawing.Point(291, 165);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(43, 13);
             this.label30.TabIndex = 59;
@@ -679,7 +679,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(250, 270);
+            this.label29.Location = new System.Drawing.Point(221, 165);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(48, 13);
             this.label29.TabIndex = 58;
@@ -688,7 +688,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(212, 165);
+            this.label28.Location = new System.Drawing.Point(250, 270);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(49, 13);
             this.label28.TabIndex = 57;
@@ -1213,23 +1213,23 @@
             this.PmADR,
             this.ALUDLine,
             this.ALUSLine,
-            this.PdFLAGd,
-            this.PdRGd,
-            this.PdSPd,
-            this.PdTd,
-            this.PdPCd,
-            this.PdIVRd,
-            this.PdADRd,
-            this.PdMDRd,
             this.PdFLAGs,
             this.PdRGs,
-            this.rectangleShape2,
             this.PdSPs,
             this.PdTs,
             this.PdPCs,
             this.PdIVRs,
             this.PdADRs,
             this.PdMDRs,
+            this.PdFLAGd,
+            this.PdRGd,
+            this.rectangleShape2,
+            this.PdSPd,
+            this.PdTd,
+            this.PdPCd,
+            this.PdIVRd,
+            this.PdADRd,
+            this.PdMDRd,
             this.IRShape,
             this.rectangleShape23,
             this.rectangleShape22,
@@ -1605,95 +1605,95 @@
             this.ALUSLine.Y1 = 130;
             this.ALUSLine.Y2 = 316;
             // 
-            // PdFLAGd
-            // 
-            this.PdFLAGd.BorderWidth = 3;
-            this.PdFLAGd.Name = "PdFLAGd";
-            this.PdFLAGd.X1 = 942;
-            this.PdFLAGd.X2 = 943;
-            this.PdFLAGd.Y1 = 130;
-            this.PdFLAGd.Y2 = 316;
-            // 
-            // PdRGd
-            // 
-            this.PdRGd.BorderWidth = 3;
-            this.PdRGd.Name = "PdRGd";
-            this.PdRGd.X1 = 609;
-            this.PdRGd.X2 = 610;
-            this.PdRGd.Y1 = 129;
-            this.PdRGd.Y2 = 315;
-            // 
-            // PdSPd
-            // 
-            this.PdSPd.BorderWidth = 3;
-            this.PdSPd.Name = "PdSPd";
-            this.PdSPd.X1 = 522;
-            this.PdSPd.X2 = 523;
-            this.PdSPd.Y1 = 130;
-            this.PdSPd.Y2 = 316;
-            // 
-            // PdTd
-            // 
-            this.PdTd.BorderWidth = 3;
-            this.PdTd.Name = "PdTd";
-            this.PdTd.X1 = 456;
-            this.PdTd.X2 = 457;
-            this.PdTd.Y1 = 130;
-            this.PdTd.Y2 = 316;
-            // 
-            // PdPCd
-            // 
-            this.PdPCd.BorderWidth = 3;
-            this.PdPCd.Name = "PdPCd";
-            this.PdPCd.X1 = 381;
-            this.PdPCd.X2 = 382;
-            this.PdPCd.Y1 = 129;
-            this.PdPCd.Y2 = 315;
-            // 
-            // PdIVRd
-            // 
-            this.PdIVRd.BorderWidth = 3;
-            this.PdIVRd.Name = "PdIVRd";
-            this.PdIVRd.X1 = 310;
-            this.PdIVRd.X2 = 311;
-            this.PdIVRd.Y1 = 131;
-            this.PdIVRd.Y2 = 317;
-            // 
-            // PdADRd
-            // 
-            this.PdADRd.BorderWidth = 3;
-            this.PdADRd.Name = "PdADRd";
-            this.PdADRd.X1 = 240;
-            this.PdADRd.X2 = 241;
-            this.PdADRd.Y1 = 131;
-            this.PdADRd.Y2 = 317;
-            // 
-            // PdMDRd
-            // 
-            this.PdMDRd.BorderWidth = 3;
-            this.PdMDRd.Name = "PdMDRd";
-            this.PdMDRd.X1 = 170;
-            this.PdMDRd.X2 = 171;
-            this.PdMDRd.Y1 = 130;
-            this.PdMDRd.Y2 = 316;
-            // 
             // PdFLAGs
             // 
             this.PdFLAGs.BorderWidth = 3;
             this.PdFLAGs.Name = "PdFLAGs";
-            this.PdFLAGs.X1 = 966;
-            this.PdFLAGs.X2 = 966;
-            this.PdFLAGs.Y1 = 230;
-            this.PdFLAGs.Y2 = 319;
+            this.PdFLAGs.X1 = 942;
+            this.PdFLAGs.X2 = 943;
+            this.PdFLAGs.Y1 = 130;
+            this.PdFLAGs.Y2 = 316;
             // 
             // PdRGs
             // 
             this.PdRGs.BorderWidth = 3;
             this.PdRGs.Name = "PdRGs";
-            this.PdRGs.X1 = 771;
-            this.PdRGs.X2 = 771;
-            this.PdRGs.Y1 = 228;
-            this.PdRGs.Y2 = 317;
+            this.PdRGs.X1 = 609;
+            this.PdRGs.X2 = 610;
+            this.PdRGs.Y1 = 129;
+            this.PdRGs.Y2 = 315;
+            // 
+            // PdSPs
+            // 
+            this.PdSPs.BorderWidth = 3;
+            this.PdSPs.Name = "PdSPs";
+            this.PdSPs.X1 = 522;
+            this.PdSPs.X2 = 523;
+            this.PdSPs.Y1 = 130;
+            this.PdSPs.Y2 = 316;
+            // 
+            // PdTs
+            // 
+            this.PdTs.BorderWidth = 3;
+            this.PdTs.Name = "PdTs";
+            this.PdTs.X1 = 456;
+            this.PdTs.X2 = 457;
+            this.PdTs.Y1 = 130;
+            this.PdTs.Y2 = 316;
+            // 
+            // PdPCs
+            // 
+            this.PdPCs.BorderWidth = 3;
+            this.PdPCs.Name = "PdPCs";
+            this.PdPCs.X1 = 381;
+            this.PdPCs.X2 = 382;
+            this.PdPCs.Y1 = 129;
+            this.PdPCs.Y2 = 315;
+            // 
+            // PdIVRs
+            // 
+            this.PdIVRs.BorderWidth = 3;
+            this.PdIVRs.Name = "PdIVRs";
+            this.PdIVRs.X1 = 310;
+            this.PdIVRs.X2 = 311;
+            this.PdIVRs.Y1 = 131;
+            this.PdIVRs.Y2 = 317;
+            // 
+            // PdADRs
+            // 
+            this.PdADRs.BorderWidth = 3;
+            this.PdADRs.Name = "PdADRs";
+            this.PdADRs.X1 = 240;
+            this.PdADRs.X2 = 241;
+            this.PdADRs.Y1 = 131;
+            this.PdADRs.Y2 = 317;
+            // 
+            // PdMDRs
+            // 
+            this.PdMDRs.BorderWidth = 3;
+            this.PdMDRs.Name = "PdMDRs";
+            this.PdMDRs.X1 = 170;
+            this.PdMDRs.X2 = 171;
+            this.PdMDRs.Y1 = 130;
+            this.PdMDRs.Y2 = 316;
+            // 
+            // PdFLAGd
+            // 
+            this.PdFLAGd.BorderWidth = 3;
+            this.PdFLAGd.Name = "PdFLAGd";
+            this.PdFLAGd.X1 = 966;
+            this.PdFLAGd.X2 = 966;
+            this.PdFLAGd.Y1 = 230;
+            this.PdFLAGd.Y2 = 319;
+            // 
+            // PdRGd
+            // 
+            this.PdRGd.BorderWidth = 3;
+            this.PdRGd.Name = "PdRGd";
+            this.PdRGd.X1 = 771;
+            this.PdRGd.X2 = 771;
+            this.PdRGd.Y1 = 228;
+            this.PdRGd.Y2 = 317;
             // 
             // rectangleShape2
             // 
@@ -1701,59 +1701,59 @@
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(350, 225);
             // 
-            // PdSPs
+            // PdSPd
             // 
-            this.PdSPs.BorderWidth = 3;
-            this.PdSPs.Name = "PdSPs";
-            this.PdSPs.X1 = 546;
-            this.PdSPs.X2 = 546;
-            this.PdSPs.Y1 = 229;
-            this.PdSPs.Y2 = 318;
+            this.PdSPd.BorderWidth = 3;
+            this.PdSPd.Name = "PdSPd";
+            this.PdSPd.X1 = 546;
+            this.PdSPd.X2 = 546;
+            this.PdSPd.Y1 = 229;
+            this.PdSPd.Y2 = 318;
             // 
-            // PdTs
+            // PdTd
             // 
-            this.PdTs.BorderWidth = 3;
-            this.PdTs.Name = "PdTs";
-            this.PdTs.X1 = 476;
-            this.PdTs.X2 = 476;
-            this.PdTs.Y1 = 229;
-            this.PdTs.Y2 = 318;
+            this.PdTd.BorderWidth = 3;
+            this.PdTd.Name = "PdTd";
+            this.PdTd.X1 = 476;
+            this.PdTd.X2 = 476;
+            this.PdTd.Y1 = 229;
+            this.PdTd.Y2 = 318;
             // 
-            // PdPCs
+            // PdPCd
             // 
-            this.PdPCs.BorderWidth = 3;
-            this.PdPCs.Name = "PdPCs";
-            this.PdPCs.X1 = 404;
-            this.PdPCs.X2 = 404;
-            this.PdPCs.Y1 = 228;
-            this.PdPCs.Y2 = 317;
+            this.PdPCd.BorderWidth = 3;
+            this.PdPCd.Name = "PdPCd";
+            this.PdPCd.X1 = 404;
+            this.PdPCd.X2 = 404;
+            this.PdPCd.Y1 = 228;
+            this.PdPCd.Y2 = 317;
             // 
-            // PdIVRs
+            // PdIVRd
             // 
-            this.PdIVRs.BorderWidth = 3;
-            this.PdIVRs.Name = "PdIVRs";
-            this.PdIVRs.X1 = 333;
-            this.PdIVRs.X2 = 333;
-            this.PdIVRs.Y1 = 227;
-            this.PdIVRs.Y2 = 316;
+            this.PdIVRd.BorderWidth = 3;
+            this.PdIVRd.Name = "PdIVRd";
+            this.PdIVRd.X1 = 333;
+            this.PdIVRd.X2 = 333;
+            this.PdIVRd.Y1 = 227;
+            this.PdIVRd.Y2 = 316;
             // 
-            // PdADRs
+            // PdADRd
             // 
-            this.PdADRs.BorderWidth = 3;
-            this.PdADRs.Name = "PdADRs";
-            this.PdADRs.X1 = 266;
-            this.PdADRs.X2 = 266;
-            this.PdADRs.Y1 = 228;
-            this.PdADRs.Y2 = 317;
+            this.PdADRd.BorderWidth = 3;
+            this.PdADRd.Name = "PdADRd";
+            this.PdADRd.X1 = 266;
+            this.PdADRd.X2 = 266;
+            this.PdADRd.Y1 = 228;
+            this.PdADRd.Y2 = 317;
             // 
-            // PdMDRs
+            // PdMDRd
             // 
-            this.PdMDRs.BorderWidth = 3;
-            this.PdMDRs.Name = "PdMDRs";
-            this.PdMDRs.X1 = 200;
-            this.PdMDRs.X2 = 200;
-            this.PdMDRs.Y1 = 227;
-            this.PdMDRs.Y2 = 316;
+            this.PdMDRd.BorderWidth = 3;
+            this.PdMDRd.Name = "PdMDRd";
+            this.PdMDRd.X1 = 200;
+            this.PdMDRd.X2 = 200;
+            this.PdMDRd.Y1 = 227;
+            this.PdMDRd.Y2 = 316;
             // 
             // IRShape
             // 
@@ -1968,23 +1968,23 @@
         public System.Windows.Forms.Label label26;
         public System.Windows.Forms.Label label25;
         public Microsoft.VisualBasic.PowerPacks.RectangleShape IRShape;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdTs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdPCs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdADRs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPs;
-        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGs;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRd;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGd;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGd;
-        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdTd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdPCd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRd;
         public Microsoft.VisualBasic.PowerPacks.LineShape PdADRd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPd;
+        public Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGd;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdMDRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdFLAGs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdRGs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdSPs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdTs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdPCs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdIVRs;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PdADRs;
         public Microsoft.VisualBasic.PowerPacks.LineShape ALUDLine;
         public Microsoft.VisualBasic.PowerPacks.LineShape ALUSLine;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmRG;
