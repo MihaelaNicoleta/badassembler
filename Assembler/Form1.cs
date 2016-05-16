@@ -211,6 +211,7 @@ namespace Assembler
 
             if (MPM != null)
             {
+                sequencer.MPM = MPM;
                 messagesTextBox.Text += "Microcode loading was a great success.\r\n";
             }
             else

@@ -10,7 +10,12 @@ namespace Assembler
     {
         public int step = 0;
 
-        public int IR;
+        public int IR;    
+
+        public List<UInt64> MPM = new List<ulong>();
+
+        public int MAR = 0;
+
 
         public void runSimulationStepByStep()
         {
@@ -18,7 +23,9 @@ namespace Assembler
 
             GraphicChanger graphicChanger = new GraphicChanger();
 
-            ulong MIR = 391036338689;
+            ulong MIR = MPM[MAR];
+
+            //ulong MIR = 391036338689;
 
             switch(step)
             {
@@ -65,6 +72,7 @@ namespace Assembler
 
                 case 7:
                     {
+                        MAR++;
                         graphicChanger.resetGraphicToDefault();
                         step = 0;
 

@@ -520,7 +520,7 @@ namespace Assembler
             myForm.Pdminus1.BorderColor = defaultColor;
             myForm.PdIRs.BorderColor = defaultColor;
             myForm.PdIRs.BorderColor = defaultColor;
-            myForm.PdMDRd.BorderColor = defaultColor;
+            myForm.PdMDRs.BorderColor = defaultColor;
             myForm.PdMDRd.BorderColor = defaultColor;
             myForm.PdADRd.BorderColor = defaultColor;
             myForm.PdADRs.BorderColor = defaultColor;
