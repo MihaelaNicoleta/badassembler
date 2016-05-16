@@ -198,6 +198,7 @@
             this.SBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
+            this.ALUOperation = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -276,6 +277,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.ALUOperation);
             this.panel3.Controls.Add(this.label61);
             this.panel3.Controls.Add(this.label60);
             this.panel3.Controls.Add(this.label59);
@@ -1574,8 +1576,8 @@
             // 
             this.ALUDLine.BorderWidth = 3;
             this.ALUDLine.Name = "ALUDLine";
-            this.ALUDLine.X1 = 1075;
-            this.ALUDLine.X2 = 1075;
+            this.ALUDLine.X1 = 1077;
+            this.ALUDLine.X2 = 1077;
             this.ALUDLine.Y1 = 227;
             this.ALUDLine.Y2 = 316;
             // 
@@ -1583,10 +1585,10 @@
             // 
             this.ALUSLine.BorderWidth = 3;
             this.ALUSLine.Name = "ALUSLine";
-            this.ALUSLine.X1 = 1023;
-            this.ALUSLine.X2 = 1024;
-            this.ALUSLine.Y1 = 129;
-            this.ALUSLine.Y2 = 315;
+            this.ALUSLine.X1 = 1017;
+            this.ALUSLine.X2 = 1018;
+            this.ALUSLine.Y1 = 130;
+            this.ALUSLine.Y2 = 316;
             // 
             // PdFLAGd
             // 
@@ -1821,6 +1823,15 @@
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
             // 
+            // ALUOperation
+            // 
+            this.ALUOperation.AutoSize = true;
+            this.ALUOperation.Location = new System.Drawing.Point(1023, 295);
+            this.ALUOperation.Name = "ALUOperation";
+            this.ALUOperation.Size = new System.Drawing.Size(53, 13);
+            this.ALUOperation.TabIndex = 91;
+            this.ALUOperation.Text = "Operation";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2016,7 +2027,7 @@
         public System.Windows.Forms.Label label58;
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine5;
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine4;
-
+        private System.Windows.Forms.Label ALUOperation;
     }
 }
 

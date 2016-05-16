@@ -10,6 +10,8 @@ namespace Assembler
     {
         public int step = 0;
 
+        public int IR;
+
         public void runStepSimulation()
         {
             step++;
@@ -55,62 +57,42 @@ namespace Assembler
             {
                 case 0x1: //PdIRs
                     graphicChanger.PdIRs();
-                    //SBUS = (UInt16)(IR & 0x00FF);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x2: //PdFLAGs		
                     graphicChanger.PdFLAGs();
-                    //SBUS = (UInt16)(FLAG);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x3: //PdSPs
                     graphicChanger.PdSPs();
-                    //SBUS = (UInt16)(SP);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x4: //PdTs
                     graphicChanger.PdTs();
-                    //SBUS = (UInt16)(T);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
-                case 0x5: //PdnTs	
-                    //PdnTs();
-                    //UInt16 t = T;
-                    //SBUS = (UInt16)(~t);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
+                case 0x5: //PdnotTs	
+                    //graphicChanger.PdnotTs();
                     break;
 
                 case 0x6: //PdPCs	
                     graphicChanger.PdPCs();
-                    //SBUS = (UInt16)(PC);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x7: //PdIVRs	
                     graphicChanger.PdIVRs();
-                    //SBUS = (UInt16)(IVR);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x8: //PdADRs		
                     graphicChanger.PdADRs();
-                    //SBUS = (UInt16)(ADR);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0x9: //PdMDRs	
                     graphicChanger.PdMDRs();
-                    //SBUS = (UInt16)(MDR);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0xA: //PdRGs		
                     //int nr_reg = (IR & 0x03C0) >> 6; //preiau reg din camp RS din IR
-                    //SBUS = (UInt16)(R[nr_reg]);
                     var nr_reg = 1;
                     switch (nr_reg)
                     {
@@ -165,26 +147,18 @@ namespace Assembler
                     }
 
                     graphicChanger.PdRGs();
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0xB: //Pd0s
                     graphicChanger.Pd0s();
-                    //SBUS = 0;
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0xC: //Pd-1s
                     graphicChanger.Pdminus1s();
-                    //Int16 v = -1;
-                    //SBUS = (UInt16)v;
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 case 0xD: //Pd1s
                     graphicChanger.Pd1s();
-                    //SBUS = (UInt16)(1);
-                    //SBUSlabel.Text = Convert_Binary(SBUS.ToString(), 16);
                     break;
 
                 default:
@@ -198,64 +172,44 @@ namespace Assembler
             UInt16 dbus = (UInt16)((MIRCode & 32212254720) >> 31);
             switch (dbus)
             {
-                case 0x1: //PdIR[Off]d
+                case 0x1: //PdIR[Offset]d
                     graphicChanger.PdIRd();
-                    //DBUS = (UInt16)(IR & 0x00FF);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x2: //PdFLAGd
                     graphicChanger.PdFLAGd();
-                    //DBUS = (UInt16)(FLAG);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x3: //PdSPd
                     graphicChanger.PdSPd();
-                    //DBUS = (UInt16)(SP);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x4: //PdTd
                     graphicChanger.PdTd();
-                    //DBUS = (UInt16)(T);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
-                case 0x5: //PdnTd
-                    //PdnTd();
-                    //UInt16 t = T;
-                    //DBUS = (UInt16)(~t);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
+                case 0x5: //PdnotTd
+                    //graphicChanger.PdnTd();
                     break;
 
                 case 0x6: //PdPCd
                     graphicChanger.PdPCd();
-                    //DBUS = (UInt16)(PC);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x7: //PdIVRd
                     graphicChanger.PdIVRd();
-                    //DBUS = (UInt16)(IVR);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x8: //PdADRd
                     graphicChanger.PdADRd();
-                    //DBUS = (UInt16)(ADR);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0x9: //PdMDRd
                     graphicChanger.PdMDRd();
-                    //DBUS = (UInt16)(MDR);
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0xA: //PdRGd
                     //int nr_reg = IR & 0x000F; //preiau reg din camp RS din IR
-                    //DBUS = Convert.ToUInt16(R[nr_reg]);
 
                     var  nr_reg = 1;
                     switch (nr_reg)
@@ -310,13 +264,10 @@ namespace Assembler
                             break;
                     }
                     graphicChanger.PdRGd();
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 case 0xB: //Pd0d
                     graphicChanger.Pd0d();
-                    //DBUS = 0;
-                    //DBUSlabel.Text = Convert_Binary(DBUS.ToString(), 16);
                     break;
 
                 default: //none
@@ -328,123 +279,126 @@ namespace Assembler
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 rbus = (UInt16)((MIRCode & 125829120) >> 23);
+
+            ushort value = 127;
+
             switch (rbus)
             {
                 case 0x1: //PmFLAG
                     graphicChanger.PmFLAG();
-                    //FLAG = RBUS;
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
 
                 case 0x2: //PmRG
                     //int nr_reg = IR & 0x000F;
                     //R[nr_reg] = RBUS;
-                    //PmRGline.BorderColor = Color.Red;
+                    graphicChanger.PmRG();
+
+                   
 
                     var nr_reg = 1;
                     switch (nr_reg)
                     {
                         case 0:
-                            //R0text.Text = Convert_Binary(R[0].ToString(), 16);
                             graphicChanger.colorR0();
+                            graphicChanger.setR0(value);
                             break;
-                        case 1:
-                            //R1text.Text = Convert_Binary(R[1].ToString(), 16);
+                        case 1:                            
                             graphicChanger.colorR1();
+                            graphicChanger.setR1(value);
                             break;
-                        case 2:
-                            //R2text.Text = Convert_Binary(R[2].ToString(), 16);
+                        case 2:                            
                             graphicChanger.colorR2();
+                            graphicChanger.setR2(value);
                             break;
-                        case 3:
-                            //R3text.Text = Convert_Binary(R[3].ToString(), 16);
+                        case 3:                            
                             graphicChanger.colorR3();
+                            graphicChanger.setR3(value);
                             break;
                         case 4:
-                            //R4text.Text = Convert_Binary(R[4].ToString(), 16);
                             graphicChanger.colorR4();
+                            graphicChanger.setR4(value);
                             break;
-                        case 5:
-                            //R5text.Text = Convert_Binary(R[5].ToString(), 16);
+                        case 5:                            
                             graphicChanger.colorR5();
+                            graphicChanger.setR5(value);
                             break;
                         case 6:
-                            //R6text.Text = Convert_Binary(R[6].ToString(), 16);
                             graphicChanger.colorR6();
+                            graphicChanger.setR6(value);
                             break;
                         case 7:
-                            //R7text.Text = Convert_Binary(R[7].ToString(), 16);
                             graphicChanger.colorR7();
+                            graphicChanger.setR7(value);
                             break;
                         case 8:
-                            //R8text.Text = Convert_Binary(R[8].ToString(), 16);
                             graphicChanger.colorR8();
+                            graphicChanger.setR8(value);
                             break;
                         case 9:
-                            //R9text.Text = Convert_Binary(R[9].ToString(), 16);
                             graphicChanger.colorR9();
+                            graphicChanger.setR9(value);
                             break;
                         case 10:
-                            //R10text.Text = Convert_Binary(R[10].ToString(), 16);
                             graphicChanger.colorR10();
+                            graphicChanger.setR10(value);
                             break;
                         case 11:
-                            //R11text.Text = Convert_Binary(R[11].ToString(), 16);
                             graphicChanger.colorR11();
+                            graphicChanger.setR11(value);
                             break;
                         case 12:
-                            //R12text.Text = Convert_Binary(R[12].ToString(), 16);
                             graphicChanger.colorR12();
+                            graphicChanger.setR12(value);
                             break;
                         case 13:
-                            //R13text.Text = Convert_Binary(R[13].ToString(), 16);
                             graphicChanger.colorR13();
+                            graphicChanger.setR13(value);
                             break;
                         case 14:
-                            //R14text.Text = Convert_Binary(R[14].ToString(), 16);
                             graphicChanger.colorR14();
+                            graphicChanger.setR14(value);
                             break;
                         case 15:
-                            //R15text.Text = Convert_Binary(R[15].ToString(), 16);
                             graphicChanger.colorR15();
+                            graphicChanger.setR15(value);
                             break;
                     }
                     break;
 
                 case 0x3: //PmSP
                     graphicChanger.PmSP();
+                    graphicChanger.setSP(value);
                     //SP = RBUS;
-                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
                     break;
 
                 case 0x4: //PmT
                     graphicChanger.PmT();
+                    graphicChanger.setT(value);
                     //T = RBUS;
-                    //Ttext.Text = Convert_Binary(T.ToString(), 16);
                     break;
 
                 case 0x5: //PmPC
                     graphicChanger.PmPC();
+                    graphicChanger.setPC(value);
                     //PC = RBUS;
-                    //PCtext.Text = Convert_Binary(PC.ToString(), 16);
                     break;
 
                 case 0x6: //PmIVR
                     graphicChanger.PmIVR();
+                    graphicChanger.setIVR(value);
                     //IVR = RBUS;
-                    //IVRtext.Text = Convert_Binary(IVR.ToString(), 16);
                     break;
 
                 case 0x7: //PmADR
                     graphicChanger.PmADR();
+                    graphicChanger.setADR(value);
                     //ADR = RBUS;
-                    //ADRtext.Text = Convert_Binary(ADR.ToString(), 16);
                     break;
 
                 case 0x8: //PmMDR
                     graphicChanger.PmMDR();
+                    graphicChanger.setMDR(value);
                     //MDR = RBUS;
-                    //MDRtext.Text = Convert_Binary(MDR.ToString(), 16);
                     break;
 
                 default: //none
@@ -454,13 +408,134 @@ namespace Assembler
 
         private void decodeALU()
         {
-
+            UInt16 campALU = (UInt16)((MIR & 0x0000000078000000) >> 27);
+            switch (campALU)
+            {
+                case 0x1: //SUM
+                    #region sum
+                    if ((((UInt16)(MIR & 0x0000000007800000)) >> 18) == 2)
+                    { //CIN activat atunci mai adun si val 1
+                        try
+                        {
+                            //ActivateCIN();
+                            ALUlabel.Text = "SUM";
+                            Alu();
+                            RBUS = (UInt16)(SBUS + DBUS + 0x1);
+                            RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                        }
+                        catch (OverflowException) // daca apare overflow
+                        {
+                            FLAG = (UInt16)(FLAG | 0X0001); // setez bit overflow V
+                            //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                        }
+                    }
+                    else
+                    { //adunare
+                        try
+                        {
+                            ALUlabel.Text = "SUM";
+                            Alu();
+                            RBUS = (UInt16)(SBUS + DBUS);
+                            RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                        }
+                        catch (OverflowException)
+                        {
+                            FLAG = (UInt16)(FLAG | 0X0001); // setez bit V
+                            //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                        }
+                    }
+                    #endregion
+                    break;
+                case 0x2: //AND
+                    ALUlabel.Text = "AND";
+                    Alu();
+                    RBUS = (UInt16)(SBUS & DBUS);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x3: //OR
+                    ALUlabel.Text = "OR";
+                    Alu();
+                    RBUS = (UInt16)(SBUS | DBUS);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x4: //XOR
+                    ALUlabel.Text = "XOR";
+                    Alu();
+                    RBUS = (UInt16)(SBUS ^ DBUS);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x5: //ASL
+                    ALUlabel.Text = "ASL";
+                    Alu();
+                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    RBUS = (UInt16)(DBUS << 1);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x6: //ASR
+                    ALUlabel.Text = "ASR";
+                    Alu();
+                    Carry = (UInt16)(DBUS & 0x0001);
+                    Int16 t = (Int16)((Int16)DBUS >> 1);
+                    RBUS = (UInt16)t;
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x7: //LSR
+                    ALUlabel.Text = "LSR";
+                    Alu();
+                    Carry = (UInt16)(DBUS & 0x0001);
+                    RBUS = (UInt16)(DBUS >> 1);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x8: //ROL
+                    ALUlabel.Text = "ROL";
+                    Alu();
+                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    RBUS = (UInt16)((DBUS << 1) + Carry);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0x9: //ROR 
+                    ALUlabel.Text = "ROR";
+                    Alu();
+                    Carry = (UInt16)(DBUS & 0x0001);
+                    bit = (UInt16)(Carry << 15);
+                    RBUS = (UInt16)((DBUS >> 1) + bit);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0xA: //RLC
+                    ALUlabel.Text = "RLC";
+                    Alu();
+                    bit = Carry;
+                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    RBUS = (UInt16)((DBUS << 1) + bit);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0xB: //RRC
+                    ALUlabel.Text = "RRC";
+                    Alu();
+                    bit = Carry;
+                    Carry = (UInt16)(DBUS & 0x0001);
+                    UInt16 leftBit = (UInt16)(Carry << 15);
+                    RBUS = (UInt16)((DBUS >> 1) + (bit << 15));
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                case 0xC: //nDBUS
+                    ALUlabel.Text = "nDBUS";
+                    Alu();
+                    RBUS = (UInt16)(~DBUS);
+                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    break;
+                default: //none
+                    break;
+            }
         }
 
         private void decodeOtherOperations(Int64 MIRCode)
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 otherOp = (UInt16)((MIRCode & 8126464) >> 18);
+
+            ushort value = 127;
+
             switch (otherOp)
             {
                 case 0x1: //PdCOND
@@ -473,8 +548,8 @@ namespace Assembler
                     //    FLAG = (UInt16)(FLAG | 0x0002);
                     //}
                     graphicChanger.PdCond();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | (Carry << 3));
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x2: //CIN + PdCOND
                     //if (RBUS == 0) // rezultat 0 => setez bitul Z
@@ -485,86 +560,87 @@ namespace Assembler
                     //{
                     //    FLAG = (UInt16)(FLAG | 0x0002);
                     //}
+
                     graphicChanger.PdCond();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | (Carry << 3));
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x3: //+2SP
                     graphicChanger.plusSP();
+                    graphicChanger.setSP(value);
                     //SP += 2;
-                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
                     break;
-                case 0x4: //-2SP
+                case 0x4: //minus2SP
                     graphicChanger.minusSP();
+                    graphicChanger.setSP(value);
                     //SP -= 2;
-                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
                     break;
-                case 0x5: //+2PC
+                case 0x5: //plus2PC
                     graphicChanger.plusPC();
+                    graphicChanger.setPC(value);
                     //PC += 2;
-                    //PCtext.Text = Convert_Binary(PC.ToString(), 16);
                     break;
                 case 0x6: //A(0)BPO
                     break;
                 case 0x7: //A(0)C
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0xFFF7);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x8: //A(1)C
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x0008);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x9: //A(0)V
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0xFFFE);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xA: //A(1)V
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x0001);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xB: //A(0)Z
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0xFFFB);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xC: //A(1)Z
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x0004);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xD: //A(0)S
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0xFFFD);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xE: //A(1)S
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x0002);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0xF: //A(0)CVZS
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0xFFF0);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x10: //A(1)CVZS
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x000F);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x11: //A(0)BVI
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG & 0x0FF7F);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 case 0x12: //A(1)BVI
                     graphicChanger.colorFlags();
+                    graphicChanger.setFLAGS(value);
                     //FLAG = (UInt16)(FLAG | 0x0080);
-                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
                     break;
                 default: //none
                     break;
