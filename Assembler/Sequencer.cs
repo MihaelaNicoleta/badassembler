@@ -12,7 +12,7 @@ namespace Assembler
 
         public int IR;
 
-        public void runStepSimulation()
+        public void runSimulationStepByStep()
         {
             step++;
 
@@ -406,123 +406,113 @@ namespace Assembler
             }
         }
 
-        private void decodeALU()
+        private void decodeALU(Int64 MIRCode)
         {
-            UInt16 campALU = (UInt16)((MIR & 0x0000000078000000) >> 27);
-            switch (campALU)
+            GraphicChanger graphicChanger = new GraphicChanger();
+            UInt16 alu = (UInt16)((MIRCode & 0x0000000078000000) >> 27);
+
+            ushort value = 127;
+            switch (alu)
             {
                 case 0x1: //SUM
                     #region sum
-                    if ((((UInt16)(MIR & 0x0000000007800000)) >> 18) == 2)
+                    if ((((UInt16)(MIRCode & 0x0000000007800000)) >> 18) == 2)
                     { //CIN activat atunci mai adun si val 1
                         try
                         {
                             //ActivateCIN();
-                            ALUlabel.Text = "SUM";
-                            Alu();
-                            RBUS = (UInt16)(SBUS + DBUS + 0x1);
-                            RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                            graphicChanger.setALUOperation("SUM");
+                            graphicChanger.colorAlu();              
+                            //RBUS = (UInt16)(SBUS + DBUS + 0x1);                    
                         }
                         catch (OverflowException) // daca apare overflow
                         {
-                            FLAG = (UInt16)(FLAG | 0X0001); // setez bit overflow V
-                            //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                            //FLAG = (UInt16)(FLAG | 0X0001); // setez bit overflow V
+                            graphicChanger.setFLAGS(value);
                         }
                     }
                     else
                     { //adunare
                         try
                         {
-                            ALUlabel.Text = "SUM";
-                            Alu();
-                            RBUS = (UInt16)(SBUS + DBUS);
-                            RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                            graphicChanger.setALUOperation("SUM");
+                            graphicChanger.colorAlu();
+                            //RBUS = (UInt16)(SBUS + DBUS);
                         }
                         catch (OverflowException)
                         {
-                            FLAG = (UInt16)(FLAG | 0X0001); // setez bit V
-                            //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                            //FLAG = (UInt16)(FLAG | 0X0001); // setez bit V
+                            graphicChanger.setFLAGS(value);
                         }
                     }
                     #endregion
                     break;
                 case 0x2: //AND
-                    ALUlabel.Text = "AND";
-                    Alu();
-                    RBUS = (UInt16)(SBUS & DBUS);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("AND");
+                    graphicChanger.colorAlu();
+                    //RBUS = (UInt16)(SBUS & DBUS);
                     break;
                 case 0x3: //OR
-                    ALUlabel.Text = "OR";
-                    Alu();
-                    RBUS = (UInt16)(SBUS | DBUS);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("OR");
+                    graphicChanger.colorAlu();
+                    //RBUS = (UInt16)(SBUS | DBUS);
                     break;
                 case 0x4: //XOR
-                    ALUlabel.Text = "XOR";
-                    Alu();
-                    RBUS = (UInt16)(SBUS ^ DBUS);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("XOR");
+                    graphicChanger.colorAlu();
+                    //RBUS = (UInt16)(SBUS ^ DBUS);
                     break;
                 case 0x5: //ASL
-                    ALUlabel.Text = "ASL";
-                    Alu();
-                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
-                    RBUS = (UInt16)(DBUS << 1);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("ASL");
+                    graphicChanger.colorAlu();
+                    //Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    //RBUS = (UInt16)(DBUS << 1);
                     break;
                 case 0x6: //ASR
-                    ALUlabel.Text = "ASR";
-                    Alu();
-                    Carry = (UInt16)(DBUS & 0x0001);
-                    Int16 t = (Int16)((Int16)DBUS >> 1);
-                    RBUS = (UInt16)t;
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("ASR");
+                    graphicChanger.colorAlu();
+                    //Carry = (UInt16)(DBUS & 0x0001);
+                    //Int16 t = (Int16)((Int16)DBUS >> 1);
+                    //RBUS = (UInt16)t;
                     break;
                 case 0x7: //LSR
-                    ALUlabel.Text = "LSR";
-                    Alu();
-                    Carry = (UInt16)(DBUS & 0x0001);
-                    RBUS = (UInt16)(DBUS >> 1);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("LSR");
+                    graphicChanger.colorAlu();
+                    //Carry = (UInt16)(DBUS & 0x0001);
+                    //RBUS = (UInt16)(DBUS >> 1);
                     break;
                 case 0x8: //ROL
-                    ALUlabel.Text = "ROL";
-                    Alu();
-                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
-                    RBUS = (UInt16)((DBUS << 1) + Carry);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("ROL");
+                    graphicChanger.colorAlu();
+                    //Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    //RBUS = (UInt16)((DBUS << 1) + Carry);
                     break;
                 case 0x9: //ROR 
-                    ALUlabel.Text = "ROR";
-                    Alu();
-                    Carry = (UInt16)(DBUS & 0x0001);
-                    bit = (UInt16)(Carry << 15);
-                    RBUS = (UInt16)((DBUS >> 1) + bit);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("ROR");
+                    graphicChanger.colorAlu();
+                    //Carry = (UInt16)(DBUS & 0x0001);
+                    //bit = (UInt16)(Carry << 15);
+                    //RBUS = (UInt16)((DBUS >> 1) + bit);
                     break;
                 case 0xA: //RLC
-                    ALUlabel.Text = "RLC";
-                    Alu();
-                    bit = Carry;
-                    Carry = (UInt16)((DBUS & 0x8000) >> 15);
-                    RBUS = (UInt16)((DBUS << 1) + bit);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("RLC");
+                    graphicChanger.colorAlu();
+                    //bit = Carry;
+                    //Carry = (UInt16)((DBUS & 0x8000) >> 15);
+                    //RBUS = (UInt16)((DBUS << 1) + bit);
                     break;
                 case 0xB: //RRC
-                    ALUlabel.Text = "RRC";
-                    Alu();
-                    bit = Carry;
-                    Carry = (UInt16)(DBUS & 0x0001);
-                    UInt16 leftBit = (UInt16)(Carry << 15);
-                    RBUS = (UInt16)((DBUS >> 1) + (bit << 15));
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("RRC");
+                    graphicChanger.colorAlu();
+                    //bit = Carry;
+                    //Carry = (UInt16)(DBUS & 0x0001);
+                    //UInt16 leftBit = (UInt16)(Carry << 15);
+                    //RBUS = (UInt16)((DBUS >> 1) + (bit << 15));
                     break;
                 case 0xC: //nDBUS
-                    ALUlabel.Text = "nDBUS";
-                    Alu();
-                    RBUS = (UInt16)(~DBUS);
-                    RBUSlabel.Text = Convert_Binary(RBUS.ToString(), 16);
+                    graphicChanger.setALUOperation("nDBUS");
+                    graphicChanger.colorAlu();
+                    //RBUS = (UInt16)(~DBUS);
                     break;
                 default: //none
                     break;

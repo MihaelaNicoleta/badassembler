@@ -265,7 +265,7 @@ namespace Assembler
             myForm.muxFlagLine2.BorderColor = changeColor;
         }
 
-        public void ColorAlu()
+        public void colorAlu()
         {
             myForm.ALUSLine.BorderColor = changeColor;
             myForm.ALUDLine.BorderColor = changeColor;
@@ -502,6 +502,11 @@ namespace Assembler
         public void setFLAGS(UInt16 value)
         {
             setNewRegisterValue(myForm.flags, value);
+        }
+
+        public void setALUOperation(String operation)
+        {
+            myForm.ALUOperation.Text = operation.ToUpper();
         }
 
     }

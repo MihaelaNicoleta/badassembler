@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.asmCode = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ALUOperation = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -198,7 +199,9 @@
             this.SBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
-            this.ALUOperation = new System.Windows.Forms.Label();
+            this.runStepByStepButton = new System.Windows.Forms.Button();
+            this.memoryButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -210,30 +213,33 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.resetButton);
+            this.panel1.Controls.Add(this.memoryButton);
+            this.panel1.Controls.Add(this.runStepByStepButton);
             this.panel1.Controls.Add(this.runButton);
             this.panel1.Controls.Add(this.assembleButton);
             this.panel1.Controls.Add(this.microcodeButton);
             this.panel1.Controls.Add(this.asmButton);
             this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(195, 122);
+            this.panel1.Size = new System.Drawing.Size(340, 122);
             this.panel1.TabIndex = 0;
             // 
             // runButton
             // 
-            this.runButton.Location = new System.Drawing.Point(3, 90);
+            this.runButton.Location = new System.Drawing.Point(181, 3);
             this.runButton.Name = "runButton";
-            this.runButton.Size = new System.Drawing.Size(110, 23);
+            this.runButton.Size = new System.Drawing.Size(147, 23);
             this.runButton.TabIndex = 3;
-            this.runButton.Text = "Run simulation";
+            this.runButton.Text = "Run simulation till the end";
             this.runButton.UseVisualStyleBackColor = true;
             this.runButton.Click += new System.EventHandler(this.runButton_Click);
             // 
             // assembleButton
             // 
-            this.assembleButton.Location = new System.Drawing.Point(3, 32);
+            this.assembleButton.Location = new System.Drawing.Point(6, 32);
             this.assembleButton.Name = "assembleButton";
-            this.assembleButton.Size = new System.Drawing.Size(110, 23);
+            this.assembleButton.Size = new System.Drawing.Size(148, 23);
             this.assembleButton.TabIndex = 2;
             this.assembleButton.Text = "Assemble";
             this.assembleButton.UseVisualStyleBackColor = true;
@@ -243,7 +249,7 @@
             // 
             this.microcodeButton.Location = new System.Drawing.Point(3, 61);
             this.microcodeButton.Name = "microcodeButton";
-            this.microcodeButton.Size = new System.Drawing.Size(110, 23);
+            this.microcodeButton.Size = new System.Drawing.Size(151, 23);
             this.microcodeButton.TabIndex = 1;
             this.microcodeButton.Text = "Open microcode";
             this.microcodeButton.UseVisualStyleBackColor = true;
@@ -251,9 +257,9 @@
             // 
             // asmButton
             // 
-            this.asmButton.Location = new System.Drawing.Point(3, 3);
+            this.asmButton.Location = new System.Drawing.Point(6, 3);
             this.asmButton.Name = "asmButton";
-            this.asmButton.Size = new System.Drawing.Size(110, 23);
+            this.asmButton.Size = new System.Drawing.Size(148, 23);
             this.asmButton.TabIndex = 0;
             this.asmButton.Text = "Read asm code";
             this.asmButton.UseVisualStyleBackColor = true;
@@ -264,14 +270,14 @@
             this.panel2.Controls.Add(this.asmCode);
             this.panel2.Location = new System.Drawing.Point(2, 152);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 497);
+            this.panel2.Size = new System.Drawing.Size(203, 256);
             this.panel2.TabIndex = 1;
             // 
             // asmCode
             // 
-            this.asmCode.Location = new System.Drawing.Point(3, 0);
+            this.asmCode.Location = new System.Drawing.Point(3, 13);
             this.asmCode.Name = "asmCode";
-            this.asmCode.Size = new System.Drawing.Size(189, 361);
+            this.asmCode.Size = new System.Drawing.Size(181, 231);
             this.asmCode.TabIndex = 3;
             this.asmCode.Text = "ASM CODE";
             // 
@@ -372,6 +378,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1124, 643);
             this.panel3.TabIndex = 2;
+            // 
+            // ALUOperation
+            // 
+            this.ALUOperation.AutoSize = true;
+            this.ALUOperation.Location = new System.Drawing.Point(1023, 295);
+            this.ALUOperation.Name = "ALUOperation";
+            this.ALUOperation.Size = new System.Drawing.Size(53, 13);
+            this.ALUOperation.TabIndex = 91;
+            this.ALUOperation.Text = "Operation";
             // 
             // label61
             // 
@@ -1817,20 +1832,38 @@
             // 
             // messagesTextBox
             // 
-            this.messagesTextBox.Location = new System.Drawing.Point(208, 68);
+            this.messagesTextBox.Location = new System.Drawing.Point(211, 189);
             this.messagesTextBox.Multiline = true;
             this.messagesTextBox.Name = "messagesTextBox";
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
             // 
-            // ALUOperation
+            // runStepByStepButton
             // 
-            this.ALUOperation.AutoSize = true;
-            this.ALUOperation.Location = new System.Drawing.Point(1023, 295);
-            this.ALUOperation.Name = "ALUOperation";
-            this.ALUOperation.Size = new System.Drawing.Size(53, 13);
-            this.ALUOperation.TabIndex = 91;
-            this.ALUOperation.Text = "Operation";
+            this.runStepByStepButton.Location = new System.Drawing.Point(181, 32);
+            this.runStepByStepButton.Name = "runStepByStepButton";
+            this.runStepByStepButton.Size = new System.Drawing.Size(147, 23);
+            this.runStepByStepButton.TabIndex = 4;
+            this.runStepByStepButton.Text = "Run simulation step by step";
+            this.runStepByStepButton.UseVisualStyleBackColor = true;
+            // 
+            // memoryButton
+            // 
+            this.memoryButton.Location = new System.Drawing.Point(181, 61);
+            this.memoryButton.Name = "memoryButton";
+            this.memoryButton.Size = new System.Drawing.Size(147, 23);
+            this.memoryButton.TabIndex = 5;
+            this.memoryButton.Text = "Memory";
+            this.memoryButton.UseVisualStyleBackColor = true;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(76, 94);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(147, 23);
+            this.resetButton.TabIndex = 6;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
@@ -2027,7 +2060,10 @@
         public System.Windows.Forms.Label label58;
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine5;
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine4;
-        private System.Windows.Forms.Label ALUOperation;
+        public System.Windows.Forms.Label ALUOperation;
+        public System.Windows.Forms.Button resetButton;
+        public System.Windows.Forms.Button memoryButton;
+        public System.Windows.Forms.Button runStepByStepButton;
     }
 }
 

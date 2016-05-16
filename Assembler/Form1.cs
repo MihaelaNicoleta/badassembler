@@ -59,6 +59,7 @@ namespace Assembler
 
 
         bool assemblySuccess = true;
+        bool stepByStep = false;
 
         //sequencer vars
         List<UInt64> MPM = new List<ulong>();
