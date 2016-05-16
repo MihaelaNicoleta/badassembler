@@ -42,9 +42,9 @@
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
+            this.zero = new System.Windows.Forms.Label();
+            this.minusOne = new System.Windows.Forms.Label();
+            this.one = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -288,9 +288,9 @@
             this.panel3.Controls.Add(this.label60);
             this.panel3.Controls.Add(this.label59);
             this.panel3.Controls.Add(this.label58);
-            this.panel3.Controls.Add(this.label57);
-            this.panel3.Controls.Add(this.label56);
-            this.panel3.Controls.Add(this.label55);
+            this.panel3.Controls.Add(this.zero);
+            this.panel3.Controls.Add(this.minusOne);
+            this.panel3.Controls.Add(this.one);
             this.panel3.Controls.Add(this.label54);
             this.panel3.Controls.Add(this.label53);
             this.panel3.Controls.Add(this.label52);
@@ -424,32 +424,32 @@
             this.label58.TabIndex = 87;
             this.label58.Text = "Pd1";
             // 
-            // label57
+            // zero
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(810, 32);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(13, 13);
-            this.label57.TabIndex = 86;
-            this.label57.Text = "0";
+            this.zero.AutoSize = true;
+            this.zero.Location = new System.Drawing.Point(810, 32);
+            this.zero.Name = "zero";
+            this.zero.Size = new System.Drawing.Size(13, 13);
+            this.zero.TabIndex = 86;
+            this.zero.Text = "0";
             // 
-            // label56
+            // minusOne
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(746, 32);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(16, 13);
-            this.label56.TabIndex = 85;
-            this.label56.Text = "-1";
+            this.minusOne.AutoSize = true;
+            this.minusOne.Location = new System.Drawing.Point(746, 32);
+            this.minusOne.Name = "minusOne";
+            this.minusOne.Size = new System.Drawing.Size(16, 13);
+            this.minusOne.TabIndex = 85;
+            this.minusOne.Text = "-1";
             // 
-            // label55
+            // one
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(689, 32);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(13, 13);
-            this.label55.TabIndex = 84;
-            this.label55.Text = "1";
+            this.one.AutoSize = true;
+            this.one.Location = new System.Drawing.Point(689, 32);
+            this.one.Name = "one";
+            this.one.Size = new System.Drawing.Size(13, 13);
+            this.one.TabIndex = 84;
+            this.one.Text = "1";
             // 
             // label54
             // 
@@ -1846,6 +1846,7 @@
             this.runStepByStepButton.TabIndex = 4;
             this.runStepByStepButton.Text = "Run simulation step by step";
             this.runStepByStepButton.UseVisualStyleBackColor = true;
+            this.runStepByStepButton.Click += new System.EventHandler(this.runStepByStepButton_Click);
             // 
             // memoryButton
             // 
@@ -2047,9 +2048,9 @@
         public Microsoft.VisualBasic.PowerPacks.RectangleShape zeroShape;
         public Microsoft.VisualBasic.PowerPacks.RectangleShape minusOneShape;
         public Microsoft.VisualBasic.PowerPacks.RectangleShape oneShape;
-        public System.Windows.Forms.Label label57;
-        public System.Windows.Forms.Label label56;
-        public System.Windows.Forms.Label label55;
+        public System.Windows.Forms.Label zero;
+        public System.Windows.Forms.Label minusOne;
+        public System.Windows.Forms.Label one;
         public Microsoft.VisualBasic.PowerPacks.LineShape Pd0s;
         public Microsoft.VisualBasic.PowerPacks.LineShape Pdminus1;
         public Microsoft.VisualBasic.PowerPacks.LineShape Pd1;

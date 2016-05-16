@@ -225,5 +225,11 @@ namespace Assembler
             sequencer.runSimulation();
 
         }
+
+        private void runStepByStepButton_Click(object sender, EventArgs e)
+        {
+            stepByStep = true;
+            sequencer.runSimulationStepByStep();
+        }
     }
 }

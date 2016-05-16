@@ -16,28 +16,64 @@ namespace Assembler
         {
             step++;
 
+            GraphicChanger graphicChanger = new GraphicChanger();
+
+            ulong MIR = 391036338689;
+
             switch(step)
             {
                 case 1:
                     {
+                        decodeSBUS(MIR);
 
                     }
                     break;
+
                 case 2:
                     {
+                        decodeDBUS(MIR);
 
                     }
                     break;
+
                 case 3:
                     {
+                        decodeALU(MIR);
 
                     }
                     break;
+
                 case 4:
                     {
+                        decodeRBUS(MIR);
 
                     }
                     break;
+                case 5:
+                    {
+                        decodeOtherOperations(MIR);
+
+                    }
+                    break;
+
+                case 6:
+                    {
+                        //decodeOtherOperations(MIR);
+
+                    }
+                    break;
+
+                case 7:
+                    {
+                        graphicChanger.resetGraphicToDefault();
+                        step = 0;
+
+                    }
+                    break;
+
+                default:
+                    break;    
+
             }
         }
 
@@ -275,7 +311,7 @@ namespace Assembler
             }
         }
 
-        private void decodeRBUS(Int64 MIRCode)
+        private void decodeRBUS(UInt64 MIRCode)
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 rbus = (UInt16)((MIRCode & 125829120) >> 23);
@@ -406,7 +442,7 @@ namespace Assembler
             }
         }
 
-        private void decodeALU(Int64 MIRCode)
+        private void decodeALU(UInt64 MIRCode)
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 alu = (UInt16)((MIRCode & 0x0000000078000000) >> 27);
@@ -519,7 +555,7 @@ namespace Assembler
             }
         }
 
-        private void decodeOtherOperations(Int64 MIRCode)
+        private void decodeOtherOperations(UInt64 MIRCode)
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 otherOp = (UInt16)((MIRCode & 8126464) >> 18);

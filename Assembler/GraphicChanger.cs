@@ -14,32 +14,33 @@ namespace Assembler
     {
         mainForm myForm = mainForm.currentForm;
         Color changeColor = Color.Orange;
+        Color defaultColor = Color.Black;
 
         public void Pd0s()
         {
             myForm.Pd0s.BorderColor = changeColor;
-            myForm.zeroShape.BorderColor = changeColor;
+            myForm.zero.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void Pd0d()
         {
             myForm.Pd0d.BorderColor = changeColor;
-            myForm.zeroShape.BorderColor = changeColor;
+            myForm.zero.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
         }
 
         public void Pd1s()
         {
             myForm.Pd1.BorderColor = changeColor;
-            myForm.oneShape.BorderColor = changeColor;
+            myForm.one.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
         public void Pdminus1s()
         {
             myForm.Pdminus1.BorderColor = changeColor;
-            myForm.minusOneShape.BorderColor = changeColor;
+            myForm.minusOne.ForeColor = changeColor;
             myForm.SBUS.BorderColor = changeColor;
         }
 
@@ -369,10 +370,8 @@ namespace Assembler
             myForm.MDRLine3.BorderColor = changeColor;
         }
 
-        private String toBinary(UInt16 value)
+        private String toBinary(UInt16 integerValue)
         {
-           // int integerValue = Convert.ToInt16(value);
-            int integerValue = value;
             var stringValue = Convert.ToString(integerValue, 2);
 
             String zeros = "0";
@@ -507,6 +506,135 @@ namespace Assembler
         public void setALUOperation(String operation)
         {
             myForm.ALUOperation.Text = operation.ToUpper();
+        }
+
+        private void resetBusesColor()
+        {
+            myForm.SBUS.BorderColor = defaultColor;
+            myForm.DBUS.BorderColor = defaultColor;
+            myForm.RBUS.BorderColor = defaultColor;
+
+            myForm.Pd0s.BorderColor = defaultColor;
+            myForm.Pd0d.BorderColor = defaultColor;
+            myForm.Pd1.BorderColor = defaultColor;
+            myForm.Pdminus1.BorderColor = defaultColor;
+            myForm.PdIRs.BorderColor = defaultColor;
+            myForm.PdIRs.BorderColor = defaultColor;
+            myForm.PdMDRs.BorderColor = defaultColor;
+            myForm.PdMDRs.BorderColor = defaultColor;
+            myForm.PdADRs.BorderColor = defaultColor;
+            myForm.PdADRd.BorderColor = defaultColor;
+            myForm.PdIVRs.BorderColor = defaultColor;
+            myForm.PdIVRd.BorderColor = defaultColor;
+            myForm.PdPCs.BorderColor = defaultColor;
+            myForm.PdPCd.BorderColor = defaultColor;
+            myForm.PdTs.BorderColor = defaultColor;
+            myForm.PdTd.BorderColor = defaultColor;
+            myForm.PdSPs.BorderColor = defaultColor;
+            myForm.PdSPd.BorderColor = defaultColor;
+            myForm.PdRGs.BorderColor = defaultColor;
+            myForm.PdRGd.BorderColor = defaultColor;
+            myForm.PdFLAGs.BorderColor = defaultColor;
+            myForm.PdFLAGd.BorderColor = defaultColor;
+            myForm.PdCond1.BorderColor = defaultColor;
+            myForm.PdCond2.BorderColor = defaultColor;
+            myForm.PdCond3.BorderColor = defaultColor;
+            myForm.PdCond4.BorderColor = defaultColor;
+            myForm.PdCond5.BorderColor = defaultColor;
+
+            myForm.PmMDR.BorderColor = defaultColor;
+            myForm.PmMDR1.BorderColor = defaultColor;
+            myForm.PmADR.BorderColor = defaultColor;
+            myForm.PmIVR.BorderColor = defaultColor;
+            myForm.PmPC.BorderColor = defaultColor;
+            myForm.PmT.BorderColor = defaultColor;
+            myForm.PmSP.BorderColor = defaultColor;
+            myForm.PmRG.BorderColor = defaultColor;
+            myForm.PmFLAG.BorderColor = defaultColor;
+            myForm.PmFLAG1.BorderColor = defaultColor;
+
+            myForm.ADRLine1.BorderColor = defaultColor;
+            myForm.ADRLine2.BorderColor = defaultColor;
+            myForm.MDRLine1.BorderColor = defaultColor;
+            myForm.MDRLine2.BorderColor = defaultColor;
+            myForm.MDRLine3.BorderColor = defaultColor;
+            myForm.DataOUTLine1.BorderColor = defaultColor;
+            myForm.DataOUTLine2.BorderColor = defaultColor;
+            myForm.DataOUTLine3.BorderColor = defaultColor;
+            myForm.DataOUTLine4.BorderColor = defaultColor;
+            myForm.DataOUTLine5.BorderColor = defaultColor;
+
+            myForm.ALUSLine.BorderColor = defaultColor;
+            myForm.ALUDLine.BorderColor = defaultColor;
+            myForm.ALURLine.BorderColor = defaultColor;
+        }
+
+        private void resetRegistersColor()
+        {
+            myForm.zero.ForeColor = defaultColor;
+            myForm.one.ForeColor = defaultColor;
+            myForm.minusOne.ForeColor = defaultColor;
+            myForm.IR.ForeColor = defaultColor;
+            myForm.MDR.ForeColor = defaultColor;
+            myForm.ADR.ForeColor = defaultColor;
+            myForm.IVR.ForeColor = defaultColor;
+            myForm.PC.ForeColor = defaultColor;
+            myForm.T.ForeColor = defaultColor;
+            myForm.SP.ForeColor = defaultColor;
+            myForm.R0.ForeColor = defaultColor;
+            myForm.R1.ForeColor = defaultColor;
+            myForm.R2.ForeColor = defaultColor;
+            myForm.R3.ForeColor = defaultColor;
+            myForm.R4.ForeColor = defaultColor;
+            myForm.R5.ForeColor = defaultColor;
+            myForm.R6.ForeColor = defaultColor;
+            myForm.R7.ForeColor = defaultColor;
+            myForm.R8.ForeColor = defaultColor;
+            myForm.R9.ForeColor = defaultColor;
+            myForm.R10.ForeColor = defaultColor;
+            myForm.R11.ForeColor = defaultColor;
+            myForm.R12.ForeColor = defaultColor;
+            myForm.R13.ForeColor = defaultColor;
+            myForm.R14.ForeColor = defaultColor;
+            myForm.R15.ForeColor = defaultColor;
+            myForm.flags.ForeColor = defaultColor;
+
+        }
+
+        public void resetRegistersValues()
+        {
+            ushort value = 0;
+
+            setNewRegisterValue(myForm.IR, value);
+            setNewRegisterValue(myForm.MDR, value);
+            setNewRegisterValue(myForm.ADR, value);
+            setNewRegisterValue(myForm.IVR, value);
+            setNewRegisterValue(myForm.PC, value);
+            setNewRegisterValue(myForm.T, value);
+            setNewRegisterValue(myForm.SP, value);
+            setNewRegisterValue(myForm.R0, value);
+            setNewRegisterValue(myForm.R1, value);
+            setNewRegisterValue(myForm.R2, value);
+            setNewRegisterValue(myForm.R3, value);
+            setNewRegisterValue(myForm.R4, value);
+            setNewRegisterValue(myForm.R5, value);
+            setNewRegisterValue(myForm.R6, value);
+            setNewRegisterValue(myForm.R7, value);
+            setNewRegisterValue(myForm.R8, value);
+            setNewRegisterValue(myForm.R9, value);
+            setNewRegisterValue(myForm.R10, value);
+            setNewRegisterValue(myForm.R11, value);
+            setNewRegisterValue(myForm.R12, value);
+            setNewRegisterValue(myForm.R13, value);
+            setNewRegisterValue(myForm.R14, value);
+            setNewRegisterValue(myForm.R15, value);
+            setNewRegisterValue(myForm.flags, value);
+        }
+
+        public void resetGraphicToDefault()
+        {
+            resetBusesColor();
+            resetRegistersColor();
         }
 
     }
