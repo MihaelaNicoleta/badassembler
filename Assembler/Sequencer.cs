@@ -114,52 +114,52 @@ namespace Assembler
                     switch (nr_reg)
                     {
                         case 0x1:
-                            graphicChanger.PdR1();
+                            graphicChanger.colorR1();
                             break;
                         case 0x2:
-                            graphicChanger.PdR2();
+                            graphicChanger.colorR2();
                             break;
                         case 0x3:
-                            graphicChanger.PdR3();
+                            graphicChanger.colorR3();
                             break;
                         case 0x4:
-                            graphicChanger.PdR4();
+                            graphicChanger.colorR4();
                             break;
                         case 0x5:
-                            graphicChanger.PdR5();
+                            graphicChanger.colorR5();
                             break;
                         case 0x6:
-                            graphicChanger.PdR6();
+                            graphicChanger.colorR6();
                             break;
                         case 0x7:
-                            graphicChanger.PdR7();
+                            graphicChanger.colorR7();
                             break;
                         case 0x8:
-                            graphicChanger.PdR8();
+                            graphicChanger.colorR8();
                             break;
                         case 0x9:
-                            graphicChanger.PdR9();
+                            graphicChanger.colorR9();
                             break;
                         case 0xA:
-                            graphicChanger.PdR10();
+                            graphicChanger.colorR10();
                             break;
                         case 0xB:
-                            graphicChanger.PdR11();
+                            graphicChanger.colorR11();
                             break;
                         case 0xC:
-                            graphicChanger.PdR12();
+                            graphicChanger.colorR12();
                             break;
                         case 0xD:
-                            graphicChanger.PdR13();
+                            graphicChanger.colorR13();
                             break;
                         case 0xE:
-                            graphicChanger.PdR14();
+                            graphicChanger.colorR14();
                             break;
                         case 0xF:
-                            graphicChanger.PdR15();
+                            graphicChanger.colorR15();
                             break;
                         default:
-                            graphicChanger.PdR0();
+                            graphicChanger.colorR0();
                             break;
                     }
 
@@ -260,52 +260,52 @@ namespace Assembler
                     switch (nr_reg)
                     {
                         case 0x1:
-                            graphicChanger.PdR1();
+                            graphicChanger.colorR1();
                             break;
                         case 0x2:
-                            graphicChanger.PdR2();
+                            graphicChanger.colorR2();
                             break;
                         case 0x3:
-                            graphicChanger.PdR3();
+                            graphicChanger.colorR3();
                             break;
                         case 0x4:
-                            graphicChanger.PdR4();
+                            graphicChanger.colorR4();
                             break;
                         case 0x5:
-                            graphicChanger.PdR5();
+                            graphicChanger.colorR5();
                             break;
                         case 0x6:
-                            graphicChanger.PdR6();
+                            graphicChanger.colorR6();
                             break;
                         case 0x7:
-                            graphicChanger.PdR7();
+                            graphicChanger.colorR7();
                             break;
                         case 0x8:
-                            graphicChanger.PdR8();
+                            graphicChanger.colorR8();
                             break;
                         case 0x9:
-                            graphicChanger.PdR9();
+                            graphicChanger.colorR9();
                             break;
                         case 0xA:
-                            graphicChanger.PdR10();
+                            graphicChanger.colorR10();
                             break;
                         case 0xB:
-                            graphicChanger.PdR11();
+                            graphicChanger.colorR11();
                             break;
                         case 0xC:
-                            graphicChanger.PdR12();
+                            graphicChanger.colorR12();
                             break;
                         case 0xD:
-                            graphicChanger.PdR13();
+                            graphicChanger.colorR13();
                             break;
                         case 0xE:
-                            graphicChanger.PdR14();
+                            graphicChanger.colorR14();
                             break;
                         case 0xF:
-                            graphicChanger.PdR15();
+                            graphicChanger.colorR15();
                             break;
                         default:
-                            graphicChanger.PdR0();
+                            graphicChanger.colorR0();
                             break;
                     }
                     graphicChanger.PdRGd();
@@ -323,14 +323,251 @@ namespace Assembler
             }
         }
 
-        private void decodeRBUS()
+        private void decodeRBUS(Int64 MIRCode)
         {
+            GraphicChanger graphicChanger = new GraphicChanger();
+            UInt16 rbus = (UInt16)((MIRCode & 125829120) >> 23);
+            switch (rbus)
+            {
+                case 0x1: //PmFLAG
+                    graphicChanger.PmFLAG();
+                    //FLAG = RBUS;
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
 
+                case 0x2: //PmRG
+                    //int nr_reg = IR & 0x000F;
+                    //R[nr_reg] = RBUS;
+                    //PmRGline.BorderColor = Color.Red;
+
+                    var nr_reg = 1;
+                    switch (nr_reg)
+                    {
+                        case 0:
+                            //R0text.Text = Convert_Binary(R[0].ToString(), 16);
+                            graphicChanger.colorR0();
+                            break;
+                        case 1:
+                            //R1text.Text = Convert_Binary(R[1].ToString(), 16);
+                            graphicChanger.colorR1();
+                            break;
+                        case 2:
+                            //R2text.Text = Convert_Binary(R[2].ToString(), 16);
+                            graphicChanger.colorR2();
+                            break;
+                        case 3:
+                            //R3text.Text = Convert_Binary(R[3].ToString(), 16);
+                            graphicChanger.colorR3();
+                            break;
+                        case 4:
+                            //R4text.Text = Convert_Binary(R[4].ToString(), 16);
+                            graphicChanger.colorR4();
+                            break;
+                        case 5:
+                            //R5text.Text = Convert_Binary(R[5].ToString(), 16);
+                            graphicChanger.colorR5();
+                            break;
+                        case 6:
+                            //R6text.Text = Convert_Binary(R[6].ToString(), 16);
+                            graphicChanger.colorR6();
+                            break;
+                        case 7:
+                            //R7text.Text = Convert_Binary(R[7].ToString(), 16);
+                            graphicChanger.colorR7();
+                            break;
+                        case 8:
+                            //R8text.Text = Convert_Binary(R[8].ToString(), 16);
+                            graphicChanger.colorR8();
+                            break;
+                        case 9:
+                            //R9text.Text = Convert_Binary(R[9].ToString(), 16);
+                            graphicChanger.colorR9();
+                            break;
+                        case 10:
+                            //R10text.Text = Convert_Binary(R[10].ToString(), 16);
+                            graphicChanger.colorR10();
+                            break;
+                        case 11:
+                            //R11text.Text = Convert_Binary(R[11].ToString(), 16);
+                            graphicChanger.colorR11();
+                            break;
+                        case 12:
+                            //R12text.Text = Convert_Binary(R[12].ToString(), 16);
+                            graphicChanger.colorR12();
+                            break;
+                        case 13:
+                            //R13text.Text = Convert_Binary(R[13].ToString(), 16);
+                            graphicChanger.colorR13();
+                            break;
+                        case 14:
+                            //R14text.Text = Convert_Binary(R[14].ToString(), 16);
+                            graphicChanger.colorR14();
+                            break;
+                        case 15:
+                            //R15text.Text = Convert_Binary(R[15].ToString(), 16);
+                            graphicChanger.colorR15();
+                            break;
+                    }
+                    break;
+
+                case 0x3: //PmSP
+                    graphicChanger.PmSP();
+                    //SP = RBUS;
+                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
+                    break;
+
+                case 0x4: //PmT
+                    graphicChanger.PmT();
+                    //T = RBUS;
+                    //Ttext.Text = Convert_Binary(T.ToString(), 16);
+                    break;
+
+                case 0x5: //PmPC
+                    graphicChanger.PmPC();
+                    //PC = RBUS;
+                    //PCtext.Text = Convert_Binary(PC.ToString(), 16);
+                    break;
+
+                case 0x6: //PmIVR
+                    graphicChanger.PmIVR();
+                    //IVR = RBUS;
+                    //IVRtext.Text = Convert_Binary(IVR.ToString(), 16);
+                    break;
+
+                case 0x7: //PmADR
+                    graphicChanger.PmADR();
+                    //ADR = RBUS;
+                    //ADRtext.Text = Convert_Binary(ADR.ToString(), 16);
+                    break;
+
+                case 0x8: //PmMDR
+                    graphicChanger.PmMDR();
+                    //MDR = RBUS;
+                    //MDRtext.Text = Convert_Binary(MDR.ToString(), 16);
+                    break;
+
+                default: //none
+                    break;
+            }
         }
 
         private void decodeALU()
         {
 
+        }
+
+        private void decodeOtherOperations(Int64 MIRCode)
+        {
+            GraphicChanger graphicChanger = new GraphicChanger();
+            UInt16 otherOp = (UInt16)((MIRCode & 8126464) >> 18);
+            switch (otherOp)
+            {
+                case 0x1: //PdCOND
+                    //if (RBUS == 0) // rezultat 0 => setez bitul Z
+                    //{
+                    //    FLAG = (UInt16)(FLAG | 0x0004);
+                    //}
+                    //if (RBUS >> 15 == 0x1) // setez bit de semn S
+                    //{
+                    //    FLAG = (UInt16)(FLAG | 0x0002);
+                    //}
+                    graphicChanger.PdCond();
+                    //FLAG = (UInt16)(FLAG | (Carry << 3));
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x2: //CIN + PdCOND
+                    //if (RBUS == 0) // rezultat 0 => setez bitul Z
+                    //{
+                    //    FLAG = (UInt16)(FLAG | 0x0004);
+                    //}
+                    //if (RBUS >> 15 == 0x1) // setez bit de semn S
+                    //{
+                    //    FLAG = (UInt16)(FLAG | 0x0002);
+                    //}
+                    graphicChanger.PdCond();
+                    //FLAG = (UInt16)(FLAG | (Carry << 3));
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x3: //+2SP
+                    graphicChanger.plusSP();
+                    //SP += 2;
+                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
+                    break;
+                case 0x4: //-2SP
+                    graphicChanger.minusSP();
+                    //SP -= 2;
+                    //SPtext.Text = Convert_Binary(SP.ToString(), 16);
+                    break;
+                case 0x5: //+2PC
+                    graphicChanger.plusPC();
+                    //PC += 2;
+                    //PCtext.Text = Convert_Binary(PC.ToString(), 16);
+                    break;
+                case 0x6: //A(0)BPO
+                    break;
+                case 0x7: //A(0)C
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0xFFF7);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x8: //A(1)C
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x0008);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x9: //A(0)V
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0xFFFE);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xA: //A(1)V
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x0001);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xB: //A(0)Z
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0xFFFB);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xC: //A(1)Z
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x0004);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xD: //A(0)S
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0xFFFD);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xE: //A(1)S
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x0002);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0xF: //A(0)CVZS
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0xFFF0);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x10: //A(1)CVZS
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x000F);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x11: //A(0)BVI
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG & 0x0FF7F);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                case 0x12: //A(1)BVI
+                    graphicChanger.colorFlags();
+                    //FLAG = (UInt16)(FLAG | 0x0080);
+                    //FLAGtext.Text = Convert_Binary(FLAG.ToString(), 16);
+                    break;
+                default: //none
+                    break;
+            }
         }
     }
 }

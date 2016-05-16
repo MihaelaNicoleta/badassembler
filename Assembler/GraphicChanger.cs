@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using System.Drawing;
+using System.Windows.Forms;
+
 
 namespace Assembler
 {
@@ -140,82 +142,82 @@ namespace Assembler
             myForm.DBUS.BorderColor = changeColor;
         }
 
-        public void PdR0()
+        public void colorR0()
         {
             myForm.R0.ForeColor = changeColor;
         }
 
-        public void PdR1()
+        public void colorR1()
         {
             myForm.R1.ForeColor = changeColor;
         }
 
-        public void PdR2()
+        public void colorR2()
         {
             myForm.R2.ForeColor = changeColor;
         }
 
-        public void PdR3()
+        public void colorR3()
         {
             myForm.R3.ForeColor = changeColor;
         }
 
-        public void PdR4()
+        public void colorR4()
         {
             myForm.R4.ForeColor = changeColor;
         }
 
-        public void PdR5()
+        public void colorR5()
         {
             myForm.R5.ForeColor = changeColor;
         }
 
-        public void PdR6()
+        public void colorR6()
         {
             myForm.R6.ForeColor = changeColor;
         }
 
-        public void PdR7()
+        public void colorR7()
         {
             myForm.R7.ForeColor = changeColor;
         }
 
-        public void PdR8()
+        public void colorR8()
         {
             myForm.R8.ForeColor = changeColor;
         }
 
-        public void PdR9()
+        public void colorR9()
         {
             myForm.R9.ForeColor = changeColor;
         }
 
-        public void PdR10()
+        public void colorR10()
         {
             myForm.R10.ForeColor = changeColor;
         }
 
-        public void PdR11()
+        public void colorR11()
         {
             myForm.R11.ForeColor = changeColor;
         }
 
-        public void PdR12()
+        public void colorR12()
         {
             myForm.R12.ForeColor = changeColor;
         }
 
-        public void PdR13()
+        public void colorR13()
         {
             myForm.R13.ForeColor = changeColor;
         }
 
-        public void PdR14()
+        public void colorR14()
         {
             myForm.R14.ForeColor = changeColor;
         }
 
-        public void PdR15()
+        public void colorR15()
         {
             myForm.R15.ForeColor = changeColor;
         }
@@ -245,6 +247,11 @@ namespace Assembler
             myForm.PdFLAGd.BorderColor = changeColor;
             myForm.flags.ForeColor = changeColor;
             myForm.DBUS.BorderColor = changeColor;
+        }
+
+        public void colorFlags()
+        {
+            myForm.flags.ForeColor = changeColor;
         }
 
         public void PdCond()
@@ -361,6 +368,137 @@ namespace Assembler
             myForm.MDRLine2.BorderColor = changeColor;
             myForm.MDRLine3.BorderColor = changeColor;
         }
+
+        private String toBinary(UInt16 value)
+        {
+           // int integerValue = Convert.ToInt16(value);
+            int integerValue = value;
+            var stringValue = Convert.ToString(integerValue, 2);
+
+            String zeros = "0";
+            for (int i = 0; i < (15 - stringValue.Length); i++)
+            {
+                zeros += "0";
+            }
+
+            return zeros + stringValue;
+        }
+
+        private void setNewRegisterValue(Label element, UInt16 value)
+        {
+            element.Text = toBinary(value);
+        }
+
+        public void setMDR(UInt16 value)
+        {
+            setNewRegisterValue(myForm.MDR, value);
+        }
+
+        public void setADR(UInt16 value)
+        {
+            setNewRegisterValue(myForm.ADR, value);
+        }
+
+        public void setIVR(UInt16 value)
+        {
+            setNewRegisterValue(myForm.IVR, value);
+        }
+
+        public void setPC(UInt16 value)
+        {
+            setNewRegisterValue(myForm.PC, value);
+        }
+
+        public void setT(UInt16 value)
+        {
+            setNewRegisterValue(myForm.T, value);
+        }
+
+        public void setSP(UInt16 value)
+        {
+            setNewRegisterValue(myForm.SP, value);
+        }
+
+        public void setR0(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R0, value);
+        }
+
+        public void setR1(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R1, value);
+        }
+
+        public void setR2(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R2, value);
+        }
+
+        public void setR3(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R3, value);
+        }
+
+        public void setR4(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R4, value);
+        }
+
+        public void setR5(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R5, value);
+        }
+
+        public void setR6(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R6, value);
+        }
+
+        public void setR7(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R7, value);
+        }
+
+        public void setR8(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R8, value);
+        }
+
+        public void setR9(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R9, value);
+        }
+
+        public void setR10(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R10, value);
+        }
+
+        public void setR11(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R11, value);
+        }
+
+        public void setR12(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R12, value);
+        }
+
+        public void setR13(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R13, value);
+        }
+
+        public void setR14(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R14, value);
+        }
+
+        public void setR15(UInt16 value)
+        {
+            setNewRegisterValue(myForm.R15, value);
+        }
+
 
     }
 }
