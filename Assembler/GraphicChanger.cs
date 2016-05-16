@@ -499,6 +499,10 @@ namespace Assembler
             setNewRegisterValue(myForm.R15, value);
         }
 
+        public void setFLAGS(UInt16 value)
+        {
+            setNewRegisterValue(myForm.flags, value);
+        }
 
     }
 }

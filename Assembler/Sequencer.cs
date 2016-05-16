@@ -43,7 +43,8 @@ namespace Assembler
         {
 
             GraphicChanger graphicChanger = new GraphicChanger();
-            graphicChanger.Pd0s();
+            decodeSBUS(391036338689);
+            //graphicChanger.Pd0s();
         }
 
         private void decodeSBUS(UInt64 MIRCode)
