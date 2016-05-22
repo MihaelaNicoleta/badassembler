@@ -22,16 +22,23 @@ namespace Assembler
         //read asm file and display output
         public void showAsmCode(String fileName, List<String> assemblyCodeLines)
         {
-            String asmCodeLine;
+            String asmCodeLine;           
 
             StreamReader sr = new StreamReader(fileName);
             while ((asmCodeLine = sr.ReadLine()) != null)
             {
-                //this.asmCode.Text += "\n" + asmCodeLine;
+                //remov comments from code
+                int comment = asmCodeLine.IndexOf(";");
+                if (comment != -1)
+                {
+                    asmCodeLine.Remove(comment);
+                }
+
                 assemblyCodeLines.Add(asmCodeLine);
             }
 
             sr.Close();
+            
         }
 
         //read and parse instructions file
@@ -48,8 +55,7 @@ namespace Assembler
 
             int ct = 0;
             while ((instructionsLine = sr.ReadLine()) != null)
-            {
-               
+            {              
                 string[] instr_binaryCode = instructionsLine.Split(';');
 
                 if (ct < numberOfB1)

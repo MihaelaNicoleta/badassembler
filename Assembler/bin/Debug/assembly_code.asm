@@ -1,7 +1,7 @@
 .DATA
 .CODE
 MOV R3, 124(R12)
-NEG R10
+NEG R10 ;comment
 ADD R3,7
 MOV R2, 124 (R7)
 MOV R3, (R14)
