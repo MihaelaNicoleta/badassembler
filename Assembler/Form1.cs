@@ -32,12 +32,6 @@ namespace Assembler
         List<String> microCodeLines = new List<String>();
         List<String> microCodeBinaryLines = new List<String>();
 
-        //not used
-        List<Instruction> instructions = new List<Instruction>();
-
-        //the 01 only instructions
-        List<Instruction> binaryInstructionss = new List<Instruction>(); //-- not used
-
         //save instruction and its type
         Dictionary<Instruction, string> binaryInstructions = new Dictionary<Instruction, string>();
 
@@ -55,9 +49,6 @@ namespace Assembler
         InstructionHelper instrHelper = new InstructionHelper();
         Sequencer sequencer = new Sequencer();
 
-        //Thread
-
-
         bool assemblySuccess = true;
         bool stepByStep = false;
 
@@ -74,7 +65,6 @@ namespace Assembler
 
     private void getDefaultInstructionsRegistersAddressingModes()
         {
-            // fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             fileParser.createBinaryInstructionsCodes(instructionsFile);
             fileParser.createBinaryRegistersAndAddressingModesCodes(registersAndAddressingModesFile, registers, addressingModes);
 

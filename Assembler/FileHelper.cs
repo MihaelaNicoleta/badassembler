@@ -32,6 +32,7 @@ namespace Assembler
                 if (comment != -1)
                 {
                     asmCodeLine.Remove(comment);
+                    asmCodeLine.Trim();
                 }
 
                 assemblyCodeLines.Add(asmCodeLine);
