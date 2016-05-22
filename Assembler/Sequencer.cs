@@ -10,13 +10,17 @@ namespace Assembler
     {
         public int step = 0;
 
-        public int IR;    
+        public int IR; 
+        public int FLAG;
+
 
         public List<UInt64> MPM = new List<ulong>();
 
         public int MAR = 0;
 
         public UInt64 index;
+        public UInt16 classs;
+        public bool isInterrupt = false;
 
 
         public void runSimulationStepByStep()
@@ -85,10 +89,9 @@ namespace Assembler
                                     MAR = shift;
                                     break;
                                 case 0x1: //INDEX1
-                                   // UInt16 cl = getCl();
-                                    UInt16 cl = 0;
+                                    UInt16 classss = getCl();
 
-                                    switch (cl)
+                                    switch (classss)
                                     {
                                         case 0:
                                             MAR = shift;
@@ -742,6 +745,68 @@ namespace Assembler
                 default: //none
                     break;
             }
+        }
+
+        private UInt16 getCl1()
+        {
+            UInt16 IR15 = (UInt16)((IR & 0x8000) >> 15);
+            UInt16 IR13 = (UInt16)((IR & 0x2000) >> 13);
+            UInt16 rez = (UInt16)(IR15 & IR13);
+            return rez; // IR15 & IR13
+        }
+
+        private UInt16 getCl0()
+        {
+            UInt16 IR15 = (UInt16)((IR & 0x8000) >> 15);
+            UInt16 nIR14 = (UInt16)(((~IR) & 0x4000) >> 14);
+            UInt16 rez = (UInt16)(IR15 & nIR14);
+            return rez; //IR15 & nIR14
+        }
+
+        private UInt16 getCl()
+        {
+            UInt16 CL1 = (UInt16)(getCl1());
+            UInt16 CL0 = (UInt16)(getCl0());
+            classs = (UInt16)((CL1 << 1) | CL0);
+            return classs;
+        }
+
+        private UInt16 decodeSuccesor(UInt64 MIRCode)
+        {
+            UInt16 nTF, condition = 0;
+            nTF = (UInt16)((MIRCode & 0x0000000000000100) >> 8);
+            switch ((MIRCode & 61440) >> 12)
+            {
+                case 1: //INT
+                    if (isInterrupt == true)
+                        condition = 1;
+                    break;
+                case 2: //C
+                    condition = (UInt16)((FLAG & 0x0008) >> 3);
+                    break;
+                case 3: //Z
+                    condition = (UInt16)((FLAG & 0x0004) >> 2);
+                    break;
+                case 4: //S
+                    condition = (UInt16)((FLAG & 0x0002) >> 1);
+                    break;
+                case 5: //V
+                    condition = (UInt16)(FLAG & 0x0001);
+                    break;
+                case 6:
+                    UInt16 ma = (UInt16)((IR & 0x0030) >> 4);
+                    if (ma == 1)
+                        condition = 1;
+                    break;
+                case 0x7://CIL
+                    break;
+                case 0x8://ACLOW
+                    break;
+                default: //NONE
+                    condition = 1; // return 1 daca nT/F = 0(not nT/F)
+                    break;
+            }
+            return (UInt16)(nTF ^ condition);
         }
     }
 }
