@@ -265,5 +265,10 @@ namespace Assembler
                 location++;
             }
         }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            sequencer.resetProcessor();
+        }
     }
 }

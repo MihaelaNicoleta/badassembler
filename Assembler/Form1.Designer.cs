@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.resetButton = new System.Windows.Forms.Button();
-            this.memoryButton = new System.Windows.Forms.Button();
             this.runStepByStepButton = new System.Windows.Forms.Button();
             this.runButton = new System.Windows.Forms.Button();
             this.assembleButton = new System.Windows.Forms.Button();
@@ -204,6 +203,8 @@
             this.messagesTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.memoryListBox = new System.Windows.Forms.ListBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -217,7 +218,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.resetButton);
-            this.panel1.Controls.Add(this.memoryButton);
             this.panel1.Controls.Add(this.runStepByStepButton);
             this.panel1.Controls.Add(this.runButton);
             this.panel1.Controls.Add(this.assembleButton);
@@ -225,26 +225,18 @@
             this.panel1.Controls.Add(this.asmButton);
             this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 122);
+            this.panel1.Size = new System.Drawing.Size(340, 91);
             this.panel1.TabIndex = 0;
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(76, 94);
+            this.resetButton.Location = new System.Drawing.Point(181, 60);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(147, 23);
             this.resetButton.TabIndex = 6;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
-            // 
-            // memoryButton
-            // 
-            this.memoryButton.Location = new System.Drawing.Point(181, 61);
-            this.memoryButton.Name = "memoryButton";
-            this.memoryButton.Size = new System.Drawing.Size(147, 23);
-            this.memoryButton.TabIndex = 5;
-            this.memoryButton.Text = "Memory";
-            this.memoryButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // runStepByStepButton
             // 
@@ -292,7 +284,7 @@
             this.asmButton.Name = "asmButton";
             this.asmButton.Size = new System.Drawing.Size(148, 23);
             this.asmButton.TabIndex = 0;
-            this.asmButton.Text = "Read asm code";
+            this.asmButton.Text = "Open asm file";
             this.asmButton.UseVisualStyleBackColor = true;
             this.asmButton.Click += new System.EventHandler(this.asmButton_Click);
             // 
@@ -1863,18 +1855,19 @@
             // 
             // messagesTextBox
             // 
-            this.messagesTextBox.Location = new System.Drawing.Point(211, 189);
+            this.messagesTextBox.Location = new System.Drawing.Point(189, 145);
             this.messagesTextBox.Multiline = true;
             this.messagesTextBox.Name = "messagesTextBox";
-            this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
+            this.messagesTextBox.Size = new System.Drawing.Size(141, 212);
             this.messagesTextBox.TabIndex = 3;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label56);
             this.panel4.Controls.Add(this.memoryListBox);
-            this.panel4.Location = new System.Drawing.Point(2, 142);
+            this.panel4.Location = new System.Drawing.Point(5, 123);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 241);
+            this.panel4.Size = new System.Drawing.Size(171, 241);
             this.panel4.TabIndex = 4;
             // 
             // memoryListBox
@@ -1882,14 +1875,33 @@
             this.memoryListBox.FormattingEnabled = true;
             this.memoryListBox.Location = new System.Drawing.Point(6, 22);
             this.memoryListBox.Name = "memoryListBox";
-            this.memoryListBox.Size = new System.Drawing.Size(181, 212);
+            this.memoryListBox.Size = new System.Drawing.Size(145, 212);
             this.memoryListBox.TabIndex = 5;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(186, 128);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(30, 13);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "Logs";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(7, 5);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(44, 13);
+            this.label56.TabIndex = 6;
+            this.label56.Text = "Memory";
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 658);
+            this.Controls.Add(this.label55);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.messagesTextBox);
             this.Controls.Add(this.panel3);
@@ -1906,6 +1918,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2084,10 +2097,11 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine4;
         public System.Windows.Forms.Label ALUOperation;
         public System.Windows.Forms.Button resetButton;
-        public System.Windows.Forms.Button memoryButton;
         public System.Windows.Forms.Button runStepByStepButton;
         public System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox memoryListBox;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
     }
 }
 

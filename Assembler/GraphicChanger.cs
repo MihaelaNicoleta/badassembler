@@ -648,5 +648,15 @@ namespace Assembler
             microcodeForm.microcodeListBox.SetSelected(lineNumber, true);
         }
 
+        public void setLogMessage(String message)
+        {
+            myForm.messagesTextBox.Text += message + "\r\n";
+        }
+
+        public void refresh()
+        {
+            myForm.Refresh();
+        }
+
     }
 }
