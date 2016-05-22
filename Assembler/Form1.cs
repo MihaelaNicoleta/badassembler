@@ -179,6 +179,19 @@ namespace Assembler
 
         private void asmButton_Click(object sender, EventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();            
+
+            dialog.Filter = "Assembly Files (.asm)|*.asm|Text Files (.txt)|*.txt|All Files (*.*)|*.*";
+            dialog.FilterIndex = 1;
+            dialog.Multiselect = false;
+
+            DialogResult opened = dialog.ShowDialog();
+
+            if (opened == DialogResult.OK) // Test result.
+            {
+                assemblyCodeFile = dialog.FileName;                
+            }
+
             fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             foreach(String instruction in assemblyCodeLines)
             {
