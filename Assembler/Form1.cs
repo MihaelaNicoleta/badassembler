@@ -196,6 +196,7 @@ namespace Assembler
             if(assemblySuccess == true)
             {
                 messagesTextBox.Text += "Assembly process was a great success.\r\n";
+                showMemory();
             }
             else
             {
@@ -235,6 +236,21 @@ namespace Assembler
         {
             stepByStep = true;
             sequencer.runSimulationStepByStep();
+        }
+
+        private void showMemory()
+        {
+            var location = 0;
+
+            foreach (KeyValuePair<Instruction, String> instruction in binaryInstructions)
+            {
+                var value = instruction.Key.ToString();
+
+                memoryListBox.Items.Add(location + "\t" + value.Substring(value.Length - 8));                
+                location++;
+                memoryListBox.Items.Add(location + "\t" + value.Substring(0, 8));
+                location++;
+            }
         }
     }
 }

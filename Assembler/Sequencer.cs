@@ -16,6 +16,8 @@ namespace Assembler
 
         public int MAR = 0;
 
+        public UInt64 index;
+
 
         public void runSimulationStepByStep()
         {
@@ -25,6 +27,8 @@ namespace Assembler
 
             ulong MIR = MPM[MAR];
 
+            UInt16 shift = (UInt16)(MIR & 255);
+
             //ulong MIR = 391036338689;
 
             switch(step)
@@ -32,8 +36,7 @@ namespace Assembler
                 case 1:
                     {
                         decodeSBUS(MIR);
-
-                        graphicChanger.selectMicrocodeLine(7);
+                        graphicChanger.selectMicrocodeLine(MAR);
 
                     }
                     break;
@@ -41,27 +44,23 @@ namespace Assembler
                 case 2:
                     {
                         decodeDBUS(MIR);
-
                     }
                     break;
 
                 case 3:
                     {
                         decodeALU(MIR);
-
                     }
                     break;
 
                 case 4:
                     {
                         decodeRBUS(MIR);
-
                     }
                     break;
                 case 5:
                     {
                         decodeOtherOperations(MIR);
-
                     }
                     break;
 
@@ -74,7 +73,70 @@ namespace Assembler
 
                 case 7:
                     {
-                        MAR++;
+                        //g = TestG();
+                        var g = 0;
+
+                        if (g == 1) // MAR = ADRESA_SALT + INDEX
+                        {
+                            switch ((MIR & 3584) >> 9)
+                            {
+
+                                case 0x0: //INDEX0 
+                                    MAR = shift;
+                                    break;
+                                case 0x1: //INDEX1
+                                   // UInt16 cl = getCl();
+                                    UInt16 cl = 0;
+
+                                    switch (cl)
+                                    {
+                                        case 0:
+                                            MAR = shift;
+                                            break;
+                                        case 1:
+                                            MAR = (UInt16)(shift + 0x1);
+                                            break;
+                                        case 2:
+                                            MAR = (UInt16)(shift + 0x3);
+                                            break;
+                                        case 3:
+                                            MAR = (UInt16)(shift + 0x2);
+                                            break;
+                                    }
+                                    break;
+                                case 0x2: //INDEX2
+                                    index = (UInt16)((IR & 3072) >> 9);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                case 0x3: //INDEX3
+                                    index = (UInt16)((IR & 48) >> 3);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                case 0x4: //INDEX4
+                                    index = (UInt16)((IR & 28672) >> 11);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                case 0x5: //INDEX5
+                                    index = (UInt16)((IR & 1984) >> 5);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                case 0x6: //INDEX6
+                                    index = (UInt16)((IR & 7936) >> 7);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                case 0x7: //INDEX7
+                                    index = (UInt16)((IR & 31) << 1);
+                                    MAR = (UInt16)(shift + index);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        else
+                        { // MAR = MAR + 1
+                            //MAR = (UInt16)(MAR + 0x1);
+                            MAR++;
+                        }                        
                         graphicChanger.resetGraphicToDefault();
                         step = 0;
 
@@ -91,8 +153,7 @@ namespace Assembler
         {
 
             GraphicChanger graphicChanger = new GraphicChanger();
-            decodeSBUS(391036338689);
-            //graphicChanger.Pd0s();
+
         }
 
         private void decodeSBUS(UInt64 MIRCode)

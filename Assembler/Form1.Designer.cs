@@ -203,7 +203,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label55 = new System.Windows.Forms.Label();
+            this.memoryListBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1871,19 +1871,19 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label55);
+            this.panel4.Controls.Add(this.memoryListBox);
             this.panel4.Location = new System.Drawing.Point(2, 142);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(203, 241);
             this.panel4.TabIndex = 4;
             // 
-            // label55
+            // memoryListBox
             // 
-            this.label55.Location = new System.Drawing.Point(3, 10);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(181, 212);
-            this.label55.TabIndex = 4;
-            this.label55.Text = "Memory";
+            this.memoryListBox.FormattingEnabled = true;
+            this.memoryListBox.Location = new System.Drawing.Point(6, 22);
+            this.memoryListBox.Name = "memoryListBox";
+            this.memoryListBox.Size = new System.Drawing.Size(181, 212);
+            this.memoryListBox.TabIndex = 5;
             // 
             // mainForm
             // 
@@ -2087,7 +2087,7 @@
         public System.Windows.Forms.Button memoryButton;
         public System.Windows.Forms.Button runStepByStepButton;
         public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label label55;
+        private System.Windows.Forms.ListBox memoryListBox;
     }
 }
 
