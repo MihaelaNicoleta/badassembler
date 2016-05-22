@@ -77,8 +77,7 @@ namespace Assembler
 
                 case 7:
                     {
-                        //g = TestG();
-                        var g = 0;
+                        var g = decodeSuccesor(MIR);
 
                         if (g == 1) // MAR = ADRESA_SALT + INDEX
                         {
@@ -202,9 +201,8 @@ namespace Assembler
                     break;
 
                 case 0xA: //PdRGs		
-                    //int nr_reg = (IR & 0x03C0) >> 6; //preiau reg din camp RS din IR
-                    var nr_reg = 1;
-                    switch (nr_reg)
+                    int register = (IR & 960) >> 6; 
+                    switch (register)
                     {
                         case 0x1:
                             graphicChanger.colorR1();
@@ -319,10 +317,9 @@ namespace Assembler
                     break;
 
                 case 0xA: //PdRGd
-                    //int nr_reg = IR & 0x000F; //preiau reg din camp RS din IR
+                    var register = IR & 15;
 
-                    var  nr_reg = 1;
-                    switch (nr_reg)
+                    switch (register)
                     {
                         case 0x1:
                             graphicChanger.colorR1();
@@ -399,14 +396,10 @@ namespace Assembler
                     break;
 
                 case 0x2: //PmRG
-                    //int nr_reg = IR & 0x000F;
-                    //R[nr_reg] = RBUS;
-                    graphicChanger.PmRG();
+                    var register = IR & 15;
+                    graphicChanger.PmRG();                   
 
-                   
-
-                    var nr_reg = 1;
-                    switch (nr_reg)
+                    switch (register)
                     {
                         case 0:
                             graphicChanger.colorR0();
@@ -519,14 +512,14 @@ namespace Assembler
         private void decodeALU(UInt64 MIRCode)
         {
             GraphicChanger graphicChanger = new GraphicChanger();
-            UInt16 alu = (UInt16)((MIRCode & 0x0000000078000000) >> 27);
+            UInt16 alu = (UInt16)((MIRCode & 2013265920) >> 27);
 
             ushort value = 127;
             switch (alu)
             {
                 case 0x1: //SUM
                     #region sum
-                    if ((((UInt16)(MIRCode & 0x0000000007800000)) >> 18) == 2)
+                    if ((((UInt16)(MIRCode & 2013265920)) >> 18) == 2)
                     { //CIN activat atunci mai adun si val 1
                         try
                         {
@@ -747,6 +740,32 @@ namespace Assembler
             }
         }
 
+        private void decodeMemoryOperation(UInt64 MIRCode)
+        {
+            GraphicChanger graphicChanger = new GraphicChanger();
+            UInt16 memOperation = (UInt16)((MIRCode & 196608) >> 16);
+
+            ushort value = 127;
+
+            switch (memOperation)
+            {
+                case 0x1: //IFCH
+                    //contor++;
+                    graphicChanger.IFCH();
+                    graphicChanger.setIR(value);
+                    break;
+                case 0x2: //READ
+                    graphicChanger.Read();
+                    graphicChanger.setMDR(value);
+                    break;
+                case 0x3: //WRITE
+                    graphicChanger.Write();
+                    break;
+                default: 
+                    break;
+            }
+        }
+
         private UInt16 getCl1()
         {
             UInt16 IR15 = (UInt16)((IR & 0x8000) >> 15);
@@ -774,7 +793,8 @@ namespace Assembler
         private UInt16 decodeSuccesor(UInt64 MIRCode)
         {
             UInt16 nTF, condition = 0;
-            nTF = (UInt16)((MIRCode & 0x0000000000000100) >> 8);
+            nTF = (UInt16)((MIRCode & 256) >> 8);
+
             switch ((MIRCode & 61440) >> 12)
             {
                 case 1: //INT

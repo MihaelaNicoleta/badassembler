@@ -404,6 +404,11 @@ namespace Assembler
             setNewRegisterValue(myForm.IVR, value);
         }
 
+        public void setIR(UInt16 value)
+        {
+            setNewRegisterValue(myForm.IR, value);
+        }
+
         public void setPC(UInt16 value)
         {
             setNewRegisterValue(myForm.PC, value);
