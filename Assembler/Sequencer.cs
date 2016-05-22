@@ -33,6 +33,8 @@ namespace Assembler
                     {
                         decodeSBUS(MIR);
 
+                        graphicChanger.selectMicrocodeLine(7);
+
                     }
                     break;
 

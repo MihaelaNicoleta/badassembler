@@ -13,6 +13,7 @@ namespace Assembler
     class GraphicChanger
     {
         mainForm myForm = mainForm.currentForm;
+        MicrocodeForm microcodeForm = MicrocodeForm.microcodeForm;
         Color changeColor = Color.Orange;
         Color defaultColor = Color.Black;
 
@@ -635,6 +636,11 @@ namespace Assembler
         {
             resetBusesColor();
             resetRegistersColor();
+        }
+
+        public void selectMicrocodeLine(int lineNumber)
+        {
+            microcodeForm.microcodeListBox.SetSelected(lineNumber, true);
         }
 
     }

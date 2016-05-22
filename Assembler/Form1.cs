@@ -63,6 +63,7 @@ namespace Assembler
 
         //sequencer vars
         List<UInt64> MPM = new List<ulong>();
+        MicrocodeForm microcodeForm = new MicrocodeForm();
 
         public mainForm()
         {
@@ -213,6 +214,9 @@ namespace Assembler
             {
                 sequencer.MPM = MPM;
                 messagesTextBox.Text += "Microcode loading was a great success.\r\n";
+                
+                microcodeForm.microcodeListBox.DataSource = microCodeLines;
+                microcodeForm.Show();
             }
             else
             {

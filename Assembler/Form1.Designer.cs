@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.memoryButton = new System.Windows.Forms.Button();
+            this.runStepByStepButton = new System.Windows.Forms.Button();
             this.runButton = new System.Windows.Forms.Button();
             this.assembleButton = new System.Windows.Forms.Button();
             this.microcodeButton = new System.Windows.Forms.Button();
@@ -199,9 +202,8 @@
             this.SBUS = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
-            this.runStepByStepButton = new System.Windows.Forms.Button();
-            this.memoryButton = new System.Windows.Forms.Button();
-            this.resetButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -209,6 +211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -224,6 +227,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 122);
             this.panel1.TabIndex = 0;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(76, 94);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(147, 23);
+            this.resetButton.TabIndex = 6;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            // 
+            // memoryButton
+            // 
+            this.memoryButton.Location = new System.Drawing.Point(181, 61);
+            this.memoryButton.Name = "memoryButton";
+            this.memoryButton.Size = new System.Drawing.Size(147, 23);
+            this.memoryButton.TabIndex = 5;
+            this.memoryButton.Text = "Memory";
+            this.memoryButton.UseVisualStyleBackColor = true;
+            // 
+            // runStepByStepButton
+            // 
+            this.runStepByStepButton.Location = new System.Drawing.Point(181, 32);
+            this.runStepByStepButton.Name = "runStepByStepButton";
+            this.runStepByStepButton.Size = new System.Drawing.Size(147, 23);
+            this.runStepByStepButton.TabIndex = 4;
+            this.runStepByStepButton.Text = "Run simulation step by step";
+            this.runStepByStepButton.UseVisualStyleBackColor = true;
+            this.runStepByStepButton.Click += new System.EventHandler(this.runStepByStepButton_Click);
             // 
             // runButton
             // 
@@ -268,9 +299,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.asmCode);
-            this.panel2.Location = new System.Drawing.Point(2, 152);
+            this.panel2.Location = new System.Drawing.Point(5, 394);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 256);
+            this.panel2.Size = new System.Drawing.Size(203, 249);
             this.panel2.TabIndex = 1;
             // 
             // asmCode
@@ -1838,39 +1869,28 @@
             this.messagesTextBox.Size = new System.Drawing.Size(134, 122);
             this.messagesTextBox.TabIndex = 3;
             // 
-            // runStepByStepButton
+            // panel4
             // 
-            this.runStepByStepButton.Location = new System.Drawing.Point(181, 32);
-            this.runStepByStepButton.Name = "runStepByStepButton";
-            this.runStepByStepButton.Size = new System.Drawing.Size(147, 23);
-            this.runStepByStepButton.TabIndex = 4;
-            this.runStepByStepButton.Text = "Run simulation step by step";
-            this.runStepByStepButton.UseVisualStyleBackColor = true;
-            this.runStepByStepButton.Click += new System.EventHandler(this.runStepByStepButton_Click);
+            this.panel4.Controls.Add(this.label55);
+            this.panel4.Location = new System.Drawing.Point(2, 142);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(203, 241);
+            this.panel4.TabIndex = 4;
             // 
-            // memoryButton
+            // label55
             // 
-            this.memoryButton.Location = new System.Drawing.Point(181, 61);
-            this.memoryButton.Name = "memoryButton";
-            this.memoryButton.Size = new System.Drawing.Size(147, 23);
-            this.memoryButton.TabIndex = 5;
-            this.memoryButton.Text = "Memory";
-            this.memoryButton.UseVisualStyleBackColor = true;
-            // 
-            // resetButton
-            // 
-            this.resetButton.Location = new System.Drawing.Point(76, 94);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(147, 23);
-            this.resetButton.TabIndex = 6;
-            this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
+            this.label55.Location = new System.Drawing.Point(3, 10);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(181, 212);
+            this.label55.TabIndex = 4;
+            this.label55.Text = "Memory";
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 658);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.messagesTextBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -1885,6 +1905,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2065,6 +2086,8 @@
         public System.Windows.Forms.Button resetButton;
         public System.Windows.Forms.Button memoryButton;
         public System.Windows.Forms.Button runStepByStepButton;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label55;
     }
 }
 
