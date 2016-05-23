@@ -82,6 +82,7 @@ namespace Assembler
 
         public static mainForm currentForm = null;
         public static UInt16 PCmax = 0;
+        public static UInt16[] MEM = new UInt16[200];
 
         //given files
         String assemblyCodeFile = "assembly_code.asm";
@@ -316,15 +317,23 @@ namespace Assembler
         private void showMemory()
         {
             int location = 0;
+            var high = "";
+            var low = "";
 
             List<String> lines = new List<String>();
             lines = fileParser.getMemoryData("output.txt");
 
             foreach (String instruction in lines)
             {
-                memoryListBox.Items.Add(location + "\t" + instruction.Substring(instruction.Length - 8));                
+                high = instruction.Substring(instruction.Length - 8);
+                low = instruction.Substring(0, 8);
+
+                memoryListBox.Items.Add(location + "\t" + high);
+                MEM[location] = (UInt16)Convert.ToInt16(high, 2); 
                 location++;
-                memoryListBox.Items.Add(location + "\t" + instruction.Substring(0, 8));
+                
+                memoryListBox.Items.Add(location + "\t" + low);
+                MEM[location] = (UInt16)Convert.ToInt16(low, 2);
                 location++;
             }
 

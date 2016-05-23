@@ -446,19 +446,19 @@ namespace Assembler
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 rbus = (UInt16)((MIRCode & 125829120) >> 23);
 
-            ushort value = 0;
+            UInt16 value = 0;
 
             switch (rbus)
             {
                 case 0x1: //PmFLAG
-                    regs.FLAG = bus.RBUS;
+                    regs.FLAG = (UInt16)bus.RBUS;
                     graphicChanger.PmFLAG();
                     break;
 
                 case 0x2: //PmRG
                     var register = regs.IR & 15;
                     graphicChanger.PmRG();
-                    value = bus.RBUS;
+                    value = (UInt16)bus.RBUS;
 
                     switch (register)
                     {
@@ -531,37 +531,37 @@ namespace Assembler
 
                 case 0x3: //PmSP
                     graphicChanger.PmSP();
-                    value = regs.SP = bus.RBUS;
+                    value = regs.SP = (UInt16)bus.RBUS;
                     graphicChanger.setSP(value);
                     break;
 
                 case 0x4: //PmT
                     graphicChanger.PmT();
-                    value = regs.T = bus.RBUS;
+                    value = regs.T = (UInt16)bus.RBUS;
                     graphicChanger.setT(value);
                     break;
 
                 case 0x5: //PmPC
                     graphicChanger.PmPC();
-                    value = regs.PC = bus.RBUS;
+                    value = regs.PC = (UInt16)bus.RBUS;
                     graphicChanger.setPC(value);
                     break;
 
                 case 0x6: //PmIVR
                     graphicChanger.PmIVR();
-                    value = regs.IVR = bus.RBUS;
+                    value = regs.IVR = (UInt16)bus.RBUS;
                     graphicChanger.setIVR(value);
                     break;
 
                 case 0x7: //PmADR
                     graphicChanger.PmADR();
-                    value = regs.ADR = bus.RBUS;
+                    value = regs.ADR = (UInt16)bus.RBUS;
                     graphicChanger.setADR(value);
                     break;
 
                 case 0x8: //PmMDR
                     graphicChanger.PmMDR();
-                    value = regs.MDR = bus.RBUS;
+                    value = regs.MDR = (UInt16)bus.RBUS;
                     graphicChanger.setMDR(value);
                     break;
 
@@ -718,79 +718,94 @@ namespace Assembler
                     break;
                 case 0x3: //plus2SP
                     graphicChanger.plusSP();
-                    value = regs.SP += 2;
+                    regs.SP += (UInt16)2;
+                    value = (UInt16)regs.SP;
                     graphicChanger.setSP(value);
                     break;
                 case 0x4: //minus2SP
                     graphicChanger.minusSP();
-                    value = regs.SP -= 2;
+                    regs.SP -= (UInt16)2;
+                    value = (UInt16)regs.SP;
                     graphicChanger.setSP(value);
                     break;
                 case 0x5: //plus2PC
                     graphicChanger.plusPC();
-                    value = regs.PC += 2;
+                    regs.PC += (UInt16)2;
+                    value = (UInt16)regs.PC;
                     graphicChanger.setPC(value);
                     break;
                 case 0x6: //A(0)BPO
                     break;
                 case 0x7: //A(0)C
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0xFFF7);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0xFFF7);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0x8: //A(1)C
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x0008);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x0008);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0x9: //A(0)V
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0xFFFE);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0xFFFE);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xA: //A(1)V
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x0001);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x0001);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xB: //A(0)Z
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0xFFFB);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0xFFFB);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xC: //A(1)Z
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x0004);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x0004);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xD: //A(0)S
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0xFFFD);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0xFFFD);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xE: //A(1)S
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x0002);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x0002);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0xF: //A(0)CVZS
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0xFFF0);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0xFFF0);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0x10: //A(1)CVZS
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x000F);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x000F);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0x11: //A(0)BVI
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG & 0x0FF7F);
+                    regs.FLAG = (UInt16)(regs.FLAG & 0x0FF7F);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 case 0x12: //A(1)BVI
                     graphicChanger.colorFlags();
-                    value = regs.FLAG = (UInt16)(regs.FLAG | 0x0080);
+                    regs.FLAG = (UInt16)(regs.FLAG | 0x0080);
+                    value = (UInt16)regs.FLAG;
                     graphicChanger.setFLAGS(value);
                     break;
                 default: //none
@@ -802,19 +817,40 @@ namespace Assembler
         {
             GraphicChanger graphicChanger = new GraphicChanger();
             UInt16 memOperation = (UInt16)((MIRCode & 196608) >> 16);
+            UInt16 value = 0;
 
             switch (memOperation)
             {
                 case 0x1: //IFCH
                     graphicChanger.IFCH();
-                    //graphicChanger.setIR(value);
+                    regs.IR = (UInt16)((UInt16)(mainForm.MEM[regs.ADR + 1] << 8) | (UInt16)(mainForm.MEM[regs.ADR]));
+                    value = (UInt16)regs.IR;
+                    graphicChanger.setIR(value);
                     break;
                 case 0x2: //READ
                     graphicChanger.Read();
-                    //graphicChanger.setMDR(value);
+                    regs.MDR = (UInt16)((UInt16)(mainForm.MEM[regs.ADR + 1] << 8) | (UInt16)(mainForm.MEM[regs.ADR]));
+                    value = (UInt16)regs.MDR;
+                    graphicChanger.setMDR(value);
                     break;
                 case 0x3: //WRITE
                     graphicChanger.Write();
+
+                    mainForm.MEM[regs.ADR] = (byte)regs.MDR;
+                    mainForm.MEM[regs.ADR + 1] = (byte)((UInt16)(regs.MDR >> 8));
+                    UInt16 ADR_2 = (UInt16)(regs.ADR + 1);
+
+                    if (mainForm.MEM[regs.ADR] != 0)
+                    {
+                        mainForm.MEM[regs.ADR] = mainForm.MEM[regs.ADR];
+                        mainForm.MEM[ADR_2] = mainForm.MEM[ADR_2];
+                    }
+                    else
+                    {
+                        mainForm.MEM[regs.ADR] = mainForm.MEM[regs.ADR];
+                        mainForm.MEM[regs.ADR + 1] = mainForm.MEM[regs.ADR + 1];
+                    }
+
                     break;
                 default: 
                     break;
