@@ -258,7 +258,7 @@ namespace Assembler
             fileParser.showAsmCode(assemblyCodeFile, assemblyCodeLines);
             foreach(String instruction in assemblyCodeLines)
             {
-                asmCode.Text += "\n" + instruction;
+                asmCodeListBox.Items.Add("\n" + instruction);
             }
 
         }

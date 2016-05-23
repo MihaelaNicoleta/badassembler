@@ -37,7 +37,6 @@
             this.microcodeButton = new System.Windows.Forms.Button();
             this.asmButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.asmCode = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ALUOperation = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
@@ -205,6 +204,8 @@
             this.label56 = new System.Windows.Forms.Label();
             this.memoryListBox = new System.Windows.Forms.ListBox();
             this.label55 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.asmCodeListBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -290,19 +291,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.asmCode);
+            this.panel2.Controls.Add(this.asmCodeListBox);
+            this.panel2.Controls.Add(this.label57);
             this.panel2.Location = new System.Drawing.Point(84, 394);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 249);
             this.panel2.TabIndex = 1;
-            // 
-            // asmCode
-            // 
-            this.asmCode.Location = new System.Drawing.Point(3, 13);
-            this.asmCode.Name = "asmCode";
-            this.asmCode.Size = new System.Drawing.Size(181, 231);
-            this.asmCode.TabIndex = 3;
-            this.asmCode.Text = "ASM CODE";
             // 
             // panel3
             // 
@@ -1896,6 +1890,23 @@
             this.label55.TabIndex = 5;
             this.label55.Text = "Logs";
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(3, 4);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(79, 13);
+            this.label57.TabIndex = 7;
+            this.label57.Text = "Assembly Code";
+            // 
+            // asmCodeListBox
+            // 
+            this.asmCodeListBox.FormattingEnabled = true;
+            this.asmCodeListBox.Location = new System.Drawing.Point(6, 21);
+            this.asmCodeListBox.Name = "asmCodeListBox";
+            this.asmCodeListBox.Size = new System.Drawing.Size(194, 212);
+            this.asmCodeListBox.TabIndex = 7;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1911,6 +1922,7 @@
             this.Text = "Assembler";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1985,7 +1997,6 @@
         public System.Windows.Forms.Label label20;
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.Label asmCode;
         public System.Windows.Forms.Button microcodeButton;
         public System.Windows.Forms.Button asmButton;
         public System.Windows.Forms.TextBox messagesTextBox;
@@ -2102,6 +2113,8 @@
         public System.Windows.Forms.ListBox memoryListBox;
         public System.Windows.Forms.Label label55;
         public System.Windows.Forms.Label label56;
+        public System.Windows.Forms.ListBox asmCodeListBox;
+        public System.Windows.Forms.Label label57;
     }
 }
 
