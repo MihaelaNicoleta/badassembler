@@ -9,3 +9,4 @@ E:\Facultate\ProiectC#\Assembler\Assembler\obj\Debug\Assembler.csproj.GenerateRe
 E:\Facultate\ProiectC#\Assembler\Assembler\obj\Debug\Assembler.exe
 E:\Facultate\ProiectC#\Assembler\Assembler\obj\Debug\Assembler.pdb
 E:\Facultate\ProiectC#\Assembler\Assembler\obj\Debug\Assembler.MicrocodeForm.resources
+E:\Facultate\ProiectC#\Assembler\Assembler\obj\Debug\Assembler.csprojResolveAssemblyReference.cache

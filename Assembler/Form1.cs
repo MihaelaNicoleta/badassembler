@@ -13,6 +13,48 @@ using System.Threading;
 
 namespace Assembler
 {
+    public struct busses
+    {
+        public UInt16 SBUS;
+        public UInt16 DBUS;
+        public UInt16 RBUS;
+
+        public busses(UInt16 value)
+        {
+            this.SBUS = value;
+            this.DBUS = value;
+            this.RBUS = value;
+        }
+    };
+
+    public struct impRegisters
+    {
+        public UInt16 IR;
+        public UInt16 IVR;
+        public UInt16 MDR;
+        public UInt16 ADR;
+        public UInt16 PC;
+        public UInt16 T;
+        public UInt16 SP;
+        public UInt16[] RG;
+        public UInt16 FLAG;
+
+        public impRegisters(UInt16 value)
+        {
+            this.IR = value;
+            this.IVR = value;
+            this.MDR = value;
+            this.ADR = value;
+            this.PC = value;
+            this.T = value;
+            this.SP = value;
+            this.RG = new UInt16[15];
+            this.FLAG = value;
+
+            Array.Clear(this.RG, 0, this.RG.Length);
+        }
+    };
+
     public partial class mainForm : Form
     {
 
@@ -94,74 +136,81 @@ namespace Assembler
                             switch (result.First().Key)
                             {
                                 case "B1":
-                                    B1Instruction B1instr = new B1Instruction(result.First().Value);
-                                    binaryInstructions.Add(B1instr, result.First().Key);
-
-                                    //source
-                                    List<String> b1_adrRegMAS = instrHelper.getAddressingMode(values[1].Trim());
-
-                                    if ((b1_adrRegMAS != null))
-                                    {                                       
-                                        B1instr.MAS = b1_adrRegMAS[0];
-                                        B1instr.RS = b1_adrRegMAS[1];
-                                        if (b1_adrRegMAS.Count() == 3)
                                         {
-                                            B1instr.offsetS = b1_adrRegMAS[2];
-                                        }
-                                    }  
+                                            B1Instruction B1instr = new B1Instruction(result.First().Value);
+                                            binaryInstructions.Add(B1instr, result.First().Key);
 
-                                    //destinstion
-                                    List<String> b1_adrRegMAD = instrHelper.getAddressingMode(values[2].Trim());
-                                    if ((b1_adrRegMAD != null))
-                                    {
-                                        B1instr.MAD = b1_adrRegMAD[0];
-                                        B1instr.RD = b1_adrRegMAD[1];
-                                        if (b1_adrRegMAD.Count() == 3)
-                                        {
-                                            B1instr.offsetD = b1_adrRegMAD[2];
+                                            //source
+                                            List<String> b1_adrRegMAS = instrHelper.getAddressingMode(values[1].Trim());
+
+                                            if ((b1_adrRegMAS != null))
+                                            {
+                                                B1instr.MAS = b1_adrRegMAS[0];
+                                                B1instr.RS = b1_adrRegMAS[1];
+                                                if (b1_adrRegMAS.Count() == 3)
+                                                {
+                                                    B1instr.offsetS = b1_adrRegMAS[2];
+                                                }
+                                            }
+
+                                            //destinstion
+                                            List<String> b1_adrRegMAD = instrHelper.getAddressingMode(values[2].Trim());
+                                            if ((b1_adrRegMAD != null))
+                                            {
+                                                B1instr.MAD = b1_adrRegMAD[0];
+                                                B1instr.RD = b1_adrRegMAD[1];
+                                                if (b1_adrRegMAD.Count() == 3)
+                                                {
+                                                    B1instr.offsetD = b1_adrRegMAD[2];
+                                                }
+                                            }
                                         }
-                                    }       
-                                    break;
+                                        break;
 
                                 case "B2":
-                                    B2Instruction B2instr = new B2Instruction(result.First().Value);
-                                    binaryInstructions.Add(B2instr, result.First().Key);
-
-                                    //destinstion
-                                    List<String> b2_adrRegMAD = instrHelper.getAddressingMode(values[1].Trim());
-                                    if ((b2_adrRegMAD != null))
-                                    {
-                                        B2instr.MAD = b2_adrRegMAD[0];
-                                        B2instr.RD = b2_adrRegMAD[1];
-                                        if (b2_adrRegMAD.Count() == 3)
                                         {
-                                            B2instr.offsetD = b2_adrRegMAD[2];
+                                            B2Instruction B2instr = new B2Instruction(result.First().Value);
+                                            binaryInstructions.Add(B2instr, result.First().Key);
+
+                                            //destinstion
+                                            List<String> b2_adrRegMAD = instrHelper.getAddressingMode(values[1].Trim());
+                                            if ((b2_adrRegMAD != null))
+                                            {
+                                                B2instr.MAD = b2_adrRegMAD[0];
+                                                B2instr.RD = b2_adrRegMAD[1];
+                                                if (b2_adrRegMAD.Count() == 3)
+                                                {
+                                                    B2instr.offsetD = b2_adrRegMAD[2];
+                                                }
+                                            }
                                         }
-                                    }
-                                    break;
+                                        break;
 
                                 case "B3":
-                                    B3Instruction B3instr = new B3Instruction(result.First().Value);
-                                    binaryInstructions.Add(B3instr, result.First().Key);
-
-                                    //TODO: check intervals
-                                    B3instr.offset = instrHelper.getBinaryOffset(values[1].Trim());
-                                    break;
+                                        {
+                                            B3Instruction B3instr = new B3Instruction(result.First().Value);
+                                            binaryInstructions.Add(B3instr, result.First().Key);
+                                            B3instr.offset = instrHelper.getBinaryOffset(values[1].Trim());
+                                        }
+                                        break;                                       
 
                                 case "B4":
-                                    B4Instruction B4instr = new B4Instruction(result.First().Value);
-                                    binaryInstructions.Add(B4instr, result.First().Key);
-                                    break;
+                                        {
+                                            B4Instruction B4instr = new B4Instruction(result.First().Value);
+                                            binaryInstructions.Add(B4instr, result.First().Key);
+                                        }
+                                        break;
                                 default:
-                                    //show error message
-                                    break;
+                                        {
+                                            messagesTextBox.Text = "Not a correct instruction. Reopen app and try again.\r\n";
+                                        }
+                                        break;
                             }
                         }
                        else
                         {
                             assemblySuccess = false;
-                            //TODO: Return not an existing instruction
-                            //return null;
+                            messagesTextBox.Text = "Not a correct instruction. Reopen app and try again.\r\n";
                         } 
                 }
             }

@@ -16,28 +16,8 @@ namespace Assembler
 
         public UInt16 Carry = 0;
 
-        struct busses
-        {
-            public UInt16 SBUS;
-            public UInt16 DBUS;
-            public UInt16 RBUS;
-        };
-
-        struct impRegisters
-        {
-            public UInt16 IR;
-            public UInt16 IVR;
-            public UInt16 MDR;
-            public UInt16 ADR;
-            public UInt16 PC;
-            public UInt16 T;
-            public UInt16 SP;
-            public UInt16[] RG;
-            public UInt16 FLAG;
-        };
-
-        busses bus = new busses();
-        impRegisters regs = new impRegisters();
+        public busses bus = new busses(0);
+        public impRegisters regs = new impRegisters(0);
         
         public UInt64 index;
         public UInt16 classs;

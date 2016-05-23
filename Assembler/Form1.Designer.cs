@@ -202,9 +202,9 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.messagesTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
             this.memoryListBox = new System.Windows.Forms.ListBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -291,7 +291,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.asmCode);
-            this.panel2.Location = new System.Drawing.Point(5, 394);
+            this.panel2.Location = new System.Drawing.Point(84, 394);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 249);
             this.panel2.TabIndex = 1;
@@ -1870,6 +1870,15 @@
             this.panel4.Size = new System.Drawing.Size(171, 241);
             this.panel4.TabIndex = 4;
             // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(7, 5);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(44, 13);
+            this.label56.TabIndex = 6;
+            this.label56.Text = "Memory";
+            // 
             // memoryListBox
             // 
             this.memoryListBox.FormattingEnabled = true;
@@ -1886,15 +1895,6 @@
             this.label55.Size = new System.Drawing.Size(30, 13);
             this.label55.TabIndex = 5;
             this.label55.Text = "Logs";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(7, 5);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(44, 13);
-            this.label56.TabIndex = 6;
-            this.label56.Text = "Memory";
             // 
             // mainForm
             // 
