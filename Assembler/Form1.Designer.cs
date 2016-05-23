@@ -2099,9 +2099,9 @@
         public System.Windows.Forms.Button resetButton;
         public System.Windows.Forms.Button runStepByStepButton;
         public System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListBox memoryListBox;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
+        public System.Windows.Forms.ListBox memoryListBox;
+        public System.Windows.Forms.Label label55;
+        public System.Windows.Forms.Label label56;
     }
 }
 

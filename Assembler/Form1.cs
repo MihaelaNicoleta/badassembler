@@ -82,6 +82,7 @@ namespace Assembler
 
         public static mainForm currentForm = null;
         public static UInt16 PCmax = 0;
+        public static bool stop = false;
 
         //given files
         String assemblyCodeFile = "assembly_code.asm";
@@ -334,5 +335,6 @@ namespace Assembler
         {
             sequencer.resetProcessor();
         }
+
     }
 }

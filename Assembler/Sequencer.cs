@@ -101,7 +101,13 @@ namespace Assembler
 
                 }
             }
-            graphicChanger.setLogMessage("Step by step simulation was a great success.");
+            else
+            {
+                graphicChanger.resetGraphicToDefault();
+                step = 0;
+                graphicChanger.setLogMessage("Step by step simulation was a great success.");
+            }
+            
         }
 
         public void runSimulation()
@@ -112,6 +118,11 @@ namespace Assembler
 
             while (regs.PC <= mainForm.PCmax)
             {
+                if(mainForm.stop == true)
+                {
+                    graphicChanger.setLogMessage("Simulation was stopped.");
+                    break;
+                }
 
                 MIR = MPM[MAR];
 
@@ -140,10 +151,11 @@ namespace Assembler
                 Thread.Sleep(500);
                 graphicChanger.refresh();
 
-                MAR = getMAR(MIR);                
-            }
+                MAR = getMAR(MIR);
+                graphicChanger.resetGraphicToDefault();
 
-            graphicChanger.resetGraphicToDefault();
+            }
+                        
             graphicChanger.setLogMessage("Simulation was a great success.");
 
         }
