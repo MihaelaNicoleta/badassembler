@@ -82,7 +82,6 @@ namespace Assembler
 
         public static mainForm currentForm = null;
         public static UInt16 PCmax = 0;
-        public static bool stop = false;
 
         //given files
         String assemblyCodeFile = "assembly_code.asm";
@@ -318,17 +317,18 @@ namespace Assembler
         {
             int location = 0;
 
-            foreach (KeyValuePair<Instruction, String> instruction in binaryInstructions)
-            {
-                var value = instruction.Key.ToString();
+            List<String> lines = new List<String>();
+            lines = fileParser.getMemoryData("output.txt");
 
-                memoryListBox.Items.Add(location + "\t" + value.Substring(value.Length - 8));                
+            foreach (String instruction in lines)
+            {
+                memoryListBox.Items.Add(location + "\t" + instruction.Substring(instruction.Length - 8));                
                 location++;
-                memoryListBox.Items.Add(location + "\t" + value.Substring(0, 8));
+                memoryListBox.Items.Add(location + "\t" + instruction.Substring(0, 8));
                 location++;
             }
 
-            PCmax = (UInt16)(location - 1);
+            PCmax = (UInt16)location;
         }
 
         private void resetButton_Click(object sender, EventArgs e)

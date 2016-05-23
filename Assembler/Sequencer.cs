@@ -51,6 +51,7 @@ namespace Assembler
                 {
                     case 1:
                         {
+                            MIR = MPM[MAR];
                             decodeSBUS(MIR);
                             graphicChanger.selectMicrocodeLine(MAR);
 
@@ -93,6 +94,7 @@ namespace Assembler
 
                             graphicChanger.resetGraphicToDefault();
                             step = 0;
+                            bus.reset();
                         }
                         break;
 
@@ -114,20 +116,15 @@ namespace Assembler
         {
 
             GraphicChanger graphicChanger = new GraphicChanger();
-            ulong MIR = 0;
+            ulong MIR = MPM[MAR];
 
             while (regs.PC <= mainForm.PCmax)
             {
-                if(mainForm.stop == true)
-                {
-                    graphicChanger.setLogMessage("Simulation was stopped.");
-                    break;
-                }
 
                 MIR = MPM[MAR];
 
-                decodeSBUS(MIR);
                 graphicChanger.selectMicrocodeLine(MAR);
+                decodeSBUS(MIR);                
                 Thread.Sleep(500);
                 graphicChanger.refresh();
 
@@ -152,6 +149,7 @@ namespace Assembler
                 graphicChanger.refresh();
 
                 MAR = getMAR(MIR);
+                bus.reset();
                 graphicChanger.resetGraphicToDefault();
 
             }

@@ -24,7 +24,7 @@ namespace Assembler
 
         public override string ToString()
         {
-            return opcode + MAS + RS + MAD + RD;
+            return opcode + MAD + RD + MAS + RS;
         }
 
     }

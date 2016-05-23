@@ -240,5 +240,22 @@ namespace Assembler
             return mpm;
             
         }
+
+        public List<String> getMemoryData(String fileName)
+        {
+            String line;
+            List<String> binaryLines = new List<String>();
+
+            StreamReader sr = new StreamReader(fileName);
+            while ((line = sr.ReadLine()) != null)
+            {
+                binaryLines.Add(line);
+            }
+
+            sr.Close();
+
+            return binaryLines;
+
+        }
     }
 }

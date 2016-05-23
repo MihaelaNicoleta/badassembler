@@ -573,6 +573,8 @@ namespace Assembler
             myForm.ALUSLine.BorderColor = defaultColor;
             myForm.ALUDLine.BorderColor = defaultColor;
             myForm.ALURLine.BorderColor = defaultColor;
+
+            myForm.ALUOperation.Text = "Operation";
         }
 
         private void resetRegistersColor()
