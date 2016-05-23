@@ -37,6 +37,8 @@
             this.microcodeButton = new System.Windows.Forms.Button();
             this.asmButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.asmCodeListBox = new System.Windows.Forms.ListBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ALUOperation = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
@@ -160,8 +162,8 @@
             this.DataOUTLine3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmMDR1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape26 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape25 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmMDR4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.PmMDR3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmRG = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmSP = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PmT = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -204,8 +206,6 @@
             this.label56 = new System.Windows.Forms.Label();
             this.memoryListBox = new System.Windows.Forms.ListBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.asmCodeListBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -297,6 +297,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 249);
             this.panel2.TabIndex = 1;
+            // 
+            // asmCodeListBox
+            // 
+            this.asmCodeListBox.FormattingEnabled = true;
+            this.asmCodeListBox.Location = new System.Drawing.Point(6, 21);
+            this.asmCodeListBox.Name = "asmCodeListBox";
+            this.asmCodeListBox.Size = new System.Drawing.Size(194, 212);
+            this.asmCodeListBox.TabIndex = 7;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(3, 4);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(79, 13);
+            this.label57.TabIndex = 7;
+            this.label57.Text = "Assembly Code";
             // 
             // panel3
             // 
@@ -1220,8 +1237,8 @@
             this.DataOUTLine3,
             this.PmMDR,
             this.PmMDR1,
-            this.lineShape26,
-            this.lineShape25,
+            this.PmMDR4,
+            this.PmMDR3,
             this.PmRG,
             this.PmSP,
             this.PmT,
@@ -1532,23 +1549,23 @@
             this.PmMDR1.Y1 = 575;
             this.PmMDR1.Y2 = 575;
             // 
-            // lineShape26
+            // PmMDR4
             // 
-            this.lineShape26.BorderWidth = 3;
-            this.lineShape26.Name = "lineShape26";
-            this.lineShape26.X1 = 186;
-            this.lineShape26.X2 = 186;
-            this.lineShape26.Y1 = 543;
-            this.lineShape26.Y2 = 561;
+            this.PmMDR4.BorderWidth = 3;
+            this.PmMDR4.Name = "PmMDR4";
+            this.PmMDR4.X1 = 186;
+            this.PmMDR4.X2 = 186;
+            this.PmMDR4.Y1 = 543;
+            this.PmMDR4.Y2 = 561;
             // 
-            // lineShape25
+            // PmMDR3
             // 
-            this.lineShape25.BorderWidth = 3;
-            this.lineShape25.Name = "lineShape25";
-            this.lineShape25.X1 = 126;
-            this.lineShape25.X2 = 185;
-            this.lineShape25.Y1 = 561;
-            this.lineShape25.Y2 = 561;
+            this.PmMDR3.BorderWidth = 3;
+            this.PmMDR3.Name = "PmMDR3";
+            this.PmMDR3.X1 = 126;
+            this.PmMDR3.X2 = 185;
+            this.PmMDR3.Y1 = 561;
+            this.PmMDR3.Y2 = 561;
             // 
             // PmRG
             // 
@@ -1890,23 +1907,6 @@
             this.label55.TabIndex = 5;
             this.label55.Text = "Logs";
             // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(3, 4);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(79, 13);
-            this.label57.TabIndex = 7;
-            this.label57.Text = "Assembly Code";
-            // 
-            // asmCodeListBox
-            // 
-            this.asmCodeListBox.FormattingEnabled = true;
-            this.asmCodeListBox.Location = new System.Drawing.Point(6, 21);
-            this.asmCodeListBox.Name = "asmCodeListBox";
-            this.asmCodeListBox.Size = new System.Drawing.Size(194, 212);
-            this.asmCodeListBox.TabIndex = 7;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2038,8 +2038,8 @@
         public Microsoft.VisualBasic.PowerPacks.LineShape PmPC;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmIVR;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmADR;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape26;
-        public Microsoft.VisualBasic.PowerPacks.LineShape lineShape25;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR4;
+        public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR3;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR;
         public Microsoft.VisualBasic.PowerPacks.LineShape PmMDR1;
         public Microsoft.VisualBasic.PowerPacks.LineShape DataOUTLine3;

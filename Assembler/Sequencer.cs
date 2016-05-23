@@ -54,7 +54,6 @@ namespace Assembler
                             MIR = MPM[MAR];
                             decodeSBUS(MIR);
                             graphicChanger.selectMicrocodeLine(MAR);
-
                         }
                         break;
 
@@ -126,27 +125,27 @@ namespace Assembler
                 graphicChanger.selectMicrocodeLine(MAR);
                 decodeSBUS(MIR);                
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 decodeDBUS(MIR);
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 decodeALU(MIR);
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 decodeRBUS(MIR);
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 decodeOtherOperations(MIR);
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 decodeMemoryOperations(MIR);
                 //Thread.Sleep(500);
-                graphicChanger.refresh();
+                //graphicChanger.refresh();
 
                 MAR = getMAR(MIR);
                 bus.reset();
