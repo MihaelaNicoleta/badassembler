@@ -389,12 +389,12 @@ namespace Assembler
         {
             var stringValue = Convert.ToString(integerValue, 2);
 
-            String zeros = "0";
-            for (int i = 0; i < (15 - stringValue.Length); i++)
+            String zeros = "";
+            for (int i = 0; i < (16 - stringValue.Length); i++)
             {
                 zeros += "0";
             }
-
+            
             return zeros + stringValue;
         }
 

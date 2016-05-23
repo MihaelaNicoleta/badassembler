@@ -125,27 +125,27 @@ namespace Assembler
 
                 graphicChanger.selectMicrocodeLine(MAR);
                 decodeSBUS(MIR);                
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 decodeDBUS(MIR);
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 decodeALU(MIR);
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 decodeRBUS(MIR);
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 decodeOtherOperations(MIR);
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 decodeMemoryOperations(MIR);
-                Thread.Sleep(500);
+                //Thread.Sleep(500);
                 graphicChanger.refresh();
 
                 MAR = getMAR(MIR);
