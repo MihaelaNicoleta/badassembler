@@ -123,7 +123,21 @@ namespace Assembler
             myForm.SBUS.BorderColor = changeColor;
         }
 
+        public void PdnotTs()
+        {
+            myForm.PdTd.BorderColor = changeColor;
+            myForm.T.ForeColor = changeColor;
+            myForm.SBUS.BorderColor = changeColor;
+        }
+
         public void PdTd()
+        {
+            myForm.PdTs.BorderColor = changeColor;
+            myForm.T.ForeColor = changeColor;
+            myForm.DBUS.BorderColor = changeColor;
+        }
+
+        public void PdnotTd()
         {
             myForm.PdTs.BorderColor = changeColor;
             myForm.T.ForeColor = changeColor;

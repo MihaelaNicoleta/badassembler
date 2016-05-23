@@ -186,7 +186,8 @@ namespace Assembler
                     break;
 
                 case 0x5: //PdnotTs	
-                    //graphicChanger.PdnotTs();
+                    graphicChanger.PdnotTs();
+                    bus.SBUS = (UInt16)(~regs.T);
                     break;
 
                 case 0x6: //PdPCs	
@@ -319,41 +320,42 @@ namespace Assembler
 
                 case 0x2: //PdFLAGd
                     graphicChanger.PdFLAGd();
-                    bus.DBUS = regs.FLAG;
+                    bus.DBUS = (UInt16)regs.FLAG;
                     break;
 
                 case 0x3: //PdSPd
                     graphicChanger.PdSPd();
-                    bus.DBUS = regs.SP;
+                    bus.DBUS = (UInt16)regs.SP;
                     break;
 
                 case 0x4: //PdTd
                     graphicChanger.PdTd();
-                    bus.DBUS = regs.T;
+                    bus.DBUS = (UInt16)regs.T;
                     break;
 
                 case 0x5: //PdnotTd
-                    //graphicChanger.PdnTd();
+                    graphicChanger.PdnotTd();
+                    bus.DBUS = (UInt16)(~regs.T);
                     break;
 
                 case 0x6: //PdPCd
                     graphicChanger.PdPCd();
-                    bus.DBUS = regs.PC;
+                    bus.DBUS = (UInt16)regs.PC;
                     break;
 
                 case 0x7: //PdIVRd
                     graphicChanger.PdIVRd();
-                    bus.DBUS = regs.IVR;
+                    bus.DBUS = (UInt16)regs.IVR;
                     break;
 
                 case 0x8: //PdADRd
                     graphicChanger.PdADRd();
-                    bus.DBUS = regs.ADR;
+                    bus.DBUS = (UInt16)regs.ADR;
                     break;
 
                 case 0x9: //PdMDRd
                     graphicChanger.PdMDRd();
-                    bus.DBUS = regs.MDR;
+                    bus.DBUS = (UInt16)regs.MDR;
                     break;
 
                 case 0xA: //PdRGd
@@ -363,67 +365,67 @@ namespace Assembler
                     {
                         case 0x1:
                             graphicChanger.colorR1();
-                            bus.DBUS = regs.RG[1];
+                            bus.DBUS = (UInt16)regs.RG[1];
                             break;
                         case 0x2:
                             graphicChanger.colorR2();
-                            bus.DBUS = regs.RG[2];
+                            bus.DBUS = (UInt16)regs.RG[2];
                             break;
                         case 0x3:
                             graphicChanger.colorR3();
-                            bus.DBUS = regs.RG[3];
+                            bus.DBUS = (UInt16)regs.RG[3];
                             break;
                         case 0x4:
                             graphicChanger.colorR4();
-                            bus.DBUS = regs.RG[4];
+                            bus.DBUS = (UInt16)regs.RG[4];
                             break;
                         case 0x5:
                             graphicChanger.colorR5();
-                            bus.DBUS = regs.RG[5];
+                            bus.DBUS = (UInt16)regs.RG[5];
                             break;
                         case 0x6:
                             graphicChanger.colorR6();
-                            bus.DBUS = regs.RG[6];
+                            bus.DBUS = (UInt16)regs.RG[6];
                             break;
                         case 0x7:
                             graphicChanger.colorR7();
-                            bus.DBUS = regs.RG[7];
+                            bus.DBUS = (UInt16)regs.RG[7];
                             break;
                         case 0x8:
                             graphicChanger.colorR8();
-                            bus.DBUS = regs.RG[8];
+                            bus.DBUS = (UInt16)regs.RG[8];
                             break;
                         case 0x9:
                             graphicChanger.colorR9();
-                            bus.DBUS = regs.RG[9];
+                            bus.DBUS = (UInt16)regs.RG[9];
                             break;
                         case 0xA:
                             graphicChanger.colorR10();
-                            bus.DBUS = regs.RG[10];
+                            bus.DBUS = (UInt16)regs.RG[10];
                             break;
                         case 0xB:
                             graphicChanger.colorR11();
-                            bus.DBUS = regs.RG[11];
+                            bus.DBUS = (UInt16)regs.RG[11];
                             break;
                         case 0xC:
                             graphicChanger.colorR12();
-                            bus.DBUS = regs.RG[12];
+                            bus.DBUS = (UInt16)regs.RG[12];
                             break;
                         case 0xD:
                             graphicChanger.colorR13();
-                            bus.DBUS = regs.RG[13];
+                            bus.DBUS = (UInt16)regs.RG[13];
                             break;
                         case 0xE:
                             graphicChanger.colorR14();
-                            bus.DBUS = regs.RG[14];
+                            bus.DBUS = (UInt16)regs.RG[14];
                             break;
                         case 0xF:
                             graphicChanger.colorR15();
-                            bus.DBUS = regs.RG[15];
+                            bus.DBUS = (UInt16)regs.RG[15];
                             break;
                         default:
                             graphicChanger.colorR0();
-                            bus.DBUS = regs.RG[0];
+                            bus.DBUS = (UInt16)regs.RG[0];
                             break;
                     }
                     graphicChanger.PdRGd();
