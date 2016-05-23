@@ -25,6 +25,13 @@ namespace Assembler
             this.DBUS = value;
             this.RBUS = value;
         }
+
+        public void reset()
+        {
+            this.SBUS = (UInt16)0;
+            this.DBUS = (UInt16)0;
+            this.RBUS = (UInt16)0;
+        }
     };
 
     public struct impRegisters
@@ -53,12 +60,28 @@ namespace Assembler
 
             Array.Clear(this.RG, 0, this.RG.Length);
         }
-    };
+
+        public void reset()
+        {
+            this.IR = (UInt16)0;
+            this.IVR = (UInt16)0;
+            this.MDR = (UInt16)0;
+            this.ADR = (UInt16)0;
+            this.PC = (UInt16)0;
+            this.T = (UInt16)0;
+            this.SP = (UInt16)0;
+            this.RG = new UInt16[15];
+            this.FLAG = (UInt16)0;
+
+            Array.Clear(this.RG, 0, this.RG.Length);
+        }
+    };    
 
     public partial class mainForm : Form
     {
 
         public static mainForm currentForm = null;
+        public static UInt16 PCmax = 0;
 
         //given files
         String assemblyCodeFile = "assembly_code.asm";
@@ -96,7 +119,7 @@ namespace Assembler
 
         //sequencer vars
         List<UInt64> MPM = new List<ulong>();
-        MicrocodeForm microcodeForm = new MicrocodeForm();
+        MicrocodeForm microcodeForm = new MicrocodeForm();        
 
         public mainForm()
         {
@@ -292,7 +315,7 @@ namespace Assembler
 
         private void showMemory()
         {
-            var location = 0;
+            int location = 0;
 
             foreach (KeyValuePair<Instruction, String> instruction in binaryInstructions)
             {
@@ -303,6 +326,8 @@ namespace Assembler
                 memoryListBox.Items.Add(location + "\t" + value.Substring(0, 8));
                 location++;
             }
+
+            PCmax = (UInt16)(location - 1);
         }
 
         private void resetButton_Click(object sender, EventArgs e)

@@ -32,6 +32,9 @@ namespace Assembler
             graphicChanger.resetRegistersValues();
             graphicChanger.resetGraphicToDefault();
             graphicChanger.selectMicrocodeLine(MAR);
+
+            bus.reset();
+            regs.reset();
             
         }
         
@@ -40,96 +43,105 @@ namespace Assembler
             step++;
 
             GraphicChanger graphicChanger = new GraphicChanger();
-            ulong MIR = MPM[MAR];            
+            ulong MIR = MPM[MAR];
 
-            switch(step)
+            if (regs.PC <= mainForm.PCmax)
             {
-                case 1:
-                    {
-                        decodeSBUS(MIR);
-                        graphicChanger.selectMicrocodeLine(MAR);
+                switch (step)
+                {
+                    case 1:
+                        {
+                            decodeSBUS(MIR);
+                            graphicChanger.selectMicrocodeLine(MAR);
 
-                    }
-                    break;
+                        }
+                        break;
 
-                case 2:
-                    {
-                        decodeDBUS(MIR);
-                    }
-                    break;
+                    case 2:
+                        {
+                            decodeDBUS(MIR);
+                        }
+                        break;
 
-                case 3:
-                    {
-                        decodeALU(MIR);
-                    }
-                    break;
+                    case 3:
+                        {
+                            decodeALU(MIR);
+                        }
+                        break;
 
-                case 4:
-                    {
-                        decodeRBUS(MIR);
-                    }
-                    break;
-                case 5:
-                    {
-                        decodeOtherOperations(MIR);
-                    }
-                    break;
+                    case 4:
+                        {
+                            decodeRBUS(MIR);
+                        }
+                        break;
+                    case 5:
+                        {
+                            decodeOtherOperations(MIR);
+                        }
+                        break;
 
-                case 6:
-                    {
-                        decodeMemoryOperations(MIR);
+                    case 6:
+                        {
+                            decodeMemoryOperations(MIR);
 
-                    }
-                    break;
+                        }
+                        break;
 
-                case 7:
-                    {
-                        MAR = getMAR(MIR);
+                    case 7:
+                        {
+                            MAR = getMAR(MIR);
 
-                        graphicChanger.resetGraphicToDefault();
-                        step = 0;
-                    }
-                    break;
+                            graphicChanger.resetGraphicToDefault();
+                            step = 0;
+                        }
+                        break;
 
-                default:
-                    break;    
+                    default:
+                        break;
 
+                }
             }
+            graphicChanger.setLogMessage("Step by step simulation was a great success.");
         }
 
         public void runSimulation()
         {
 
             GraphicChanger graphicChanger = new GraphicChanger();
-            ulong MIR = MPM[MAR];
+            ulong MIR = 0;
 
-            //foreach
-            decodeSBUS(MIR);          
-            graphicChanger.selectMicrocodeLine(MAR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+            while (regs.PC <= mainForm.PCmax)
+            {
 
-            decodeDBUS(MIR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+                MIR = MPM[MAR];
 
-            decodeALU(MIR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+                decodeSBUS(MIR);
+                graphicChanger.selectMicrocodeLine(MAR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
 
-            decodeRBUS(MIR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+                decodeDBUS(MIR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
 
-            decodeOtherOperations(MIR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+                decodeALU(MIR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
 
-            decodeMemoryOperations(MIR);
-            Thread.Sleep(500);
-            graphicChanger.refresh();
+                decodeRBUS(MIR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
 
-            MAR = getMAR(MIR);
+                decodeOtherOperations(MIR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
+
+                decodeMemoryOperations(MIR);
+                Thread.Sleep(500);
+                graphicChanger.refresh();
+
+                MAR = getMAR(MIR);                
+            }
 
             graphicChanger.resetGraphicToDefault();
             graphicChanger.setLogMessage("Simulation was a great success.");
